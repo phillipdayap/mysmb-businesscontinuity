@@ -1,0 +1,103 @@
+/* PH Business Continuity Advisory — data feed
+ * This file is REWRITTEN by the scheduled tasks after each run.
+ * It loads via file:// and when hosted, so the app works everywhere.
+ * The app also tries to fetch ./feed.json first (for live hosting); this is the fallback.
+ */
+window.PBCA_FEED = {
+  "app": "PH Business Continuity Advisory",
+  "client": "mySMB.com",
+  "location": "BGC, Taguig City, Metro Manila",
+  "generated_at": "2026-07-06T13:06:00+08:00",
+  "current": {
+    "tier": 1,
+    "tier_label": "MONITOR",
+    "action_needed": false,
+    "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+    "headline": "Calm — no active cyclone, no NCR quakes, dams normal.",
+    "confidence": "MEDIUM",
+    "next_update": "Hourly scan; full brief at 12:00 NN",
+    "monitoring_degraded": true,
+    "degraded_note": "PAGASA TC bulletin (no active cyclone, page clock 06 Jul 05:06) is current — PAGASA treated as fresh. USGS is still serving frozen seismic data (metadata dated Jul 2, ~4 days old; latest listed quake Jul 1, unchanged) — 47th consecutive stale scan. PHIVOLCS not queried (no trigger). Spot-check earthquake.usgs.gov/earthquakes/map if anything feels off.",
+    "outlook_3day": [
+      { "date": "Jul 6", "summary": "Partly cloudy; isolated afternoon rains or thunderstorms. No wind signals." },
+      { "date": "Jul 7", "summary": "Partly cloudy; isolated thunderstorms possible, mainly afternoon." },
+      { "date": "Jul 8", "summary": "Partly cloudy; isolated rains or thunderstorms possible." }
+    ],
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. No wind signal over Metro Manila.",
+    "heat_index": { "max_c": null, "category": "Not available", "note": "No numeric value published (image-only, cached page). No Danger-level heat advisory seen for Metro Manila." },
+    "volcanoes": [
+      { "name": "Taal", "alert_level": 1, "note": "Bulletin unverified today (PHIVOLCS not reached); assumed AL1 per last known." },
+      { "name": "Mayon", "alert_level": 1, "note": "Bulletin unverified today (PHIVOLCS not reached); assumed AL1 per last known." }
+    ],
+    "seismic_24h": { "count": 0, "ncr_relevant": false, "note": "No NCR-relevant quakes. USGS feed still frozen as of the 13:06 PST scan (metadata dated Jul 2, ~4 days stale; latest listed event Jul 1, M4.9 SE of Pangyan/Mindanao; recent events in Mindanao/offshore Pangasinan/Surigao incl. M6.5 WSW Sarangani); no M6.0+ within 150 km of Taguig. Nothing felt in NCR." },
+    "dams": [
+      { "name": "Angat", "status": "Normal", "detail": "RWL 169.86 m, ~40 m below spilling (NHWL 210.00 m); Angat sub-basin on Non-Flood Watch (8:00 AM reading)." },
+      { "name": "Marikina basin", "status": "Normal", "detail": "NCR/Pasig-Marikina-Laguna de Bay on Non-Flood Watch (8:00 AM reading)." }
+    ],
+    "sources": [
+      { "label": "PAGASA — Tropical Cyclone Bulletin", "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" },
+      { "label": "PAGASA — Weather / Heat Index", "url": "https://www.pagasa.dost.gov.ph/weather/heat-index" },
+      { "label": "PAGASA — Flood / Dam", "url": "https://www.pagasa.dost.gov.ph/flood" },
+      { "label": "USGS — Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/map/" },
+      { "label": "PHIVOLCS", "url": "https://www.phivolcs.dost.gov.ph/" }
+    ]
+  },
+  "notifications": [
+    {
+      "id": "2026-07-06-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-06T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 6, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "body": "No active tropical cyclone in PAR; no wind signal over Metro Manila. No NCR-relevant earthquakes — recent activity is confined to Mindanao, offshore Pangasinan, and Surigao; no M6.0+ within 150 km of Taguig; nothing felt in NCR. Dams normal: Angat 169.86 m (~40 m below spilling) and NCR/Pasig-Marikina-Laguna on Non-Flood Watch (8:00 AM reading). Volcano alert levels unverified today (PHIVOLCS not queried; assumed AL1). 3-day outlook: Jul 6 partly cloudy, isolated afternoon rains, no signals; Jul 7 isolated thunderstorms possible; Jul 8 partly cloudy, isolated rains/thunderstorms. Note: monitoring partially degraded — USGS seismic feed frozen ~4 days (metadata Jul 2); PAGASA TC and dam pages current, forecast/heat pages cached.",
+      "sms": "MYSMB brief Jul6: BGC/Taguig no action needed. 3-day: isolated afternoon rain/thunderstorms, no signals. Dams normal. Full note via email.",
+      "sources": [
+        { "label": "PAGASA TC Bulletin", "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" }
+      ]
+    },
+    {
+      "id": "2026-07-05-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-05T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 5, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "body": "No active tropical cyclone in PAR; no wind signal over Metro Manila. No NCR-relevant earthquakes — recent activity is confined to Mindanao, offshore Pangasinan, and Surigao; no M6.0+ within 150 km of Taguig. Dams normal per last verified reading. Volcano alert levels unverified today (PHIVOLCS unreachable; assumed AL1). 3-day outlook: Jul 5 partly cloudy, isolated afternoon rains, no signals; Jul 6 isolated rains/thunderstorms possible; Jul 7 partly cloudy, isolated thunderstorms. Note: monitoring partially degraded — USGS frozen ~3 days, PAGASA forecast/heat pages cached, PHIVOLCS down.",
+      "sms": "MYSMB brief Jul5: BGC/Taguig no action needed. 3-day: isolated rain/thunderstorms, no signals. Full note via email.",
+      "sources": [
+        { "label": "PAGASA TC Bulletin", "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" }
+      ]
+    },
+    {
+      "id": "2026-07-04-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-04T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 4, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "body": "No active tropical cyclone in PAR; no signal over Metro Manila. No M4.0+ quakes in the last 24h and nothing felt in NCR. Dams on Non-Flood Watch. Volcano alert levels unverified today (PHIVOLCS unreachable). 3-day outlook: Jul 5 scattered rains, no signals; Jul 6 possible afternoon monsoon rains; Jul 7 isolated thunderstorms. Note: monitoring partially degraded — USGS/PAGASA cached, PHIVOLCS down.",
+      "sms": "MYSMB brief Jul4: BGC/Taguig no action needed. 3-day: light rain, no signals. Full note via email.",
+      "sources": [
+        { "label": "PAGASA TC Bulletin", "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" }
+      ]
+    },
+    {
+      "id": "2026-07-03-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-03T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 3, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed. Former TC Henry has exited PAR.",
+      "body": "Former Typhoon Henry has left the Philippine Area of Responsibility; all wind signals lifted. Normal operations. No NCR-relevant seismic activity. Dams normal.",
+      "sms": "MYSMB brief Jul3: BGC/Taguig no action. Henry has exited PAR, signals lifted. Full note via email.",
+      "sources": [
+        { "label": "PAGASA TC Bulletin", "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" }
+      ]
+    }
+  ]
+};

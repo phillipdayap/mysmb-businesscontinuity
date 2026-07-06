@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F1F0EC" />
+  <title>PH Business Continuity Advisory — mySMB.com</title>
+  <meta name="description" content="Calm, practical hazard advisories for the mySMB.com BGC/Taguig office — carry on, prepare, work from home, or suspend." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1 class="sr-only">PH Business Continuity Advisory for mySMB.com — current hazard status and notifications</h1>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/brand-logo.png" alt="mySMB.com — Simplified AI. Human Touch." class="brand-logo" />
+      <span class="brand-sep"></span>
+      <span class="brand-desc">PH Business Continuity Advisory<span>BGC, Taguig · NCR</span></span>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist">
+      <button class="tab is-active" data-view="today" role="tab"><span class="tab-label">Today</span></button>
+      <button class="tab" data-view="notifications" role="tab"><span class="tab-label">Notifications</span></button>
+      <button class="tab" data-view="settings" role="tab"><span class="tab-label">Settings &amp; Help</span></button>
+    </nav>
+    <button id="installBtn" class="install-btn" hidden>Install app</button>
+  </header>
+
+  <main id="app">
+    <!-- ===== TODAY ===== -->
+    <section class="view" id="view-today">
+      <div class="status-card" id="statusCard">
+        <div class="status-top">
+          <span class="status-badge" id="statusBadge">MONITOR</span>
+          <span class="freshness" id="freshness"><span class="dotmark"></span><span id="freshnessText">—</span></span>
+        </div>
+        <p class="action-label">Recommended action</p>
+        <h2 class="status-line" id="statusLine">Loading the latest brief…</h2>
+        <p class="status-headline" id="statusHeadline"></p>
+        <p class="conf" id="confidence" hidden></p>
+      </div>
+
+      <div id="degradedNote" class="banner" hidden></div>
+
+      <h2 class="section-title">Today’s conditions</h2>
+      <div class="tiles" id="tiles"></div>
+
+      <div class="sources" id="sources"></div>
+
+      <!-- 3-day outlook moved to the end, as a standout "plan ahead" band -->
+      <section class="planahead" id="planahead" aria-label="3-day outlook">
+        <h2>Plan ahead <span class="mark">3-day outlook</span></h2>
+        <p class="ph-sub" id="planaheadSub">Metro Manila · so you can plan the days ahead</p>
+        <div class="outlook-grid" id="outlookGrid"></div>
+      </section>
+
+      <p class="disclaimer">
+        This is a practical advisory to support your decision — not an official warning and not the only source of truth.
+        Always confirm with the linked official bulletin. LGU suspensions cover government offices and schools; suspending
+        a private business is your call (we suggest work-from-home; DOLE Labour Advisory 17-22). We don’t provide legal,
+        HR, medical, or evacuation advice beyond what officials have stated.
+      </p>
+    </section>
+
+    <!-- ===== NOTIFICATIONS ===== -->
+    <section class="view" id="view-notifications" hidden>
+      <h2 class="page-title">Notifications</h2>
+      <p class="page-sub">Every brief and alert, viewable any time by the PH Business Continuity Admins group.</p>
+      <div class="notif-toolbar" id="notifToolbar">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="alert">Alerts only</button>
+        <button class="chip" data-filter="digest">Daily briefs</button>
+        <button class="chip" id="markAllRead" style="margin-left:auto">Mark all read</button>
+      </div>
+      <div class="notif-list" id="notifList"></div>
+    </section>
+
+    <!-- ===== SETTINGS & HELP ===== -->
+    <section class="view" id="view-settings" hidden>
+      <h2 class="page-title">Settings &amp; Help</h2>
+
+      <div class="help-card">
+        <h2>Preferences</h2>
+        <div class="field">
+          <label for="channelSelect">Default messaging app for “Send to chat”</label>
+          <select id="channelSelect">
+            <option value="teams">Microsoft Teams</option>
+            <option value="viber">Viber</option>
+            <option value="whatsapp">WhatsApp</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="emailModeSelect">Email compose opens in</label>
+          <select id="emailModeSelect">
+            <option value="default">Default mail app</option>
+            <option value="outlookweb">Outlook on the web</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="help-card">
+        <h2>What this app does</h2>
+        <p>It turns official hazard bulletins (PAGASA, PHIVOLCS, USGS, NDRRMC, LGU) into a simple, at-a-glance
+        answer for the BGC/Taguig office: <em>carry on, prepare, work from home, or suspend.</em> A scan runs each hour
+        and a full brief is prepared at noon. The latest result always shows on the <em>Today</em> tab.</p>
+      </div>
+
+      <div class="help-card">
+        <h2>Install on your phone</h2>
+        <p><strong>iPhone / iPad (Safari):</strong> open the app link → tap <em>Share</em> → <em>Add to Home Screen</em>.</p>
+        <p><strong>Android (Chrome):</strong> open the app link → tap <em>⋮</em> → <em>Install app</em>.</p>
+      </div>
+      <div class="help-card">
+        <h2>Install on your computer</h2>
+        <p><strong>Chrome / Edge:</strong> open the app link → click <em>Install</em> in the address bar (or the button above) → <em>Install</em>.</p>
+      </div>
+
+      <div class="help-card">
+        <h2>Who receives this</h2>
+        <p>The <strong>PH Business Continuity Admins</strong> group. Members can install the app and view every notification
+        here any time. Alerts can be forwarded to Outlook or your team chat in one tap from each notification. Automated
+        sending is planned for a future update.</p>
+      </div>
+
+      <p class="disclaimer" id="buildMeta"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    PH Business Continuity Advisory · Only an advisory tool, not an official warning service.
+  </footer>
+
+  <script src="feed-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
