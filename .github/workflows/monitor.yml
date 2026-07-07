@@ -1,0 +1,36 @@
+name: PH hazard monitor
+
+# Runs in GitHub's cloud — no dependency on any local machine or the Claude app.
+on:
+  schedule:
+    - cron: "0 * * * *"      # every hour on the hour (UTC). 04:00 UTC = 12:00 NN Manila = daily brief.
+  workflow_dispatch: {}        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write              # allows the job to commit the updated feed back to the repo
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run hazard scan
+        run: node scan.mjs
+      - name: Commit updated feed (only if changed)
+        run: |
+          git config user.name "mySMB hazard monitor"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.json feed-data.js
+          if git diff --staged --quiet; then
+            echo "No feed changes this run."
+          else
+            git commit -m "feed update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
