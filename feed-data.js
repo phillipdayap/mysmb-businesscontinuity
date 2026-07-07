@@ -3,13 +3,13 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-08T02:33:00+08:00",
+  "generated_at": "2026-07-08T06:42:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
     "action_needed": true,
     "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
-    "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
+    "headline": "M4.5 quake ~93 km from Taguig — may be felt in NCR.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 8",
-        "summary": "Thunderstorms, 97% chance of rain. Max ~32°C."
+        "summary": "Drizzle, 97% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 9",
-        "summary": "Heavy drizzle, 75% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 75% chance of rain. Max ~31°C."
       },
       {
         "date": "Jul 10",
         "summary": "Thunderstorms, 98% chance of rain. Max ~30°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~32°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Drizzle in Metro Manila; max ~32°C.",
     "heat_index": {
       "max_c": 38,
       "category": "Extreme Caution",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.5 ~93 km from Taguig (7 km SSE of Calatagan, Philippines)."
     },
     "dams": [],
     "sources": [
