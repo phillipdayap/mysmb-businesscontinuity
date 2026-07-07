@@ -229,9 +229,11 @@ function buildFeed(prev, scans, now) {
     });
   }
 
-  // Daily brief at noon (once per day)
+  // Daily brief: once per day. Created on the first run from 12:00 NN onward
+  // (so a skipped noon tick still yields a brief), or immediately on a manual run.
+  const isManual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch" || process.env.FORCE_DIGEST === "1";
   const digestId = `${now.date}-digest`;
-  if (now.hour === 12 && !notifications.some(n => n.id === digestId)) {
+  if ((isManual || now.hour >= 12) && !notifications.some(n => n.id === digestId)) {
     const outlookTxt = current.outlook_3day.map(o => `${o.date}: ${o.summary}`).join(" ");
     notifications.unshift({
       id: digestId, type: "digest", tier, tier_label: label, timestamp: `${now.date}T12:00:00+08:00`,
@@ -272,10 +274,21 @@ function selftest() {
   const hasDigest = f1.notifications.some(n => n.id === `${now.date}-digest`);
   const f2 = buildFeed(f1, escScans, { ...now, hour: 12 }); // rerun same hour -> no duplicate digest
   const dupDigest = f2.notifications.filter(n => n.id === `${now.date}-digest`).length;
+  // morning behaviour: scheduled morning run -> no digest; manual run -> digest
+  const calm = cases[0][1];
+  const morn = buildFeed({ current: { tier: 1 }, notifications: [] }, calm, { ...now, hour: 9 });
+  const mornDigest = morn.notifications.some(n => n.id === `${now.date}-digest`);
+  process.env.GITHUB_EVENT_NAME = "workflow_dispatch";
+  const manual = buildFeed({ current: { tier: 1 }, notifications: [] }, calm, { ...now, hour: 9 });
+  const manualDigest = manual.notifications.some(n => n.id === `${now.date}-digest`);
+  delete process.env.GITHUB_EVENT_NAME;
   console.log(`  [${hasAlert ? "PASS" : "FAIL"}] escalation created an alert`);
   console.log(`  [${hasDigest ? "PASS" : "FAIL"}] noon created a digest`);
   console.log(`  [${dupDigest === 1 ? "PASS" : "FAIL"}] digest not duplicated on rerun (count ${dupDigest})`);
-  console.log(pass && hasAlert && hasDigest && dupDigest === 1 ? "SELFTEST: ALL PASS" : "SELFTEST: FAILURES ABOVE");
+  console.log(`  [${!mornDigest ? "PASS" : "FAIL"}] scheduled 9am run did NOT create a digest`);
+  console.log(`  [${manualDigest ? "PASS" : "FAIL"}] manual run created today's digest on demand`);
+  const allpass = pass && hasAlert && hasDigest && dupDigest === 1 && !mornDigest && manualDigest;
+  console.log(allpass ? "SELFTEST: ALL PASS" : "SELFTEST: FAILURES ABOVE");
 }
 
 /* ---------- main ---------- */
