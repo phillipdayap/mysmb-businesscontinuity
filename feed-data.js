@@ -3,32 +3,32 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-07T19:39:00+08:00",
+  "generated_at": "2026-07-08T02:33:00+08:00",
   "current": {
-    "tier": 1,
-    "tier_label": "MONITOR",
-    "action_needed": false,
-    "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
-    "headline": "Calm — no active cyclone, no NCR quakes.",
+    "tier": 2,
+    "tier_label": "PREPARE",
+    "action_needed": true,
+    "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
+    "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Jul 7",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~33°C."
-      },
-      {
         "date": "Jul 8",
-        "summary": "Heavy drizzle, 93% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 97% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 9",
-        "summary": "Drizzle, 71% chance of rain. Max ~31°C."
+        "summary": "Heavy drizzle, 75% chance of rain. Max ~31°C."
+      },
+      {
+        "date": "Jul 10",
+        "summary": "Thunderstorms, 98% chance of rain. Max ~30°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~33°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~32°C.",
     "heat_index": {
       "max_c": 38,
       "category": "Extreme Caution",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "sources": [
