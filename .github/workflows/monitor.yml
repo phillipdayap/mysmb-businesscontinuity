@@ -30,7 +30,19 @@ jobs:
           git add feed.json feed-data.js
           if git diff --staged --quiet; then
             echo "No feed changes this run."
-          else
-            git commit -m "feed update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git push
+            exit 0
           fi
+          git commit -m "feed update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Integrate any newer commits on the branch before pushing (handles re-runs
+          # of older runs and concurrent updates). The freshly generated feed wins.
+          for attempt in 1 2 3; do
+            if git pull --rebase -X ours origin "${GITHUB_REF_NAME}" \
+               && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "Pushed."
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; retrying in 3s..."
+            sleep 3
+          done
+          echo "Push failed after retries."
+          exit 1
