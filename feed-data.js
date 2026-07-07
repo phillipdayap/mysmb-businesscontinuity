@@ -7,7 +7,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-06T13:06:00+08:00",
+  "generated_at": "2026-07-07T10:06:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,11 +17,11 @@ window.PBCA_FEED = {
     "confidence": "MEDIUM",
     "next_update": "Hourly scan; full brief at 12:00 NN",
     "monitoring_degraded": true,
-    "degraded_note": "PAGASA TC bulletin (no active cyclone, page clock 06 Jul 05:06) is current — PAGASA treated as fresh. USGS is still serving frozen seismic data (metadata dated Jul 2, ~4 days old; latest listed quake Jul 1, unchanged) — 47th consecutive stale scan. PHIVOLCS not queried (no trigger). Spot-check earthquake.usgs.gov/earthquakes/map if anything feels off.",
+    "degraded_note": "PAGASA TC bulletin (no active cyclone) is current — PAGASA treated as fresh. USGS is still serving frozen seismic data (metadata dated Jul 2 11:08 PST, ~5 days old; latest listed quake Jul 1, unchanged) — 68th consecutive stale scan. PHIVOLCS not queried (no trigger). Spot-check earthquake.usgs.gov/earthquakes/map if anything feels off.",
     "outlook_3day": [
-      { "date": "Jul 6", "summary": "Partly cloudy; isolated afternoon rains or thunderstorms. No wind signals." },
-      { "date": "Jul 7", "summary": "Partly cloudy; isolated thunderstorms possible, mainly afternoon." },
-      { "date": "Jul 8", "summary": "Partly cloudy; isolated rains or thunderstorms possible." }
+      { "date": "Jul 7", "summary": "Partly cloudy; isolated afternoon rains or thunderstorms. No wind signals." },
+      { "date": "Jul 8", "summary": "Partly cloudy; isolated rains or thunderstorms possible, mainly afternoon." },
+      { "date": "Jul 9", "summary": "Partly cloudy; isolated rains or thunderstorms possible." }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. No wind signal over Metro Manila.",
     "heat_index": { "max_c": null, "category": "Not available", "note": "No numeric value published (image-only, cached page). No Danger-level heat advisory seen for Metro Manila." },
@@ -29,7 +29,7 @@ window.PBCA_FEED = {
       { "name": "Taal", "alert_level": 1, "note": "Bulletin unverified today (PHIVOLCS not reached); assumed AL1 per last known." },
       { "name": "Mayon", "alert_level": 1, "note": "Bulletin unverified today (PHIVOLCS not reached); assumed AL1 per last known." }
     ],
-    "seismic_24h": { "count": 0, "ncr_relevant": false, "note": "No NCR-relevant quakes. USGS feed still frozen as of the 13:06 PST scan (metadata dated Jul 2, ~4 days stale; latest listed event Jul 1, M4.9 SE of Pangyan/Mindanao; recent events in Mindanao/offshore Pangasinan/Surigao incl. M6.5 WSW Sarangani); no M6.0+ within 150 km of Taguig. Nothing felt in NCR." },
+    "seismic_24h": { "count": 0, "ncr_relevant": false, "note": "No NCR-relevant quakes. USGS feed still frozen as of the 10:06 PST scan (metadata dated Jul 2, ~5 days stale; latest listed event Jul 1, M4.9 SE of Pangyan/Mindanao; recent events in Mindanao/offshore Pangasinan/Surigao incl. M6.5 WSW Sarangani); no M6.0+ within 150 km of Taguig. Nothing felt in NCR." },
     "dams": [
       { "name": "Angat", "status": "Normal", "detail": "RWL 169.86 m, ~40 m below spilling (NHWL 210.00 m); Angat sub-basin on Non-Flood Watch (8:00 AM reading)." },
       { "name": "Marikina basin", "status": "Normal", "detail": "NCR/Pasig-Marikina-Laguna de Bay on Non-Flood Watch (8:00 AM reading)." }

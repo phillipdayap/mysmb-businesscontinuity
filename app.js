@@ -207,6 +207,26 @@
       var sb = el.querySelector('button[data-act="share"]');
       if (sb) sb.addEventListener("click", function () { markRead(id); shareNotif(n); });
     });
+
+    // Conventional behaviour: mark a notification read once it is actually shown
+    // on screen (opened/viewed) — no button click needed. Only when the tab is visible.
+    if (!document.getElementById("view-notifications").hidden) setupReadOnView(list);
+  }
+
+  var readObserver;
+  function setupReadOnView(list) {
+    if (readObserver) readObserver.disconnect();
+    var cards = list.querySelectorAll(".notif");
+    if (!("IntersectionObserver" in window)) {           // fallback: opening the tab clears them
+      cards.forEach(function (el) { markRead(el.getAttribute("data-id")); });
+      return;
+    }
+    readObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { markRead(e.target.getAttribute("data-id")); readObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(function (el) { readObserver.observe(el); });
   }
   function markRead(id) {
     var read = getReadIds();
