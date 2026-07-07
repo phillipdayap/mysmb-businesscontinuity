@@ -21,7 +21,7 @@
     });
   }
   function fmtAbs(iso) {
-    try { return new Date(iso).toLocaleString("en-AU", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true }); }
+    try { return new Date(iso).toLocaleString("en-AU", { day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit", hour12: true }); }
     catch (e) { return iso || ""; }
   }
   function ago(iso) {
