@@ -40,6 +40,16 @@ function longDate(isoDate) { // "2026-07-08" -> "Jul 8, 2026"
   const [y, m, d] = isoDate.split("-").map(Number);
   return `${MONTHS[m - 1]} ${d}, ${y}`;
 }
+// One-time self-heal: add the year to older brief/alert titles (and SMS) that
+// were saved before the year was included. Idempotent — safe to run every time.
+function backfillYear(n) {
+  const iso = /^\d{4}-\d{2}-\d{2}/.test(n.id || "") ? n.id.slice(0, 10) : String(n.timestamp || "").slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) return n;
+  const s = shortDate(iso), l = longDate(iso);
+  if (n.title && n.title.includes(s) && !n.title.includes(l)) n.title = n.title.replace(s, l);
+  if (n.sms && n.sms.includes(s) && !n.sms.includes(l)) n.sms = n.sms.replace(s, l);
+  return n;
+}
 
 /* ---------- math / weather ---------- */
 function haversineKm(a, b) {
@@ -211,8 +221,8 @@ function buildFeed(prev, scans, now) {
     sources: SOURCES
   };
 
-  // notifications history
-  let notifications = (prev && Array.isArray(prev.notifications)) ? prev.notifications.slice() : [];
+  // notifications history (self-heal older titles/SMS to include the year)
+  let notifications = (prev && Array.isArray(prev.notifications)) ? prev.notifications.map(backfillYear) : [];
   const prevTier = prev?.current?.tier || 1;
 
   // Alert on escalation to Tier 3+ or all-clear back to <3
