@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-07T19:26:00+08:00",
+  "generated_at": "2026-07-07T19:39:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -65,6 +65,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-07-07-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-07T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 7 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Jul 7: BGC/Taguig: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~38°C (Extreme Caution). Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Jul 7: Thunderstorms, 100% chance of rain. Max ~33°C. Jul 8: Heavy drizzle, 93% chance of rain. Max ~32°C. Jul 9: Drizzle, 71% chance of rain. Max ~31°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-07-06-digest",
       "type": "digest",
