@@ -31,9 +31,14 @@ function manila(d = new Date()) {
   return { date: `${p.year}-${p.month}-${p.day}`, hour, minute: parseInt(p.minute, 10),
            iso: `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:00+08:00` };
 }
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function shortDate(isoDate) { // "2026-07-08" -> "Jul 8"
   const [y, m, d] = isoDate.split("-").map(Number);
-  return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m - 1] + " " + d;
+  return MONTHS[m - 1] + " " + d;
+}
+function longDate(isoDate) { // "2026-07-08" -> "Jul 8, 2026"
+  const [y, m, d] = isoDate.split("-").map(Number);
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
 }
 
 /* ---------- math / weather ---------- */
@@ -215,17 +220,17 @@ function buildFeed(prev, scans, now) {
     notifications.unshift({
       id: `${now.date}-${now.hour}${String(now.minute).padStart(2,"0")}-alert`,
       type: "alert", tier, tier_label: label, timestamp: now.iso,
-      title: `[${label}] PH hazard alert — ${shortDate(now.date)}`,
-      bottom_line, body: reasons.join(" ") || headline, sms: `MYSMB alert ${shortDate(now.date)}: ${bottom_line} Details in the app.`,
+      title: `[${label}] PH hazard alert — ${longDate(now.date)}`,
+      bottom_line, body: reasons.join(" ") || headline, sms: `MYSMB alert ${longDate(now.date)}: ${bottom_line} Details in the app.`,
       sources: [SOURCES[0]]
     });
   } else if (prevTier >= 3 && tier < 3) {
     notifications.unshift({
       id: `${now.date}-${now.hour}${String(now.minute).padStart(2,"0")}-allclear`,
       type: "alert", tier, tier_label: label, timestamp: now.iso,
-      title: `[ALL CLEAR] PH hazard update — ${shortDate(now.date)}`,
+      title: `[ALL CLEAR] PH hazard update — ${longDate(now.date)}`,
       bottom_line: `BGC/Taguig: Hazard has eased. ${action}`, body: "Previous elevated hazard has eased. Confirm facilities/commute before resuming as needed.",
-      sms: `MYSMB all-clear ${shortDate(now.date)}: hazard eased, normal operations may resume.`, sources: [SOURCES[0]]
+      sms: `MYSMB all-clear ${longDate(now.date)}: hazard eased, normal operations may resume.`, sources: [SOURCES[0]]
     });
   }
 
@@ -237,8 +242,8 @@ function buildFeed(prev, scans, now) {
     const outlookTxt = current.outlook_3day.map(o => `${o.date}: ${o.summary}`).join(" ");
     notifications.unshift({
       id: digestId, type: "digest", tier, tier_label: label, timestamp: `${now.date}T12:00:00+08:00`,
-      title: `PH hazard brief — ${shortDate(now.date)} — ${tier === 1 ? "No action" : label}`,
-      bottom_line, sms: `MYSMB brief ${shortDate(now.date)}: ${bottom_line} 3-day + heat index in the app.`,
+      title: `PH hazard brief — ${longDate(now.date)} — ${tier === 1 ? "No action" : label}`,
+      bottom_line, sms: `MYSMB brief ${longDate(now.date)}: ${bottom_line} 3-day + heat index in the app.`,
       body: `${headline} Heat index today ~${current.heat_index.max_c ?? "n/a"}°C (${current.heat_index.category}). Seismic: ${quakes.note} 3-day outlook — ${outlookTxt}${current.monitoring_degraded ? " Note: " + current.degraded_note : ""}`,
       sources: [SOURCES[0]]
     });
