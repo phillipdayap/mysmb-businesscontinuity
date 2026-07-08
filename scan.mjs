@@ -244,11 +244,13 @@ function buildFeed(prev, scans, now) {
     });
   }
 
-  // Daily brief: once per day. Created on the first run from 12:00 NN onward
-  // (so a skipped noon tick still yields a brief), or immediately on a manual run.
-  const isManual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch" || process.env.FORCE_DIGEST === "1";
+  // Daily brief: once per day, on the first run from 12:00 NN Manila onward (so a
+  // skipped noon tick still yields a brief). FORCE_DIGEST=1 generates it on demand
+  // regardless of the hour — set only by the workflow's manual "force_daily_brief"
+  // input, NOT by ordinary dispatch, so hourly external triggers don't create it early.
+  const forceDigest = process.env.FORCE_DIGEST === "1";
   const digestId = `${now.date}-digest`;
-  if ((isManual || now.hour >= 12) && !notifications.some(n => n.id === digestId)) {
+  if ((forceDigest || now.hour >= 12) && !notifications.some(n => n.id === digestId)) {
     const outlookTxt = current.outlook_3day.map(o => `${o.date}: ${o.summary}`).join(" ");
     notifications.unshift({
       id: digestId, type: "digest", tier, tier_label: label, timestamp: `${now.date}T12:00:00+08:00`,
@@ -293,10 +295,10 @@ function selftest() {
   const calm = cases[0][1];
   const morn = buildFeed({ current: { tier: 1 }, notifications: [] }, calm, { ...now, hour: 9 });
   const mornDigest = morn.notifications.some(n => n.id === `${now.date}-digest`);
-  process.env.GITHUB_EVENT_NAME = "workflow_dispatch";
+  process.env.FORCE_DIGEST = "1";
   const manual = buildFeed({ current: { tier: 1 }, notifications: [] }, calm, { ...now, hour: 9 });
   const manualDigest = manual.notifications.some(n => n.id === `${now.date}-digest`);
-  delete process.env.GITHUB_EVENT_NAME;
+  delete process.env.FORCE_DIGEST;
   console.log(`  [${hasAlert ? "PASS" : "FAIL"}] escalation created an alert`);
   console.log(`  [${hasDigest ? "PASS" : "FAIL"}] noon created a digest`);
   console.log(`  [${dupDigest === 1 ? "PASS" : "FAIL"}] digest not duplicated on rerun (count ${dupDigest})`);
