@@ -3,8 +3,16 @@ name: PH hazard monitor
 # Runs in GitHub's cloud — no dependency on any local machine or the Claude app.
 on:
   schedule:
-    - cron: "0 * * * *"      # every hour on the hour (UTC). 04:00 UTC = 12:00 NN Manila = daily brief.
-  workflow_dispatch: {}        # lets you run it manually from the Actions tab
+    # NOTE: GitHub cron is best-effort — it throttles/drops runs, worst at the top of
+    # the hour (:00). So we run OFF-PEAK and twice an hour to improve the odds of firing.
+    # 04:12/04:42 UTC = 12:12/12:42 NN Manila → the first afternoon run creates the daily brief.
+    - cron: "12,42 * * * *"
+  workflow_dispatch:           # lets you (or an external scheduler) run it on demand
+    inputs:
+      force_daily_brief:
+        description: "Generate today's daily brief now, even before noon"
+        type: boolean
+        default: false
 
 permissions:
   contents: write              # allows the job to commit the updated feed back to the repo
@@ -23,6 +31,10 @@ jobs:
           node-version: "20"
       - name: Run hazard scan
         run: node scan.mjs
+        env:
+          # Only a human ticking "force_daily_brief" forces the brief; scheduled and
+          # ordinary external triggers leave this at 0 so the brief stays noon-based.
+          FORCE_DIGEST: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_daily_brief) && '1' || '0' }}
       - name: Commit updated feed (only if changed)
         run: |
           git config user.name "mySMB hazard monitor"
