@@ -2,13 +2,13 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-09T04:00:00+08:00",
+  "generated_at": "2026-07-09T05:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
     "action_needed": true,
     "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
-    "headline": "M4.5 quake ~93 km from Taguig — may be felt in NCR.",
+    "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
@@ -37,7 +37,7 @@
     "seismic_24h": {
       "count": 1,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.5 ~93 km from Taguig (7 km SSE of Calatagan, Philippines)."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "sources": [
