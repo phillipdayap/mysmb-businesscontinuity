@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-08T22:01:00+08:00",
+  "generated_at": "2026-07-08T23:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,11 +17,11 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 8",
-        "summary": "Thunderstorms, 85% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 76% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 9",
-        "summary": "Drizzle, 78% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 84% chance of rain. Max ~30°C."
       },
       {
         "date": "Jul 10",
