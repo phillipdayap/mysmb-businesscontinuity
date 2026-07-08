@@ -44,7 +44,7 @@
 
   /* ---------- data ---------- */
   function loadFeed() {
-    return fetch("feed.json", { cache: "no-store" })
+    return fetch("feed.json?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .catch(function () { return window.PBCA_FEED || null; });
   }

@@ -1,6 +1,6 @@
 /* PH Business Continuity Advisory — offline app shell.
    Bump CACHE when you change app files. Data (feed) is always network-first. */
-var CACHE = "pbca-shell-v9";
+var CACHE = "pbca-shell-v10";
 var SHELL = [
   ".", "index.html", "styles.css", "app.js", "feed-data.js",
   "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png",
