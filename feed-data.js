@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-14T15:00:00+08:00",
+  "generated_at": "2026-07-14T15:26:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 14",
-        "summary": "Light drizzle, 41% chance of rain. Max ~31°C."
+        "summary": "Cloudy, 41% chance of rain. Max ~31°C."
       },
       {
         "date": "Jul 15",
@@ -28,17 +28,17 @@ window.PBCA_FEED = {
         "summary": "Thunderstorms, 71% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~31°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Cloudy in Metro Manila; max ~31°C.",
     "heat_index": {
-      "max_c": 36,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 3,
+      "count": 4,
       "ncr_relevant": false,
-      "note": "3 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~254 km from Taguig (6 km NW of San Rafael, Philippines)."
+      "note": "4 M4.0+ event(s) in the PH region (last 24h); nearest of note M5.2 ~296 km from Taguig (14 km WSW of Mabiton, Philippines)."
     },
     "dams": [],
     "sources": [
