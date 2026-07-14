@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-15T01:00:00+08:00",
+  "generated_at": "2026-07-15T02:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 7,
+      "count": 6,
       "ncr_relevant": false,
-      "note": "7 M4.0+ event(s) in the PH region (last 24h); nearest of note M5.2 ~296 km from Taguig (14 km WSW of Mabiton, Philippines)."
+      "note": "6 M4.0+ event(s) in the PH region (last 24h); nearest of note M5.2 ~296 km from Taguig (14 km WSW of Mabiton, Philippines)."
     },
     "dams": [],
     "sources": [
