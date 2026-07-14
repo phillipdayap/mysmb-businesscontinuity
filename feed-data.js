@@ -3,13 +3,13 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-15T05:00:00+08:00",
+  "generated_at": "2026-07-15T06:00:00+08:00",
   "current": {
-    "tier": 2,
-    "tier_label": "PREPARE",
-    "action_needed": true,
-    "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
-    "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
+    "tier": 1,
+    "tier_label": "MONITOR",
+    "action_needed": false,
+    "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+    "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
@@ -28,7 +28,7 @@ window.PBCA_FEED = {
         "summary": "Thunderstorms, 67% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Cloudy in Metro Manila; max ~32°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~32°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
