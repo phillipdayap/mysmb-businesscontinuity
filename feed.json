@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-14T11:00:00+08:00",
+  "generated_at": "2026-07-14T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -64,6 +64,23 @@
     ]
   },
   "notifications": [
+    {
+      "id": "2026-07-14-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-07-14T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 14, 2026 — PREPARE",
+      "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Jul 14, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~36°C (Extreme Caution). Seismic: 3 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~254 km from Taguig (6 km NW of San Rafael, Philippines). 3-day outlook — Jul 14: Light drizzle, 59% chance of rain. Max ~31°C. Jul 15: Light drizzle, 61% chance of rain. Max ~31°C. Jul 16: Thunderstorms, 73% chance of rain. Max ~31°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-07-13-digest",
       "type": "digest",
