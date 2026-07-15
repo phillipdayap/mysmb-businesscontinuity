@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-16T06:00:00+08:00",
+  "generated_at": "2026-07-16T07:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 16",
-        "summary": "Light drizzle, 39% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 25% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 17",
-        "summary": "Thunderstorms, 46% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 49% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 18",
-        "summary": "Rain showers, 71% chance of rain. Max ~30°C."
+        "summary": "Rain showers, 80% chance of rain. Max ~30°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~32°C.",
