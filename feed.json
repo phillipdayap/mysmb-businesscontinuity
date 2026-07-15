@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-15T23:00:00+08:00",
+  "generated_at": "2026-07-16T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -15,19 +15,19 @@
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Jul 15",
-        "summary": "Cloudy, 6% chance of rain. Max ~32°C."
-      },
-      {
         "date": "Jul 16",
         "summary": "Light drizzle, 39% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 17",
         "summary": "Light drizzle, 46% chance of rain. Max ~32°C."
+      },
+      {
+        "date": "Jul 18",
+        "summary": "Light drizzle, 71% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~32°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~32°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
@@ -35,9 +35,9 @@
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "sources": [
