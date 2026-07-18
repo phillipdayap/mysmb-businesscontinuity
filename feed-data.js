@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-18T10:00:00+08:00",
+  "generated_at": "2026-07-18T11:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,11 +17,11 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 18",
-        "summary": "Light drizzle, 76% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 67% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 19",
-        "summary": "Heavy drizzle, 83% chance of rain. Max ~31°C."
+        "summary": "Heavy drizzle, 80% chance of rain. Max ~31°C."
       },
       {
         "date": "Jul 20",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 3,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "3 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "sources": [
