@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-22T02:00:00+08:00",
+  "generated_at": "2026-07-22T03:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 22",
-        "summary": "Heavy drizzle, 91% chance of rain. Max ~32°C."
+        "summary": "Drizzle, 91% chance of rain. Max ~33°C."
       },
       {
         "date": "Jul 23",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 94% chance of rain. Max ~33°C."
       },
       {
         "date": "Jul 24",
-        "summary": "Rain showers, 96% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 96% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Heavy drizzle in Metro Manila; max ~32°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 2,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~242 km from Taguig (18 km SSE of Talisay, Philippines)."
+      "note": "2 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~242 km from Taguig (18 km SSE of Talisay, Philippines)."
     },
     "dams": [],
     "sources": [
