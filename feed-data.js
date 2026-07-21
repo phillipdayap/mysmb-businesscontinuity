@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-21T22:00:00+08:00",
+  "generated_at": "2026-07-21T23:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Jul 22",
-        "summary": "Heavy drizzle, 95% chance of rain. Max ~32°C."
+        "summary": "Heavy drizzle, 91% chance of rain. Max ~32°C."
       },
       {
         "date": "Jul 23",
-        "summary": "Thunderstorms, 98% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 94% chance of rain. Max ~32°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Rain showers in Metro Manila; max ~34°C.",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~242 km from Taguig (18 km SSE of Talisay, Philippines)."
     },
     "dams": [],
     "sources": [
