@@ -3,17 +3,17 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-22T18:00:00+08:00",
+  "generated_at": "2026-07-22T19:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
     "action_needed": false,
     "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
-    "headline": "No elevated hazard detected, no NCR quakes.",
+    "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": true,
-    "degraded_note": "Automated cloud monitor: PAGASA TC bulletin unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
+    "monitoring_degraded": false,
+    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
         "date": "Jul 22",
@@ -28,7 +28,7 @@ window.PBCA_FEED = {
         "summary": "Thunderstorms, 92% chance of rain. Max ~30°C."
       }
     ],
-    "weather": "Drizzle in Metro Manila; max ~33°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 38,
       "category": "Extreme Caution",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 3,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~242 km from Taguig (18 km SSE of Talisay, Philippines)."
+      "note": "3 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.6 ~242 km from Taguig (18 km SSE of Talisay, Philippines)."
     },
     "dams": [],
     "sources": [
