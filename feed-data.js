@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-23T02:00:00+08:00",
+  "generated_at": "2026-07-23T03:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 23",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~32°C."
+        "summary": "Rain showers, 100% chance of rain. Max ~33°C."
       },
       {
         "date": "Jul 24",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 94% chance of rain. Max ~30°C."
       },
       {
         "date": "Jul 25",
         "summary": "Thunderstorms, 98% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~32°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Rain showers in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
@@ -36,9 +36,9 @@ window.PBCA_FEED = {
     },
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "sources": [
