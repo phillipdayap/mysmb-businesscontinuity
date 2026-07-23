@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-23T11:00:00+08:00",
+  "generated_at": "2026-07-23T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -65,6 +65,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-07-23-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-07-23T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 23, 2026 — PREPARE",
+      "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Jul 23, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~38°C (Extreme Caution). Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Jul 23: Thunderstorms, 100% chance of rain. Max ~33°C. Jul 24: Heavy drizzle, 98% chance of rain. Max ~29°C. Jul 25: Thunderstorms, 100% chance of rain. Max ~30°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-07-22-digest",
       "type": "digest",
