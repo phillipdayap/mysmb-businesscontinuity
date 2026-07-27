@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-26T15:01:00+08:00",
+  "generated_at": "2026-07-27T15:45:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,19 +16,19 @@ window.PBCA_FEED = {
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Jul 26",
-        "summary": "Rain showers, 80% chance of rain. Max ~31°C."
-      },
-      {
         "date": "Jul 27",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms with hail, 75% chance of rain. Max ~31°C."
       },
       {
         "date": "Jul 28",
-        "summary": "Thunderstorms, 92% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 96% chance of rain. Max ~31°C."
+      },
+      {
+        "date": "Jul 29",
+        "summary": "Thunderstorms, 96% chance of rain. Max ~30°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Rain showers in Metro Manila; max ~31°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms with hail in Metro Manila; max ~31°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -65,6 +65,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-07-27-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-27T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 27, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Jul 27, 2026: BGC/Taguig: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~36°C (Extreme Caution). Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Jul 27: Thunderstorms with hail, 75% chance of rain. Max ~31°C. Jul 28: Thunderstorms, 96% chance of rain. Max ~31°C. Jul 29: Thunderstorms, 96% chance of rain. Max ~30°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-07-26-digest",
       "type": "digest",
