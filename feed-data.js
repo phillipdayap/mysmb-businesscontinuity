@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-29T11:00:00+08:00",
+  "generated_at": "2026-07-29T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Jul 29",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~26°C."
+        "summary": "Thunderstorms, 98% chance of rain. Max ~26°C."
       },
       {
         "date": "Jul 30",
-        "summary": "Drizzle, 97% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 92% chance of rain. Max ~30°C."
       },
       {
         "date": "Jul 31",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 99% chance of rain. Max ~31°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~26°C.",
@@ -65,6 +65,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-07-29-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-07-29T12:00:00+08:00",
+      "title": "PH hazard brief — Jul 29, 2026 — No action",
+      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Jul 29, 2026: BGC/Taguig: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~27°C (Caution). Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Jul 29: Thunderstorms, 98% chance of rain. Max ~26°C. Jul 30: Drizzle, 92% chance of rain. Max ~30°C. Jul 31: Thunderstorms, 99% chance of rain. Max ~31°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-07-28-digest",
       "type": "digest",
