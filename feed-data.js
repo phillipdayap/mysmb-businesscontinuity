@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-07-31T20:00:00+08:00",
+  "generated_at": "2026-07-31T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 1",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
+        "summary": "Rain showers, 100% chance of rain. Max ~31°C."
       },
       {
         "date": "Aug 2",
