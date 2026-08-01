@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-08-01T22:02:00+08:00",
+  "generated_at": "2026-08-01T23:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,11 +16,11 @@
     "outlook_3day": [
       {
         "date": "Aug 1",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 99% chance of rain. Max ~31°C."
       },
       {
         "date": "Aug 2",
-        "summary": "Rain showers, 100% chance of rain. Max ~29°C."
+        "summary": "Rain showers, 98% chance of rain. Max ~29°C."
       },
       {
         "date": "Aug 3",
