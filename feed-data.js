@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-08-03T20:00:00+08:00",
+  "generated_at": "2026-08-03T20:42:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -30,7 +30,7 @@ window.PBCA_FEED = {
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
-      "max_c": 33,
+      "max_c": 32,
       "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
