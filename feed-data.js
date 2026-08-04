@@ -3,22 +3,18 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-08-04T23:00:00+08:00",
+  "generated_at": "2026-08-05T24:00:00+08:00",
   "current": {
-    "tier": 1,
-    "tier_label": "MONITOR",
-    "action_needed": false,
-    "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
-    "headline": "Calm — no active cyclone, no NCR quakes.",
+    "tier": 2,
+    "tier_label": "PREPARE",
+    "action_needed": true,
+    "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
+    "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
-      {
-        "date": "Aug 4",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~29°C."
-      },
       {
         "date": "Aug 5",
         "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
@@ -26,12 +22,16 @@ window.PBCA_FEED = {
       {
         "date": "Aug 6",
         "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
+      },
+      {
+        "date": "Aug 7",
+        "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~29°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
-      "max_c": 34,
-      "category": "Extreme Caution",
+      "max_c": 31,
+      "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
     "volcanoes": [],
