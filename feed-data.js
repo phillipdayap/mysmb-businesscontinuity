@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-05T11:00:00+08:00",
+  "generated_at": "2026-08-05T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -74,6 +74,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-08-05-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-08-05T12:00:00+08:00",
+      "title": "PH hazard brief — Aug 5, 2026 — PREPARE",
+      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Aug 5, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~33°C (Caution). Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Aug 5: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 6: Thunderstorms, 92% chance of rain. Max ~29°C. Aug 7: Thunderstorms, 98% chance of rain. Max ~28°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-08-04-digest",
       "type": "digest",
@@ -563,23 +580,6 @@ window.PBCA_FEED = {
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-06-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-07-06T12:00:00+08:00",
-      "title": "PH hazard brief — Jul 6, 2026 — No action",
-      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
-      "body": "No active tropical cyclone in PAR; no wind signal over Metro Manila. No NCR-relevant earthquakes — recent activity is confined to Mindanao, offshore Pangasinan, and Surigao; no M6.0+ within 150 km of Taguig; nothing felt in NCR. Dams normal: Angat 169.86 m (~40 m below spilling) and NCR/Pasig-Marikina-Laguna on Non-Flood Watch (8:00 AM reading). Volcano alert levels unverified today (PHIVOLCS not queried; assumed AL1). 3-day outlook: Jul 6 partly cloudy, isolated afternoon rains, no signals; Jul 7 isolated thunderstorms possible; Jul 8 partly cloudy, isolated rains/thunderstorms. Note: monitoring partially degraded — USGS seismic feed frozen ~4 days (metadata Jul 2); PAGASA TC and dam pages current, forecast/heat pages cached.",
-      "sms": "MYSMB brief Jul6: BGC/Taguig no action needed. 3-day: isolated afternoon rain/thunderstorms, no signals. Dams normal. Full note via email.",
-      "sources": [
-        {
-          "label": "PAGASA TC Bulletin",
           "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
         }
       ]
