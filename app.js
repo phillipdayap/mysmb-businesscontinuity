@@ -127,7 +127,13 @@
     if (c.volcanoes && c.volcanoes.length) tiles.push(tile("Volcanoes", c.volcanoes.map(function (v) { return v.name + ": AL" + v.alert_level; }).join(" · "), c.volcanoes[0].note || ""));
     if (c.seismic_24h) tiles.push(tile("Seismic (24h)", c.seismic_24h.count + (c.seismic_24h.count === 1 ? " event" : " events"), c.seismic_24h.note || ""));
     if (c.dams && c.dams.length) tiles.push(tile("Dams", c.dams.map(function (d) { return d.name + ": " + d.status; }).join(" · "), c.dams[0].detail || ""));
-    if (c.flood_risk) tiles.push(tile("Rainfall / flood", (c.flood_risk.level || "—") + (c.flood_risk.category ? " · " + c.flood_risk.category : ""), c.flood_risk.note || ""));
+    if (c.flood_official && (c.flood_official.rainfall || c.flood_official.basin)) {
+      var fo = c.flood_official;
+      var v = [fo.rainfall ? fo.rainfall + " rainfall warning" : "", fo.basin].filter(Boolean).join(" · ");
+      tiles.push(tile("Rainfall / flood (official)", v, fo.note || ""));
+    } else if (c.flood_risk) {
+      tiles.push(tile("Rainfall / flood", (c.flood_risk.level || "—") + (c.flood_risk.category ? " · " + c.flood_risk.category : ""), c.flood_risk.note || ""));
+    }
     document.getElementById("tiles").innerHTML = tiles.join("") || '<div class="tile"><div class="detail">No conditions reported.</div></div>';
 
     // outlook (plan-ahead band)

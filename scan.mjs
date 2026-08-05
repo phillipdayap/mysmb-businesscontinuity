@@ -91,6 +91,36 @@ function floodRisk(peakMmHr, totalMmToday) {
     : `Forecast peak ~${peak} mm/h, ~${tot} mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin.`;
   return { level, category, tier, max_mm_hr: peak, total_mm_today: tot, note };
 }
+// --- Phase 2: best-effort detection of OFFICIAL PAGASA signals (strict, no false alarms) ---
+// Detect a rainfall warning colour only when a Metro Manila / NCR mention sits close by.
+function detectRainfall(text) {
+  for (const [colour, tier] of [["Red", 3], ["Orange", 2], ["Yellow", 1]]) {
+    const re = new RegExp(colour + "[^.<]{0,30}rainfall[^.<]{0,20}(warning|advisory)", "i");
+    const m = re.exec(text);
+    if (m) {
+      const w = text.slice(Math.max(0, m.index - 160), m.index + m[0].length + 220);
+      if (/(metro manila|ncr|national capital)/i.test(w)) {
+        const kind = /warning/i.test(m[0]) ? "warning" : "advisory";
+        const impact = tier >= 3 ? "flooding likely" : tier === 2 ? "flooding possible in low-lying areas" : "watch for localised flooding";
+        return { level: colour, tier, note: `PAGASA ${colour} rainfall ${kind} appears to cover Metro Manila — ${impact}; confirm the official bulletin.` };
+      }
+    }
+  }
+  return { level: null, tier: 1, note: null };
+}
+// Detect a flood warning / dam release near the NCR / Pasig-Marikina basin.
+function detectFlood(text) {
+  const basin = "(pasig|marikina|ncr|metro manila|laguna)";
+  if (new RegExp(basin + "[^.<]{0,120}(flood warning|flood alarm|alarm level)", "i").test(text)
+    || new RegExp("(flood warning|flood alarm|alarm level)[^.<]{0,120}" + basin, "i").test(text))
+    return { status: "Flood Warning", tier: 3, note: "PAGASA flood bulletin appears to show a flood warning/alarm for the NCR / Pasig-Marikina basin — confirm the bulletin." };
+  const watch = new RegExp(basin + "[^.<]{0,120}flood watch", "i").test(text) && !/non-?flood watch/i.test(text);
+  if (watch)
+    return { status: "Flood Watch", tier: 2, note: "PAGASA flood bulletin appears to show a flood watch for the NCR / Pasig-Marikina basin." };
+  if (/(angat|ipo|la mesa|magat)[^.<]{0,80}(spilling|gate[s]? open|water release|spillway)/i.test(text))
+    return { status: "Dam release", tier: 2, note: "A dam upstream (Angat/Ipo/La Mesa) appears near spilling or releasing water — watch downstream flooding; confirm the bulletin." };
+  return { status: null, tier: 1, note: null };
+}
 const WMO = {
   0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Cloudy",
   45: "Fog", 48: "Fog", 51: "Light drizzle", 53: "Drizzle", 55: "Heavy drizzle",
@@ -181,8 +211,25 @@ async function scanTC() {
   } catch (e) { return { ok: false, active: false, note: "PAGASA TC bulletin unreachable this run." }; }
 }
 
+// Phase 2: official PAGASA rainfall warning (best-effort; silent on failure).
+async function scanRainfall() {
+  try {
+    const html = (await getText("https://www.pagasa.dost.gov.ph/weather")).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+    const d = detectRainfall(html);
+    return { ok: true, ...d };
+  } catch (e) { return { ok: false, level: null, tier: 1, note: null }; }
+}
+// Phase 2: official PAGASA flood / dam bulletin (best-effort; silent on failure).
+async function scanFloodDam() {
+  try {
+    const html = (await getText("https://www.pagasa.dost.gov.ph/flood")).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+    const d = detectFlood(html);
+    return { ok: true, ...d };
+  } catch (e) { return { ok: false, status: null, tier: 1, note: null }; }
+}
+
 /* ---------- classification ---------- */
-function classify({ quakes, forecast, tc }) {
+function classify({ quakes, forecast, tc, rain, flood }) {
   let tier = 1; const reasons = [];
   // Earthquake proxy (USGS magnitude + distance; PEIS confirmation is manual)
   if (quakes.nearest && quakes.nearest.km <= 150) {
@@ -201,6 +248,11 @@ function classify({ quakes, forecast, tc }) {
   const fr = forecast.flood_risk;
   if (fr && fr.tier >= 3) { tier = Math.max(tier, 3); reasons.push(`Heavy rainfall forecast (~${fr.max_mm_hr} mm/h) — flooding likely in low-lying Makati areas; confirm the PAGASA rainfall/flood bulletin.`); }
   else if (fr && fr.tier === 2) { tier = Math.max(tier, 2); reasons.push(`Intense rain forecast (~${fr.max_mm_hr} mm/h) — possible flooding in low-lying Makati areas.`); }
+  // Official PAGASA signals (Phase 2) — these are official, so they take priority in the headline
+  if (rain && rain.tier >= 3) { tier = Math.max(tier, 3); reasons.unshift(rain.note); }
+  else if (rain && rain.tier === 2) { tier = Math.max(tier, 2); reasons.unshift(rain.note); }
+  if (flood && flood.tier >= 3) { tier = Math.max(tier, 3); reasons.unshift(flood.note); }
+  else if (flood && flood.tier === 2) { tier = Math.max(tier, 2); reasons.unshift(flood.note); }
   return { tier, reasons };
 }
 
@@ -210,7 +262,12 @@ function loadPrev(path) {
   return null;
 }
 function buildFeed(prev, scans, now) {
-  const { quakes, forecast, tc } = scans;
+  const { quakes, forecast, tc, rain, flood } = scans;
+  const official = ((rain && rain.level) || (flood && flood.status)) ? {
+    rainfall: (rain && rain.level) || null,
+    basin: (flood && flood.status) || null,
+    note: [rain && rain.note, flood && flood.note].filter(Boolean).join(" ") || null
+  } : null;
   const { tier, reasons } = classify(scans);
   const label = TIER_LABELS[tier];
   const degraded = [];
@@ -230,7 +287,7 @@ function buildFeed(prev, scans, now) {
   const current = {
     tier, tier_label: label, action_needed: tier > 1,
     bottom_line, headline,
-    confidence: (quakes.ok && (tc.ok || forecast.ok)) ? "MEDIUM" : "LOW",
+    confidence: official ? "HIGH" : (quakes.ok && (tc.ok || forecast.ok)) ? "MEDIUM" : "LOW",
     next_update: "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     monitoring_degraded: degraded.length > 0,
     degraded_note: degraded.length ? `Automated cloud monitor: ${degraded.join(", ")} unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.`
@@ -239,6 +296,7 @@ function buildFeed(prev, scans, now) {
     weather: (tc.ok ? tc.note + " " : "") + (forecast.weatherToday || ""),
     heat_index: forecast.heat_index,
     flood_risk: forecast.flood_risk || null,
+    flood_official: official,
     volcanoes: [],
     seismic_24h: { count: quakes.count, ncr_relevant: quakes.ncrRelevant, note: quakes.note },
     dams: [],
@@ -301,8 +359,15 @@ function selftest() {
     ["strong quake NCR", { quakes: { ok: true, count: 3, ncrRelevant: true, nearest: { mag: 6.3, km: 90, place: "Rizal" }, note: "n" }, forecast: mkForecast(30), tc: { ok: true, active: false, note: "no TC" } }, 3],
     ["flood elevated (18 mm/h)", { quakes: calmQ, forecast: mkForecast(30, 18), tc: { ok: true, active: false, note: "no TC" } }, 2],
     ["flood high (35 mm/h)", { quakes: calmQ, forecast: mkForecast(30, 35), tc: { ok: true, active: false, note: "no TC" } }, 3],
+    ["official Orange rainfall (NCR)", { quakes: calmQ, forecast: mkForecast(30), tc: { ok: true, active: false, note: "no TC" }, rain: detectRainfall("PAGASA raised an Orange Rainfall Warning over Metro Manila"), flood: { status: null, tier: 1 } }, 2],
+    ["official flood warning (basin)", { quakes: calmQ, forecast: mkForecast(30), tc: { ok: true, active: false, note: "no TC" }, rain: { level: null, tier: 1 }, flood: detectFlood("Flood Warning is in effect for the Pasig-Marikina River basin") }, 3],
+    ["official rainfall other region (no NCR)", { quakes: calmQ, forecast: mkForecast(30), tc: { ok: true, active: false, note: "no TC" }, rain: detectRainfall("Red Rainfall Warning issued for Cagayan and Isabela provinces"), flood: { status: null, tier: 1 } }, 1],
   ];
   console.log("floodRisk(2,0)=", floodRisk(2,0).level, "| floodRisk(18,0)=", floodRisk(18,0).level, "| floodRisk(35,0)=", floodRisk(35,0).level);
+  console.log("detectRainfall NCR-Orange=", detectRainfall("Orange Rainfall Warning over Metro Manila").level,
+    "| other-region=", detectRainfall("Red Rainfall Warning for Cagayan and Isabela").level);
+  console.log("detectFlood basin-warning=", detectFlood("Flood Warning for the Pasig-Marikina basin").status,
+    "| non-flood-watch=", detectFlood("NCR / Pasig-Marikina-Laguna: Non-Flood Watch").status);
   console.log("heatIndexC(35,70)=", heatIndexC(35, 70).toFixed(1), "cat", heatCategory(heatIndexC(35, 70)));
   console.log("haversine Makati->Rizal(~14.6,121.3)=", Math.round(haversineKm(OFFICE, { lat: 14.6, lon: 121.3 })), "km");
   let pass = true;
@@ -340,9 +405,9 @@ function selftest() {
 async function main() {
   if (process.argv.includes("--selftest")) { selftest(); return; }
   const now = manila();
-  const [quakes, forecast, tc] = await Promise.all([scanQuakes(), scanForecast(), scanTC()]);
+  const [quakes, forecast, tc, rain, flood] = await Promise.all([scanQuakes(), scanForecast(), scanTC(), scanRainfall(), scanFloodDam()]);
   const prev = loadPrev("feed.json");
-  const feed = buildFeed(prev, { quakes, forecast, tc }, now);
+  const feed = buildFeed(prev, { quakes, forecast, tc, rain, flood }, now);
   writeFileSync("feed.json", JSON.stringify(feed, null, 2) + "\n");
   writeFileSync("feed-data.js",
     "/* Auto-generated by the cloud monitor (GitHub Actions). Do not edit by hand. */\n" +
