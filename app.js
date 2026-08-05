@@ -159,9 +159,9 @@
      elevated (an official Metro Manila rainfall/flood warning, or a forecast
      flood-risk of Elevated/High). Never scrapes — just reliable one-tap links. */
   var LOCAL_FLOOD_LINKS = [
-    { label: "MMDA Flood Control", sub: "Live Metro Manila road flooding & traffic", url: "https://mmda.gov.ph/" },
-    { label: "DOST Project NOAH", sub: "Rain & flood sensors, hazard maps", url: "https://noah.up.edu.ph/" },
-    { label: "PAGASA Flood bulletin", sub: "Official flood & dam information", url: "https://www.pagasa.dost.gov.ph/flood" }
+    { label: "DOST Project NOAH", sub: "Most real-time — search Makati for rain & flood hazard", url: "https://noah.up.edu.ph/" },
+    { label: "MMDA Flood Control", sub: "Live Metro Manila road flooding & passability", url: "https://mmda.gov.ph/" },
+    { label: "PAGASA Flood bulletin", sub: "Official flood & dam warnings", url: "https://www.pagasa.dost.gov.ph/flood" }
   ];
   function floodElevated(c) {
     if (c.flood_official && (c.flood_official.rainfall || c.flood_official.basin)) return true;
