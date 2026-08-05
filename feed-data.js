@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-05T09:00:00+08:00",
+  "generated_at": "2026-08-05T09:27:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -42,6 +42,7 @@ window.PBCA_FEED = {
       "total_mm_today": 23,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
+    "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
       "count": 0,
