@@ -136,6 +136,9 @@
     }
     document.getElementById("tiles").innerHTML = tiles.join("") || '<div class="tile"><div class="detail">No conditions reported.</div></div>';
 
+    // Phase 3: local flood check — curated official sources, shown only when flood risk is elevated
+    renderFloodCheck(c);
+
     // outlook (plan-ahead band)
     document.getElementById("outlookGrid").innerHTML = (c.outlook_3day || []).map(function (d) {
       return '<div class="outlook-day"><div class="d">' + esc(d.date) + '</div><div class="s">' + esc(d.summary) + "</div></div>";
@@ -149,6 +152,41 @@
   function tile(label, value, detail) {
     return '<div class="tile"><div class="label">' + esc(label) + '</div><div class="value">' + esc(value) + '</div>' +
       (detail ? '<div class="detail">' + esc(detail) + "</div>" : "") + "</div>";
+  }
+
+  /* ---------- Phase 3: local flood check ----------
+     Curated official local-flood sources. Surfaced ONLY when flood risk is
+     elevated (an official Metro Manila rainfall/flood warning, or a forecast
+     flood-risk of Elevated/High). Never scrapes — just reliable one-tap links. */
+  var LOCAL_FLOOD_LINKS = [
+    { label: "MMDA Flood Control", sub: "Live Metro Manila road flooding & traffic", url: "https://mmda.gov.ph/" },
+    { label: "DOST Project NOAH", sub: "Rain & flood sensors, hazard maps", url: "https://noah.up.edu.ph/" },
+    { label: "PAGASA Flood bulletin", sub: "Official flood & dam information", url: "https://www.pagasa.dost.gov.ph/flood" }
+  ];
+  function floodElevated(c) {
+    if (c.flood_official && (c.flood_official.rainfall || c.flood_official.basin)) return true;
+    if (c.flood_risk && (c.flood_risk.tier || 1) >= 2) return true;
+    return false;
+  }
+  function renderFloodCheck(c) {
+    var host = document.getElementById("floodCheck");
+    if (!host) return;
+    if (!floodElevated(c)) { host.hidden = true; host.innerHTML = ""; return; }
+    var official = c.flood_official && (c.flood_official.rainfall || c.flood_official.basin);
+    var reason = official
+      ? "An official rainfall or flood warning covers Metro Manila."
+      : "Heavy rain is forecast for Makati.";
+    host.hidden = false;
+    host.innerHTML =
+      '<h2 class="floodcheck-title">Local flood check</h2>' +
+      '<p class="floodcheck-sub">' + esc(reason) + ' Check these official local sources before you decide.</p>' +
+      '<div class="floodcheck-links">' +
+        LOCAL_FLOOD_LINKS.map(function (l) {
+          return '<a class="floodcheck-link" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
+            '<span class="fl-label">' + esc(l.label) + ' ↗</span>' +
+            '<span class="fl-sub">' + esc(l.sub) + '</span></a>';
+        }).join("") +
+      '</div>';
   }
 
   /* ---------- Notifications ---------- */
