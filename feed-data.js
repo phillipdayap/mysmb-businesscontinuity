@@ -2,13 +2,13 @@
 window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
-  "location": "BGC, Taguig City, Metro Manila",
-  "generated_at": "2026-08-05T08:00:00+08:00",
+  "location": "Makati City, Metro Manila",
+  "generated_at": "2026-08-05T08:54:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
     "action_needed": true,
-    "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
+    "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
     "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
@@ -30,9 +30,17 @@ window.PBCA_FEED = {
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
-      "max_c": 32,
+      "max_c": 33,
       "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
+    },
+    "flood_risk": {
+      "level": "Low",
+      "category": "No heavy rain forecast",
+      "tier": 1,
+      "max_mm_hr": 2.8,
+      "total_mm_today": 23,
+      "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "volcanoes": [],
     "seismic_24h": {
