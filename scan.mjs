@@ -10,7 +10,7 @@
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
-const TAGUIG = { lat: 14.52, lon: 121.05 };
+const OFFICE = { lat: 14.5547, lon: 121.0244 }; // Makati City (CBD)
 const MM = { lat: 14.55, lon: 121.02 }; // Metro Manila centroid for forecast
 const TIER_LABELS = { 1: "MONITOR", 2: "PREPARE", 3: "ACT", 4: "CRITICAL" };
 const SOURCES = [
@@ -76,6 +76,21 @@ function heatCategory(hiC) {
   if (hiC >= 52) return "Extreme Danger"; if (hiC >= 42) return "Danger";
   if (hiC >= 33) return "Extreme Caution"; if (hiC >= 27) return "Caution"; return "Not significant";
 }
+// Forecast-based rainfall / flood risk. Bands align to PAGASA rainfall-warning
+// intensities (Yellow 7.5-15, Orange 15-30, Red 30+ mm/hr). This is a FORECAST
+// risk, not an official warning — always confirm on the PAGASA bulletin.
+function floodRisk(peakMmHr, totalMmToday) {
+  let level, category, tier;
+  if (peakMmHr >= 30 || totalMmToday >= 200) { level = "High"; category = "Torrential (Red-equivalent)"; tier = 3; }
+  else if (peakMmHr >= 15 || totalMmToday >= 100) { level = "Elevated"; category = "Intense (Orange-equivalent)"; tier = 2; }
+  else if (peakMmHr >= 7.5 || totalMmToday >= 50) { level = "Watch"; category = "Heavy (Yellow-equivalent)"; tier = 1; }
+  else { level = "Low"; category = "No heavy rain forecast"; tier = 1; }
+  const peak = Math.round(peakMmHr * 10) / 10, tot = Math.round(totalMmToday);
+  const note = level === "Low"
+    ? "No heavy rain forecast for Metro Manila (Open-Meteo)."
+    : `Forecast peak ~${peak} mm/h, ~${tot} mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin.`;
+  return { level, category, tier, max_mm_hr: peak, total_mm_today: tot, note };
+}
 const WMO = {
   0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Cloudy",
   45: "Fog", 48: "Fog", 51: "Light drizzle", 53: "Drizzle", 55: "Heavy drizzle",
@@ -107,7 +122,7 @@ async function scanQuakes() {
     let maxNear = 0, nearest = null;
     for (const f of feats) {
       const [lon, lat] = f.geometry.coordinates;
-      const km = haversineKm(TAGUIG, { lat, lon });
+      const km = haversineKm(OFFICE, { lat, lon });
       if (km <= 300 && f.properties.mag > maxNear) { maxNear = f.properties.mag; nearest = { mag: f.properties.mag, km: Math.round(km), place: f.properties.place }; }
     }
     const ncrRelevant = nearest && nearest.km <= 150 && nearest.mag >= 6.0;
@@ -117,7 +132,7 @@ async function scanQuakes() {
       ncrRelevant: !!ncrRelevant,
       nearest,
       note: feats.length
-        ? `${feats.length} M4.0+ event(s) in the PH region (last 24h)` + (nearest ? `; nearest of note M${nearest.mag} ~${nearest.km} km from Taguig (${nearest.place}).` : "; none near Metro Manila.")
+        ? `${feats.length} M4.0+ event(s) in the PH region (last 24h)` + (nearest ? `; nearest of note M${nearest.mag} ~${nearest.km} km from Makati (${nearest.place}).` : "; none near Metro Manila.")
         : "No M4.0+ earthquakes in the PH region in the last 24h."
     };
   } catch (e) { return { ok: false, count: 0, ncrRelevant: false, nearest: null, note: "USGS feed unreachable this run." }; }
@@ -125,7 +140,7 @@ async function scanQuakes() {
 
 async function scanForecast() {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${MM.lat}&longitude=${MM.lon}` +
-    `&daily=weather_code,temperature_2m_max,precipitation_probability_max&hourly=temperature_2m,relative_humidity_2m` +
+    `&daily=weather_code,temperature_2m_max,precipitation_probability_max,precipitation_sum&hourly=temperature_2m,relative_humidity_2m,precipitation` +
     `&timezone=Asia%2FManila&forecast_days=3`;
   try {
     const j = await getJSON(url);
@@ -143,13 +158,17 @@ async function scanForecast() {
       if (hi > hiMax) hiMax = hi;
     }
     const hiRounded = Math.round(hiMax);
+    // rainfall / flood risk: peak hourly intensity over next 24h + today's total
+    let peak24 = 0; const PR = H.precipitation || [];
+    for (let i = 0; i < Math.min(24, PR.length); i++) peak24 = Math.max(peak24, PR[i] || 0);
+    const totalToday = (d.precipitation_sum && d.precipitation_sum[0] != null) ? d.precipitation_sum[0] : 0;
     return {
-      ok: true, outlook,
+      ok: true, outlook, flood_risk: floodRisk(peak24, totalToday),
       heat_index: { max_c: hiRounded, category: heatCategory(hiMax), note: "Computed from Open-Meteo temperature and humidity for Metro Manila." },
       weatherToday: `${wmoText(d.weather_code[0])} in Metro Manila; max ~${Math.round(d.temperature_2m_max[0])}°C.`
     };
   } catch (e) {
-    return { ok: false, outlook: [], heat_index: { max_c: null, category: "Not available", note: "Forecast source unreachable this run." }, weatherToday: null };
+    return { ok: false, outlook: [], flood_risk: null, heat_index: { max_c: null, category: "Not available", note: "Forecast source unreachable this run." }, weatherToday: null };
   }
 }
 
@@ -167,8 +186,8 @@ function classify({ quakes, forecast, tc }) {
   let tier = 1; const reasons = [];
   // Earthquake proxy (USGS magnitude + distance; PEIS confirmation is manual)
   if (quakes.nearest && quakes.nearest.km <= 150) {
-    if (quakes.nearest.mag >= 6.0) { tier = Math.max(tier, 3); reasons.push(`Strong M${quakes.nearest.mag} quake ~${quakes.nearest.km} km from Taguig — check PHIVOLCS for felt intensity.`); }
-    else if (quakes.nearest.mag >= 4.5) { tier = Math.max(tier, 2); reasons.push(`M${quakes.nearest.mag} quake ~${quakes.nearest.km} km from Taguig — may be felt in NCR.`); }
+    if (quakes.nearest.mag >= 6.0) { tier = Math.max(tier, 3); reasons.push(`Strong M${quakes.nearest.mag} quake ~${quakes.nearest.km} km from Makati — check PHIVOLCS for felt intensity.`); }
+    else if (quakes.nearest.mag >= 4.5) { tier = Math.max(tier, 2); reasons.push(`M${quakes.nearest.mag} quake ~${quakes.nearest.km} km from Makati — may be felt in NCR.`); }
   }
   // Tropical cyclone (best-effort detection; signal level is manual)
   if (tc.active) { tier = Math.max(tier, 2); reasons.push("Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin."); }
@@ -178,6 +197,10 @@ function classify({ quakes, forecast, tc }) {
     if (hi >= 52) { tier = Math.max(tier, 3); reasons.push(`Extreme Danger heat index (~${hi}°C) forecast.`); }
     else if (hi >= 42) { tier = Math.max(tier, 2); reasons.push(`Danger-level heat index (~${hi}°C) forecast — hydration advisory for field staff.`); }
   }
+  // Rainfall / flood (forecast-based)
+  const fr = forecast.flood_risk;
+  if (fr && fr.tier >= 3) { tier = Math.max(tier, 3); reasons.push(`Heavy rainfall forecast (~${fr.max_mm_hr} mm/h) — flooding likely in low-lying Makati areas; confirm the PAGASA rainfall/flood bulletin.`); }
+  else if (fr && fr.tier === 2) { tier = Math.max(tier, 2); reasons.push(`Intense rain forecast (~${fr.max_mm_hr} mm/h) — possible flooding in low-lying Makati areas.`); }
   return { tier, reasons };
 }
 
@@ -199,7 +222,7 @@ function buildFeed(prev, scans, now) {
     : tier === 3 ? "Consider shifting to work-from-home — your call; confirm on the official bulletin."
     : tier === 2 ? "No action needed yet — review contingencies and watch the next bulletin."
     : "No action needed. Normal operations.";
-  const bottom_line = `BGC/Taguig: ${tier === 1 ? "No action needed today. Normal operations." : action}`;
+  const bottom_line = `Makati: ${tier === 1 ? "No action needed today. Normal operations." : action}`;
   const headline = tier === 1
     ? (tc.ok && !tc.active ? "Calm — no active cyclone" : "No elevated hazard detected") + (quakes.ncrRelevant ? "" : ", no NCR quakes") + "."
     : reasons[0] || "Elevated hazard — see details.";
@@ -215,6 +238,7 @@ function buildFeed(prev, scans, now) {
     outlook_3day: forecast.outlook,
     weather: (tc.ok ? tc.note + " " : "") + (forecast.weatherToday || ""),
     heat_index: forecast.heat_index,
+    flood_risk: forecast.flood_risk || null,
     volcanoes: [],
     seismic_24h: { count: quakes.count, ncr_relevant: quakes.ncrRelevant, note: quakes.note },
     dams: [],
@@ -239,7 +263,7 @@ function buildFeed(prev, scans, now) {
       id: `${now.date}-${now.hour}${String(now.minute).padStart(2,"0")}-allclear`,
       type: "alert", tier, tier_label: label, timestamp: now.iso,
       title: `[ALL CLEAR] PH hazard update — ${longDate(now.date)}`,
-      bottom_line: `BGC/Taguig: Hazard has eased. ${action}`, body: "Previous elevated hazard has eased. Confirm facilities/commute before resuming as needed.",
+      bottom_line: `Makati: Hazard has eased. ${action}`, body: "Previous elevated hazard has eased. Confirm facilities/commute before resuming as needed.",
       sms: `MYSMB all-clear ${longDate(now.date)}: hazard eased, normal operations may resume.`, sources: [SOURCES[0]]
     });
   }
@@ -256,27 +280,31 @@ function buildFeed(prev, scans, now) {
       id: digestId, type: "digest", tier, tier_label: label, timestamp: `${now.date}T12:00:00+08:00`,
       title: `PH hazard brief — ${longDate(now.date)} — ${tier === 1 ? "No action" : label}`,
       bottom_line, sms: `MYSMB brief ${longDate(now.date)}: ${bottom_line} 3-day + heat index in the app.`,
-      body: `${headline} Heat index today ~${current.heat_index.max_c ?? "n/a"}°C (${current.heat_index.category}). Seismic: ${quakes.note} 3-day outlook — ${outlookTxt}${current.monitoring_degraded ? " Note: " + current.degraded_note : ""}`,
+      body: `${headline} Heat index today ~${current.heat_index.max_c ?? "n/a"}°C (${current.heat_index.category}).${current.flood_risk && current.flood_risk.level !== "Low" ? " Rainfall/flood: " + current.flood_risk.level + " — " + current.flood_risk.category + "." : ""} Seismic: ${quakes.note} 3-day outlook — ${outlookTxt}${current.monitoring_degraded ? " Note: " + current.degraded_note : ""}`,
       sources: [SOURCES[0]]
     });
   }
 
   notifications = notifications.slice(0, 30);
-  return { app: "PH Business Continuity Advisory", client: "mySMB.com", location: "BGC, Taguig City, Metro Manila", generated_at: now.iso, current, notifications };
+  return { app: "PH Business Continuity Advisory", client: "mySMB.com", location: "Makati City, Metro Manila", generated_at: now.iso, current, notifications };
 }
 
 /* ---------- selftest (offline, mock data) ---------- */
 function selftest() {
   const now = manila();
-  const mkForecast = (hi) => ({ ok: true, outlook: [{ date: "Jul 8", summary: "Partly cloudy, 40% chance of rain. Max ~33°C." }], heat_index: { max_c: hi, category: heatCategory(hi), note: "mock" }, weatherToday: "Partly cloudy." });
+  const mkForecast = (hi, floodPeak = 0) => ({ ok: true, outlook: [{ date: "Jul 8", summary: "Partly cloudy, 40% chance of rain. Max ~33°C." }], flood_risk: floodRisk(floodPeak, 0), heat_index: { max_c: hi, category: heatCategory(hi), note: "mock" }, weatherToday: "Partly cloudy." });
+  const calmQ = { ok: true, count: 0, ncrRelevant: false, nearest: null, note: "none" };
   const cases = [
-    ["calm", { quakes: { ok: true, count: 0, ncrRelevant: false, nearest: null, note: "none" }, forecast: mkForecast(34), tc: { ok: true, active: false, note: "no TC" } }, 1],
+    ["calm", { quakes: calmQ, forecast: mkForecast(34), tc: { ok: true, active: false, note: "no TC" } }, 1],
     ["danger heat", { quakes: { ok: true, count: 1, ncrRelevant: false, nearest: null, note: "1" }, forecast: mkForecast(43), tc: { ok: true, active: false, note: "no TC" } }, 2],
-    ["active TC", { quakes: { ok: true, count: 0, ncrRelevant: false, nearest: null, note: "none" }, forecast: mkForecast(30), tc: { ok: true, active: true, note: "TC" } }, 2],
+    ["active TC", { quakes: calmQ, forecast: mkForecast(30), tc: { ok: true, active: true, note: "TC" } }, 2],
     ["strong quake NCR", { quakes: { ok: true, count: 3, ncrRelevant: true, nearest: { mag: 6.3, km: 90, place: "Rizal" }, note: "n" }, forecast: mkForecast(30), tc: { ok: true, active: false, note: "no TC" } }, 3],
+    ["flood elevated (18 mm/h)", { quakes: calmQ, forecast: mkForecast(30, 18), tc: { ok: true, active: false, note: "no TC" } }, 2],
+    ["flood high (35 mm/h)", { quakes: calmQ, forecast: mkForecast(30, 35), tc: { ok: true, active: false, note: "no TC" } }, 3],
   ];
+  console.log("floodRisk(2,0)=", floodRisk(2,0).level, "| floodRisk(18,0)=", floodRisk(18,0).level, "| floodRisk(35,0)=", floodRisk(35,0).level);
   console.log("heatIndexC(35,70)=", heatIndexC(35, 70).toFixed(1), "cat", heatCategory(heatIndexC(35, 70)));
-  console.log("haversine Taguig->Rizal(~14.6,121.3)=", Math.round(haversineKm(TAGUIG, { lat: 14.6, lon: 121.3 })), "km");
+  console.log("haversine Makati->Rizal(~14.6,121.3)=", Math.round(haversineKm(OFFICE, { lat: 14.6, lon: 121.3 })), "km");
   let pass = true;
   for (const [name, scans, expTier] of cases) {
     const t = classify(scans).tier;
