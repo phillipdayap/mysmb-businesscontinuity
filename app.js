@@ -139,6 +139,9 @@
     // Phase 3: local flood check — curated official sources, shown only when flood risk is elevated
     renderFloodCheck(c);
 
+    // Phase 4: staff & commute areas watch
+    renderAreasWatch(c);
+
     // outlook (plan-ahead band)
     document.getElementById("outlookGrid").innerHTML = (c.outlook_3day || []).map(function (d) {
       return '<div class="outlook-day"><div class="d">' + esc(d.date) + '</div><div class="s">' + esc(d.summary) + "</div></div>";
@@ -187,6 +190,44 @@
             '<span class="fl-sub">' + esc(l.sub) + '</span></a>';
         }).join("") +
       '</div>';
+  }
+
+  /* ---------- Phase 4: staff & commute areas ----------
+     Shows how the areas where staff live/commute are faring, so management can
+     factor in employees who can't safely travel even when Makati is dry. Kept
+     separate from the office recommendation. Calm "all clear" by default;
+     highlighted cards when areas are at elevated flood risk. */
+  function renderAreasWatch(c) {
+    var host = document.getElementById("areasWatch");
+    if (!host) return;
+    var aw = c.areas_watch;
+    if (!aw || !aw.ok || !aw.areas || !aw.areas.length) { host.hidden = true; host.innerHTML = ""; return; }
+    host.hidden = false;
+    var elevated = (aw.elevated || []).filter(function (a) { return a.tier >= 2; });
+    var seen = {}, regions = [];
+    (aw.areas || []).forEach(function (a) { if (a.region && !seen[a.region]) { seen[a.region] = 1; regions.push(a.region); } });
+    var watching = regions.join(", ");
+    var html = '<h2 class="section-title">Staff &amp; commute areas</h2>';
+    if (!elevated.length) {
+      html += '<div class="areas-clear"><span class="areas-ok-dot"></span>All ' + esc(aw.areas.length) +
+        ' watched staff &amp; commute areas show low flood risk right now.</div>' +
+        '<p class="areas-foot">Watching: ' + esc(watching) + '. Forecast-based (Open-Meteo) — staff can check their own area on ' +
+        '<a href="https://noah.up.edu.ph/" target="_blank" rel="noopener">NOAH</a>.</p>';
+    } else {
+      html += '<p class="areas-sub">' + esc(elevated.length) + (elevated.length > 1 ? ' areas' : ' area') +
+        ' at elevated flood risk — staff here may have trouble travelling even if Makati is clear. Consider work-from-home for affected staff.</p>' +
+        '<div class="areas-grid">' + elevated.map(function (a) {
+          return '<div class="area-card" data-tier="' + (a.tier >= 3 ? 3 : 2) + '">' +
+            '<div class="area-name">' + esc(a.name) + '</div>' +
+            '<div class="area-region">' + esc(a.region) + '</div>' +
+            '<div class="area-level">' + esc(a.level) + (a.max_mm_hr != null ? ' · ~' + esc(a.max_mm_hr) + ' mm/h' : '') + '</div>' +
+          '</div>';
+        }).join('') + '</div>' +
+        '<p class="areas-foot">Watching: ' + esc(watching) + '. Forecast-based (Open-Meteo) — confirm each area on ' +
+        '<a href="https://noah.up.edu.ph/" target="_blank" rel="noopener">NOAH</a> or the ' +
+        '<a href="https://www.pagasa.dost.gov.ph/flood" target="_blank" rel="noopener">PAGASA flood bulletin</a>.</p>';
+    }
+    host.innerHTML = html;
   }
 
   /* ---------- Notifications ---------- */

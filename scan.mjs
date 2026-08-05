@@ -12,6 +12,32 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const OFFICE = { lat: 14.5547, lon: 121.0244 }; // Makati City (CBD)
 const MM = { lat: 14.55, lon: 121.02 }; // Metro Manila centroid for forecast
+// Phase 4 — staff & commute area watch. Representative city/town centroids across
+// Metro Manila and the commuter belt (Rizal, Cavite, Laguna, Bulacan). Employees
+// commonly travel to the Makati office from these areas; heavy flooding here can
+// strand staff even when the office itself is dry. City-level only (Data Privacy
+// Act, RA 10173 — no addresses). Edit this list to match where staff actually live.
+const AREAS = [
+  // Metro Manila (commute core + flood-prone)
+  { name: "Quezon City", region: "Metro Manila", lat: 14.676, lon: 121.043 },
+  { name: "Manila", region: "Metro Manila", lat: 14.599, lon: 120.984 },
+  { name: "Marikina", region: "Metro Manila", lat: 14.650, lon: 121.102 },
+  { name: "Pasig", region: "Metro Manila", lat: 14.576, lon: 121.085 },
+  { name: "Parañaque / Las Piñas", region: "Metro Manila", lat: 14.480, lon: 121.000 },
+  { name: "Caloocan / Valenzuela", region: "Metro Manila", lat: 14.746, lon: 120.977 },
+  // Rizal
+  { name: "Antipolo", region: "Rizal", lat: 14.624, lon: 121.176 },
+  { name: "Cainta / Taytay", region: "Rizal", lat: 14.579, lon: 121.174 },
+  // Cavite
+  { name: "Bacoor / Imus", region: "Cavite", lat: 14.441, lon: 120.957 },
+  { name: "Dasmariñas", region: "Cavite", lat: 14.329, lon: 120.937 },
+  // Laguna
+  { name: "San Pedro / Biñan", region: "Laguna", lat: 14.340, lon: 121.080 },
+  { name: "Santa Rosa / Calamba", region: "Laguna", lat: 14.210, lon: 121.160 },
+  // Bulacan
+  { name: "Meycauayan / Marilao", region: "Bulacan", lat: 14.730, lon: 120.960 },
+  { name: "San Jose del Monte", region: "Bulacan", lat: 14.810, lon: 121.050 }
+];
 const TIER_LABELS = { 1: "MONITOR", 2: "PREPARE", 3: "ACT", 4: "CRITICAL" };
 const SOURCES = [
   { label: "PAGASA — Tropical Cyclone Bulletin", url: "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin" },
@@ -228,6 +254,43 @@ async function scanFloodDam() {
   } catch (e) { return { ok: false, status: null, tier: 1, note: null }; }
 }
 
+// Phase 4: staff & commute area watch. One batched Open-Meteo call for all AREAS
+// (multiple coordinates return an array of per-location forecasts). Each area gets
+// the same forecast flood-risk model as the office. Degrades silently on failure.
+async function scanAreas() {
+  const lats = AREAS.map(a => a.lat).join(",");
+  const lons = AREAS.map(a => a.lon).join(",");
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}` +
+    `&hourly=precipitation&daily=precipitation_sum&timezone=Asia%2FManila&forecast_days=2`;
+  try {
+    const j = await getJSON(url);
+    const arr = Array.isArray(j) ? j : [j];
+    const areas = arr.map((loc, idx) => {
+      const meta = AREAS[idx] || { name: "Area " + idx, region: "" };
+      const PR = (loc.hourly && loc.hourly.precipitation) || [];
+      let peak = 0; for (let i = 0; i < Math.min(24, PR.length); i++) peak = Math.max(peak, PR[i] || 0);
+      const tot = (loc.daily && loc.daily.precipitation_sum && loc.daily.precipitation_sum[0] != null) ? loc.daily.precipitation_sum[0] : 0;
+      const fr = floodRisk(peak, tot);
+      return { name: meta.name, region: meta.region, level: fr.level, tier: fr.tier, max_mm_hr: fr.max_mm_hr, total_mm: fr.total_mm_today };
+    });
+    return { ok: true, areas };
+  } catch (e) { return { ok: false, areas: [] }; }
+}
+// Summarise the area watch: which watched areas are at elevated flood risk (tier>=2),
+// the worst tier, and a plain-language note. Kept SEPARATE from the office tier so it
+// never distorts the office suspend/WFH decision.
+function summarizeAreas(areasScan) {
+  if (!areasScan || !areasScan.ok || !Array.isArray(areasScan.areas) || !areasScan.areas.length)
+    return { ok: false, checked: 0, areas: [], elevated: [], worst_tier: 1, note: "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed." };
+  const areas = areasScan.areas;
+  const elevated = areas.filter(a => a.tier >= 2).sort((a, b) => b.tier - a.tier || b.max_mm_hr - a.max_mm_hr);
+  const worst = elevated.reduce((m, a) => Math.max(m, a.tier), 1);
+  const note = !elevated.length
+    ? `All ${areas.length} watched staff/commute areas show low flood risk (Open-Meteo forecast).`
+    : `${elevated.length} of ${areas.length} watched staff/commute areas at elevated flood risk: ${elevated.map(a => `${a.name} (${a.level})`).join(", ")}. Staff there may struggle to travel even if Makati is clear — consider WFH for affected staff; confirm each area on NOAH/PAGASA.`;
+  return { ok: true, checked: areas.length, areas, elevated, worst_tier: worst, note };
+}
+
 /* ---------- classification ---------- */
 function classify({ quakes, forecast, tc, rain, flood }) {
   let tier = 1; const reasons = [];
@@ -263,6 +326,7 @@ function loadPrev(path) {
 }
 function buildFeed(prev, scans, now) {
   const { quakes, forecast, tc, rain, flood } = scans;
+  const areasWatch = summarizeAreas(scans.areas);
   const official = ((rain && rain.level) || (flood && flood.status)) ? {
     rainfall: (rain && rain.level) || null,
     basin: (flood && flood.status) || null,
@@ -300,6 +364,7 @@ function buildFeed(prev, scans, now) {
     volcanoes: [],
     seismic_24h: { count: quakes.count, ncr_relevant: quakes.ncrRelevant, note: quakes.note },
     dams: [],
+    areas_watch: areasWatch,
     sources: SOURCES
   };
 
@@ -326,6 +391,36 @@ function buildFeed(prev, scans, now) {
     });
   }
 
+  // Phase 4 — staff/commute area alert. Fires when a watched area reaches HIGH
+  // forecast flood risk (tier 3) and the OFFICE itself is NOT already the story
+  // (office tier < 3, so it isn't covered by the alert above). Elevated (tier 2)
+  // areas are reported in the daily brief but do not push, to keep noise down.
+  const NOAH = { label: "DOST Project NOAH", url: "https://noah.up.edu.ph/" };
+  const prevAreaTier = prev?.current?.areas_watch?.worst_tier || 1;
+  const areaTier = areasWatch.worst_tier || 1;
+  if (areaTier >= 3 && prevAreaTier < 3 && tier < 3) {
+    const highNames = areasWatch.elevated.filter(a => a.tier >= 3).map(a => a.name).join(", ");
+    notifications.unshift({
+      id: `${now.date}-${now.hour}${String(now.minute).padStart(2,"0")}-areaalert`,
+      type: "alert", tier: 3, tier_label: "ACT", timestamp: now.iso,
+      title: `[STAFF AREAS] Flood risk where staff live/commute — ${longDate(now.date)}`,
+      bottom_line: `Makati office is clear, but high flood risk is forecast in staff/commute areas: ${highNames}. Consider WFH for affected staff.`,
+      body: areasWatch.note,
+      sms: `MYSMB alert ${longDate(now.date)}: office clear but high flood risk in staff areas (${highNames}). Consider WFH for affected staff. Details in the app.`,
+      sources: [NOAH, SOURCES[2]]
+    });
+  } else if (prevAreaTier >= 3 && areaTier < 3 && tier < 3) {
+    notifications.unshift({
+      id: `${now.date}-${now.hour}${String(now.minute).padStart(2,"0")}-areaclear`,
+      type: "alert", tier: 1, tier_label: "MONITOR", timestamp: now.iso,
+      title: `[ALL CLEAR] Staff/commute area flood risk eased — ${longDate(now.date)}`,
+      bottom_line: "Flood risk in staff/commute areas has eased.",
+      body: areasWatch.note,
+      sms: `MYSMB all-clear ${longDate(now.date)}: staff/commute area flood risk eased.`,
+      sources: [NOAH]
+    });
+  }
+
   // Daily brief: once per day, on the first run from 12:00 NN Manila onward (so a
   // skipped noon tick still yields a brief). FORCE_DIGEST=1 generates it on demand
   // regardless of the hour — set only by the workflow's manual "force_daily_brief"
@@ -334,11 +429,16 @@ function buildFeed(prev, scans, now) {
   const digestId = `${now.date}-digest`;
   if ((forceDigest || now.hour >= 12) && !notifications.some(n => n.id === digestId)) {
     const outlookTxt = current.outlook_3day.map(o => `${o.date}: ${o.summary}`).join(" ");
+    const areasLine = areasWatch.ok
+      ? (areasWatch.elevated.length
+          ? ` Staff/commute areas: ${areasWatch.elevated.length} at elevated flood risk (${areasWatch.elevated.map(a => a.name).join(", ")}) — consider WFH for affected staff.`
+          : " Staff/commute areas: all clear.")
+      : "";
     notifications.unshift({
       id: digestId, type: "digest", tier, tier_label: label, timestamp: `${now.date}T12:00:00+08:00`,
       title: `PH hazard brief — ${longDate(now.date)} — ${tier === 1 ? "No action" : label}`,
       bottom_line, sms: `MYSMB brief ${longDate(now.date)}: ${bottom_line} 3-day + heat index in the app.`,
-      body: `${headline} Heat index today ~${current.heat_index.max_c ?? "n/a"}°C (${current.heat_index.category}).${current.flood_risk && current.flood_risk.level !== "Low" ? " Rainfall/flood: " + current.flood_risk.level + " — " + current.flood_risk.category + "." : ""} Seismic: ${quakes.note} 3-day outlook — ${outlookTxt}${current.monitoring_degraded ? " Note: " + current.degraded_note : ""}`,
+      body: `${headline} Heat index today ~${current.heat_index.max_c ?? "n/a"}°C (${current.heat_index.category}).${current.flood_risk && current.flood_risk.level !== "Low" ? " Rainfall/flood: " + current.flood_risk.level + " — " + current.flood_risk.category + "." : ""}${areasLine} Seismic: ${quakes.note} 3-day outlook — ${outlookTxt}${current.monitoring_degraded ? " Note: " + current.degraded_note : ""}`,
       sources: [SOURCES[0]]
     });
   }
@@ -397,7 +497,29 @@ function selftest() {
   console.log(`  [${dupDigest === 1 ? "PASS" : "FAIL"}] digest not duplicated on rerun (count ${dupDigest})`);
   console.log(`  [${!mornDigest ? "PASS" : "FAIL"}] scheduled 9am run did NOT create a digest`);
   console.log(`  [${manualDigest ? "PASS" : "FAIL"}] manual run created today's digest on demand`);
-  const allpass = pass && hasAlert && hasDigest && dupDigest === 1 && !mornDigest && manualDigest;
+
+  // Phase 4 — staff/commute area watch
+  const areasClear = { ok: true, areas: [ { name: "Antipolo", region: "Rizal", level: "Low", tier: 1, max_mm_hr: 1, total_mm: 2 }, { name: "Pasig", region: "Metro Manila", level: "Low", tier: 1, max_mm_hr: 0, total_mm: 0 } ] };
+  const areasElev = { ok: true, areas: [ { name: "Antipolo", region: "Rizal", level: "High", tier: 3, max_mm_hr: 35, total_mm: 120 }, { name: "Cainta / Taytay", region: "Rizal", level: "Elevated", tier: 2, max_mm_hr: 18, total_mm: 60 }, { name: "Pasig", region: "Metro Manila", level: "Low", tier: 1, max_mm_hr: 1, total_mm: 2 } ] };
+  const swClear = summarizeAreas(areasClear);
+  const swElev = summarizeAreas(areasElev);
+  const sClearOK = swClear.ok && swClear.elevated.length === 0 && swClear.worst_tier === 1;
+  const sElevOK = swElev.ok && swElev.elevated.length === 2 && swElev.worst_tier === 3 && swElev.elevated[0].name === "Antipolo";
+  console.log(`  [${sClearOK ? "PASS" : "FAIL"}] summarizeAreas: all-clear (elevated ${swClear.elevated.length}, worst ${swClear.worst_tier})`);
+  console.log(`  [${sElevOK ? "PASS" : "FAIL"}] summarizeAreas: elevated sorted High-first (elevated ${swElev.elevated.length}, worst ${swElev.worst_tier})`);
+  // Area alert fires when office is calm but an area hits High, and NOT when office already ACT+
+  const calmScans = { ...cases[0][1], areas: areasElev };
+  const areaAlertFeed = buildFeed({ current: { tier: 1, areas_watch: { worst_tier: 1 } }, notifications: [] }, calmScans, { ...now, hour: 9 });
+  const hasAreaAlert = areaAlertFeed.notifications.some(n => typeof n.id === "string" && n.id.endsWith("-areaalert"));
+  const officeTierStays1 = areaAlertFeed.current.tier === 1; // area risk must NOT inflate office tier
+  const noReAlert = buildFeed({ current: { tier: 1, areas_watch: { worst_tier: 3 } }, notifications: [] }, calmScans, { ...now, hour: 9 })
+    .notifications.some(n => typeof n.id === "string" && n.id.endsWith("-areaalert"));
+  console.log(`  [${hasAreaAlert ? "PASS" : "FAIL"}] area alert fires when office calm but staff area High`);
+  console.log(`  [${officeTierStays1 ? "PASS" : "FAIL"}] staff-area risk does NOT inflate office tier (office tier ${areaAlertFeed.current.tier})`);
+  console.log(`  [${!noReAlert ? "PASS" : "FAIL"}] area alert not repeated when already High last run`);
+
+  const allpass = pass && hasAlert && hasDigest && dupDigest === 1 && !mornDigest && manualDigest
+    && sClearOK && sElevOK && hasAreaAlert && officeTierStays1 && !noReAlert;
   console.log(allpass ? "SELFTEST: ALL PASS" : "SELFTEST: FAILURES ABOVE");
 }
 
@@ -405,9 +527,9 @@ function selftest() {
 async function main() {
   if (process.argv.includes("--selftest")) { selftest(); return; }
   const now = manila();
-  const [quakes, forecast, tc, rain, flood] = await Promise.all([scanQuakes(), scanForecast(), scanTC(), scanRainfall(), scanFloodDam()]);
+  const [quakes, forecast, tc, rain, flood, areas] = await Promise.all([scanQuakes(), scanForecast(), scanTC(), scanRainfall(), scanFloodDam(), scanAreas()]);
   const prev = loadPrev("feed.json");
-  const feed = buildFeed(prev, { quakes, forecast, tc, rain, flood }, now);
+  const feed = buildFeed(prev, { quakes, forecast, tc, rain, flood, areas }, now);
   writeFileSync("feed.json", JSON.stringify(feed, null, 2) + "\n");
   writeFileSync("feed-data.js",
     "/* Auto-generated by the cloud monitor (GitHub Actions). Do not edit by hand. */\n" +
