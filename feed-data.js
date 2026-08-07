@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-07T21:00:00+08:00",
+  "generated_at": "2026-08-07T21:56:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 3,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); nearest of note M5 ~137 km from Makati (7 km NW of Cabacao, Philippines)."
+      "note": "3 M4.0+ event(s) in the PH region (last 24h); nearest of note M5 ~137 km from Makati (7 km NW of Cabacao, Philippines)."
     },
     "dams": [],
     "areas_watch": {
