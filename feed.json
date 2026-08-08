@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-08T11:56:00+08:00",
+  "generated_at": "2026-08-08T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -194,6 +194,23 @@
     ]
   },
   "notifications": [
+    {
+      "id": "2026-08-08-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-08-08T12:00:00+08:00",
+      "title": "PH hazard brief — Aug 8, 2026 — No action",
+      "bottom_line": "Makati: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Aug 8, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~33°C (Caution). Staff/commute areas: all clear. Seismic: 5 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 8: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 9: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 10: Thunderstorms, 100% chance of rain. Max ~29°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-08-07-digest",
       "type": "digest",
@@ -680,23 +697,6 @@
       "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
       "sms": "MYSMB brief Jul 10, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
       "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~35°C (Extreme Caution). Seismic: 2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Jul 10: Heavy drizzle, 98% chance of rain. Max ~30°C. Jul 11: Thunderstorms, 100% chance of rain. Max ~29°C. Jul 12: Thunderstorms, 96% chance of rain. Max ~29°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-09-digest",
-      "type": "digest",
-      "tier": 2,
-      "tier_label": "PREPARE",
-      "timestamp": "2026-07-09T12:00:00+08:00",
-      "title": "PH hazard brief — Jul 9, 2026 — PREPARE",
-      "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
-      "sms": "MYSMB brief Jul 9, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
-      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~37°C (Extreme Caution). Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Jul 9: Heavy drizzle, 84% chance of rain. Max ~31°C. Jul 10: Thunderstorms, 99% chance of rain. Max ~30°C. Jul 11: Thunderstorms, 100% chance of rain. Max ~28°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
