@@ -3,13 +3,13 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-08T10:18:00+08:00",
+  "generated_at": "2026-08-08T11:00:00+08:00",
   "current": {
-    "tier": 2,
-    "tier_label": "PREPARE",
-    "action_needed": true,
-    "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
-    "headline": "M5 quake ~137 km from Makati — may be felt in NCR.",
+    "tier": 1,
+    "tier_label": "MONITOR",
+    "action_needed": false,
+    "bottom_line": "Makati: No action needed today. Normal operations.",
+    "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
     "monitoring_degraded": false,
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 5,
+      "count": 4,
       "ncr_relevant": false,
-      "note": "5 M4.0+ event(s) in the PH region (last 24h); nearest of note M5 ~137 km from Makati (7 km NW of Cabacao, Philippines)."
+      "note": "4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
