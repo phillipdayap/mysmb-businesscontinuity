@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-09T02:54:00+08:00",
+  "generated_at": "2026-08-09T03:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -20,7 +20,7 @@
       },
       {
         "date": "Aug 10",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
+        "summary": "Rain showers, 100% chance of rain. Max ~28°C."
       },
       {
         "date": "Aug 11",
@@ -37,8 +37,8 @@
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 4.6,
-      "total_mm_today": 34,
+      "max_mm_hr": 7.4,
+      "total_mm_today": 37,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -58,112 +58,112 @@
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.1,
-          "total_mm": 33
+          "max_mm_hr": 4.4,
+          "total_mm": 30
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.6,
-          "total_mm": 34
+          "max_mm_hr": 7.4,
+          "total_mm": 37
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.9,
-          "total_mm": 32
+          "max_mm_hr": 5.4,
+          "total_mm": 36
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.7,
-          "total_mm": 38
+          "max_mm_hr": 5.1,
+          "total_mm": 39
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
-          "level": "Watch",
+          "level": "Low",
           "tier": 1,
-          "max_mm_hr": 7.6,
+          "max_mm_hr": 3.9,
           "total_mm": 44
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3.4,
-          "total_mm": 28
+          "max_mm_hr": 8.1,
+          "total_mm": 37
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.6,
-          "total_mm": 38
+          "max_mm_hr": 8.1,
+          "total_mm": 47
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.6,
-          "total_mm": 38
+          "max_mm_hr": 8.1,
+          "total_mm": 47
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.1,
-          "total_mm": 50
+          "max_mm_hr": 6.3,
+          "total_mm": 55
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5,
-          "total_mm": 49
+          "max_mm_hr": 4.1,
+          "total_mm": 47
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.2,
-          "total_mm": 34
+          "max_mm_hr": 4.3,
+          "total_mm": 38
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.4,
-          "total_mm": 20
+          "max_mm_hr": 4.4,
+          "total_mm": 26
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3.4,
-          "total_mm": 28
+          "max_mm_hr": 8.1,
+          "total_mm": 37
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.9,
-          "total_mm": 45
+          "max_mm_hr": 5.5,
+          "total_mm": 36
         }
       ],
       "elevated": [],
