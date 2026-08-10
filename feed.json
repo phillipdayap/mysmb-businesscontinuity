@@ -2,17 +2,17 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-10T21:00:00+08:00",
+  "generated_at": "2026-08-10T22:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
     "action_needed": false,
     "bottom_line": "Makati: No action needed today. Normal operations.",
-    "headline": "Calm — no active cyclone, no NCR quakes.",
+    "headline": "No elevated hazard detected, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: PAGASA TC bulletin unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
     "outlook_3day": [
       {
         "date": "Aug 10",
@@ -24,12 +24,12 @@
       },
       {
         "date": "Aug 12",
-        "summary": "Heavy drizzle, 95% chance of rain. Max ~30°C."
+        "summary": "Thunderstorms, 95% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~29°C.",
+    "weather": "Thunderstorms in Metro Manila; max ~29°C.",
     "heat_index": {
-      "max_c": 34,
+      "max_c": 35,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,15 +38,15 @@
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 2.5,
-      "total_mm_today": 21,
+      "total_mm_today": 25,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 5,
+      "count": 4,
       "ncr_relevant": false,
-      "note": "5 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
@@ -58,8 +58,8 @@
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.7,
-          "total_mm": 18
+          "max_mm_hr": 3,
+          "total_mm": 23
         },
         {
           "name": "Manila",
@@ -67,7 +67,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.5,
-          "total_mm": 21
+          "total_mm": 25
         },
         {
           "name": "Marikina",
@@ -75,7 +75,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 6.6,
-          "total_mm": 24
+          "total_mm": 32
         },
         {
           "name": "Pasig",
@@ -83,7 +83,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.8,
-          "total_mm": 23
+          "total_mm": 27
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -91,7 +91,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.7,
-          "total_mm": 23
+          "total_mm": 24
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -107,7 +107,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.8,
-          "total_mm": 24
+          "total_mm": 25
         },
         {
           "name": "Cainta / Taytay",
@@ -115,7 +115,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.8,
-          "total_mm": 24
+          "total_mm": 25
         },
         {
           "name": "Bacoor / Imus",
@@ -123,7 +123,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.4,
-          "total_mm": 28
+          "total_mm": 30
         },
         {
           "name": "Dasmariñas",
@@ -131,7 +131,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.1,
-          "total_mm": 18
+          "total_mm": 19
         },
         {
           "name": "San Pedro / Biñan",
@@ -147,7 +147,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.9,
-          "total_mm": 9
+          "total_mm": 10
         },
         {
           "name": "Meycauayan / Marilao",
@@ -163,7 +163,7 @@
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 7.5,
-          "total_mm": 28
+          "total_mm": 29
         }
       ],
       "elevated": [],
