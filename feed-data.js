@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-10T14:00:00+08:00",
+  "generated_at": "2026-08-10T15:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 11",
-        "summary": "Rain showers, 97% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 97% chance of rain. Max ~29°C."
       },
       {
         "date": "Aug 12",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 5,
+      "count": 6,
       "ncr_relevant": false,
-      "note": "5 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "6 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
