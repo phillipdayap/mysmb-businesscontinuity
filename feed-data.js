@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-12T20:29:00+08:00",
+  "generated_at": "2026-08-12T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,17 +21,17 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 13",
-        "summary": "Rain showers, 100% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~29°C."
       },
       {
         "date": "Aug 14",
-        "summary": "Thunderstorms, 85% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 85% chance of rain. Max ~30°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
       "max_c": 33,
-      "category": "Extreme Caution",
+      "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
     "flood_risk": {
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 4.9,
-      "total_mm_today": 31,
+      "total_mm_today": 38,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,8 +59,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.2,
-          "total_mm": 18
+          "max_mm_hr": 3.3,
+          "total_mm": 30
         },
         {
           "name": "Manila",
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.9,
-          "total_mm": 31
+          "total_mm": 38
         },
         {
           "name": "Marikina",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.2,
-          "total_mm": 20
+          "total_mm": 29
         },
         {
           "name": "Pasig",
@@ -84,7 +84,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.9,
-          "total_mm": 24
+          "total_mm": 30
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -92,7 +92,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.5,
-          "total_mm": 19
+          "total_mm": 23
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 5.8,
-          "total_mm": 19
+          "total_mm": 33
         },
         {
           "name": "Antipolo",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 7.6,
-          "total_mm": 24
+          "total_mm": 30
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 7.6,
-          "total_mm": 24
+          "total_mm": 30
         },
         {
           "name": "Bacoor / Imus",
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.9,
-          "total_mm": 17
+          "total_mm": 21
         },
         {
           "name": "Dasmariñas",
@@ -132,7 +132,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 5.9,
-          "total_mm": 15
+          "total_mm": 19
         },
         {
           "name": "San Pedro / Biñan",
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 5.6,
-          "total_mm": 15
+          "total_mm": 19
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -148,7 +148,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 8.8,
-          "total_mm": 15
+          "total_mm": 21
         },
         {
           "name": "Meycauayan / Marilao",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 5.8,
-          "total_mm": 19
+          "total_mm": 33
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4,
-          "total_mm": 18
+          "total_mm": 30
         }
       ],
       "elevated": [],
