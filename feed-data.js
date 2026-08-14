@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-14T19:25:00+08:00",
+  "generated_at": "2026-08-14T20:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
