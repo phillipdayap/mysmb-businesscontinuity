@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-14T20:27:00+08:00",
+  "generated_at": "2026-08-14T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,20 +16,20 @@
     "outlook_3day": [
       {
         "date": "Aug 14",
-        "summary": "Thunderstorms with hail, 100% chance of rain. Max ~28°C."
+        "summary": "Thunderstorms with hail, 100% chance of rain. Max ~29°C."
       },
       {
         "date": "Aug 15",
-        "summary": "Rain showers, 84% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 84% chance of rain. Max ~30°C."
       },
       {
         "date": "Aug 16",
-        "summary": "Rain showers, 92% chance of rain. Max ~29°C."
+        "summary": "Drizzle, 92% chance of rain. Max ~28°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms with hail in Metro Manila; max ~28°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms with hail in Metro Manila; max ~29°C.",
     "heat_index": {
-      "max_c": 33,
+      "max_c": 34,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,8 +38,8 @@
       "category": "Heavy (Yellow-equivalent)",
       "tier": 1,
       "max_mm_hr": 8.6,
-      "total_mm_today": 32,
-      "note": "Forecast peak ~8.6 mm/h, ~32 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
+      "total_mm_today": 30,
+      "note": "Forecast peak ~8.6 mm/h, ~30 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
     },
     "flood_official": null,
     "volcanoes": [],
@@ -67,7 +67,7 @@
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 8.6,
-          "total_mm": 32
+          "total_mm": 30
         },
         {
           "name": "Marikina",
@@ -75,7 +75,7 @@
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 7.6,
-          "total_mm": 30
+          "total_mm": 29
         },
         {
           "name": "Pasig",
@@ -83,7 +83,7 @@
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 8.2,
-          "total_mm": 26
+          "total_mm": 24
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -163,7 +163,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.3,
-          "total_mm": 32
+          "total_mm": 30
         }
       ],
       "elevated": [],
