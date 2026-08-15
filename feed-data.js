@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-15T07:56:00+08:00",
+  "generated_at": "2026-08-15T08:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -51,125 +51,12 @@ window.PBCA_FEED = {
     },
     "dams": [],
     "areas_watch": {
-      "ok": true,
-      "checked": 14,
-      "areas": [
-        {
-          "name": "Quezon City",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.4,
-          "total_mm": 8
-        },
-        {
-          "name": "Manila",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.9,
-          "total_mm": 6
-        },
-        {
-          "name": "Marikina",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 9
-        },
-        {
-          "name": "Pasig",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 7
-        },
-        {
-          "name": "Parañaque / Las Piñas",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 9
-        },
-        {
-          "name": "Caloocan / Valenzuela",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 4.5,
-          "total_mm": 11
-        },
-        {
-          "name": "Antipolo",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.6,
-          "total_mm": 7
-        },
-        {
-          "name": "Cainta / Taytay",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.6,
-          "total_mm": 7
-        },
-        {
-          "name": "Bacoor / Imus",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 7
-        },
-        {
-          "name": "Dasmariñas",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 3.2,
-          "total_mm": 9
-        },
-        {
-          "name": "San Pedro / Biñan",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.3,
-          "total_mm": 6
-        },
-        {
-          "name": "Santa Rosa / Calamba",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 4
-        },
-        {
-          "name": "Meycauayan / Marilao",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 4.5,
-          "total_mm": 11
-        },
-        {
-          "name": "San Jose del Monte",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.4,
-          "total_mm": 9
-        }
-      ],
+      "ok": false,
+      "checked": 0,
+      "areas": [],
       "elevated": [],
       "worst_tier": 1,
-      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
+      "note": "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed."
     },
     "sources": [
       {
