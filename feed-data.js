@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-17T04:55:00+08:00",
+  "generated_at": "2026-08-17T05:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -12,36 +12,16 @@ window.PBCA_FEED = {
     "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
-    "outlook_3day": [
-      {
-        "date": "Aug 17",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~27°C."
-      },
-      {
-        "date": "Aug 18",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~26°C."
-      },
-      {
-        "date": "Aug 19",
-        "summary": "Thunderstorms, 98% chance of rain. Max ~27°C."
-      }
-    ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~27°C.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: forecast unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
+    "outlook_3day": [],
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. ",
     "heat_index": {
-      "max_c": 31,
-      "category": "Caution",
-      "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
+      "max_c": null,
+      "category": "Not available",
+      "note": "Forecast source unreachable this run."
     },
-    "flood_risk": {
-      "level": "Watch",
-      "category": "Heavy (Yellow-equivalent)",
-      "tier": 1,
-      "max_mm_hr": 13.8,
-      "total_mm_today": 42,
-      "note": "Forecast peak ~13.8 mm/h, ~42 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
-    },
+    "flood_risk": null,
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
