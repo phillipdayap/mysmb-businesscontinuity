@@ -3,17 +3,17 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-17T10:00:00+08:00",
+  "generated_at": "2026-08-17T11:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
     "action_needed": false,
     "bottom_line": "Makati: No action needed today. Normal operations.",
-    "headline": "Calm — no active cyclone, no NCR quakes.",
+    "headline": "No elevated hazard detected, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: PAGASA TC bulletin unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
     "outlook_3day": [
       {
         "date": "Aug 17",
@@ -25,10 +25,10 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 19",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~27°C."
+        "summary": "Thunderstorms, 98% chance of rain. Max ~27°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~28°C.",
+    "weather": "Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
       "max_c": 31,
       "category": "Caution",
