@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-17T23:56:00+08:00",
+  "generated_at": "2026-08-18T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -15,31 +15,31 @@
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Aug 17",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~27°C."
-      },
-      {
         "date": "Aug 18",
         "summary": "Thunderstorms, 100% chance of rain. Max ~27°C."
       },
       {
         "date": "Aug 19",
         "summary": "Rain showers, 100% chance of rain. Max ~28°C."
+      },
+      {
+        "date": "Aug 20",
+        "summary": "Thunderstorms, 86% chance of rain. Max ~28°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~27°C.",
     "heat_index": {
-      "max_c": 31,
+      "max_c": 30,
       "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
     "flood_risk": {
-      "level": "Low",
-      "category": "No heavy rain forecast",
+      "level": "Watch",
+      "category": "Heavy (Yellow-equivalent)",
       "tier": 1,
-      "max_mm_hr": 4.2,
-      "total_mm_today": 32,
-      "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
+      "max_mm_hr": 5.5,
+      "total_mm_today": 63,
+      "note": "Forecast peak ~5.5 mm/h, ~63 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
     },
     "flood_official": null,
     "volcanoes": [],
@@ -56,114 +56,114 @@
         {
           "name": "Quezon City",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.6,
-          "total_mm": 35
+          "max_mm_hr": 5,
+          "total_mm": 62
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.2,
-          "total_mm": 32
+          "max_mm_hr": 5.5,
+          "total_mm": 63
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 6.9,
-          "total_mm": 44
+          "max_mm_hr": 5.2,
+          "total_mm": 60
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.1,
-          "total_mm": 32
+          "max_mm_hr": 4.8,
+          "total_mm": 57
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 2.2,
-          "total_mm": 24
+          "max_mm_hr": 4.5,
+          "total_mm": 58
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.3,
-          "total_mm": 32
+          "max_mm_hr": 5.4,
+          "total_mm": 61
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 7.2,
-          "total_mm": 44
+          "max_mm_hr": 4.3,
+          "total_mm": 55
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 7.2,
-          "total_mm": 44
+          "max_mm_hr": 4.3,
+          "total_mm": 55
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3,
-          "total_mm": 30
+          "max_mm_hr": 4.7,
+          "total_mm": 63
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 2,
-          "total_mm": 23
+          "max_mm_hr": 3.6,
+          "total_mm": 52
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3.6,
-          "total_mm": 23
+          "max_mm_hr": 3.3,
+          "total_mm": 51
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 6.2,
-          "total_mm": 25
+          "max_mm_hr": 3.3,
+          "total_mm": 38
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 4.3,
-          "total_mm": 32
+          "max_mm_hr": 5.4,
+          "total_mm": 61
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.2,
-          "total_mm": 37
+          "max_mm_hr": 4.8,
+          "total_mm": 54
         }
       ],
       "elevated": [],
