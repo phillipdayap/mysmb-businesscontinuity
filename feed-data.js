@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-21T20:00:00+08:00",
+  "generated_at": "2026-08-21T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Aug 21",
-        "summary": "Drizzle, 76% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 76% chance of rain. Max ~31°C."
       },
       {
         "date": "Aug 22",
-        "summary": "Drizzle, 79% chance of rain. Max ~30°C."
+        "summary": "Light drizzle, 79% chance of rain. Max ~30°C."
       },
       {
         "date": "Aug 23",
-        "summary": "Drizzle, 80% chance of rain. Max ~29°C."
+        "summary": "Light drizzle, 80% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~30°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~31°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.7,
-          "total_mm": 4
+          "total_mm": 3
         },
         {
           "name": "Manila",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.5,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.5,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Bacoor / Imus",
