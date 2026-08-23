@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-23T20:00:00+08:00",
+  "generated_at": "2026-08-23T20:59:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 24",
-        "summary": "Thunderstorms, 86% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 86% chance of rain. Max ~30°C."
       },
       {
         "date": "Aug 25",
-        "summary": "Drizzle, 86% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 86% chance of rain. Max ~30°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~31°C.",
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 4
+          "total_mm": 5
         },
         {
           "name": "Manila",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.3,
-          "total_mm": 5
+          "total_mm": 4
         },
         {
           "name": "Pasig",
@@ -84,14 +84,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 4
+          "total_mm": 3
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         },
         {
@@ -107,7 +107,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
+          "max_mm_hr": 0.6,
           "total_mm": 3
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
+          "max_mm_hr": 0.6,
           "total_mm": 3
         },
         {
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.3,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "Dasmariñas",
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
+          "max_mm_hr": 0.4,
           "total_mm": 1
         },
         {
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.8,
-          "total_mm": 4
+          "total_mm": 3
         }
       ],
       "elevated": [],
