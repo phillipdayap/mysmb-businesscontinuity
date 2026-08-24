@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-24T23:00:00+08:00",
+  "generated_at": "2026-08-24T23:52:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Aug 24",
-        "summary": "Rain showers, 86% chance of rain. Max ~30°C."
+        "summary": "Rain showers, 84% chance of rain. Max ~30°C."
       },
       {
         "date": "Aug 25",
-        "summary": "Heavy drizzle, 90% chance of rain. Max ~30°C."
+        "summary": "Heavy drizzle, 98% chance of rain. Max ~30°C."
       },
       {
         "date": "Aug 26",
-        "summary": "Drizzle, 79% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 67% chance of rain. Max ~30°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Rain showers in Metro Manila; max ~30°C.",
