@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-29T11:22:00+08:00",
+  "generated_at": "2026-08-29T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -194,6 +194,23 @@
     ]
   },
   "notifications": [
+    {
+      "id": "2026-08-29-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-08-29T12:00:00+08:00",
+      "title": "PH hazard brief — Aug 29, 2026 — No action",
+      "bottom_line": "Makati: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Aug 29, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~31°C (Caution). Staff/commute areas: all clear. Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 29: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 30: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 31: Thunderstorms, 94% chance of rain. Max ~29°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-08-28-digest",
       "type": "digest",
@@ -680,23 +697,6 @@
       "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
       "sms": "MYSMB brief Jul 31, 2026: BGC/Taguig: No action needed today. Normal operations. 3-day + heat index in the app.",
       "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~36°C (Extreme Caution). Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Jul 31: Thunderstorms, 99% chance of rain. Max ~31°C. Aug 1: Rain showers, 100% chance of rain. Max ~31°C. Aug 2: Rain showers, 96% chance of rain. Max ~31°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-30-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-07-30T12:00:00+08:00",
-      "title": "PH hazard brief — Jul 30, 2026 — No action",
-      "bottom_line": "BGC/Taguig: No action needed today. Normal operations.",
-      "sms": "MYSMB brief Jul 30, 2026: BGC/Taguig: No action needed today. Normal operations. 3-day + heat index in the app.",
-      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~36°C (Extreme Caution). Seismic: 4 M4.0+ event(s) in the PH region (last 24h); nearest of note M5.1 ~211 km from Taguig (79 km NE of Casuguran, Philippines). 3-day outlook — Jul 30: Light drizzle, 46% chance of rain. Max ~31°C. Jul 31: Thunderstorms, 98% chance of rain. Max ~30°C. Aug 1: Thunderstorms, 100% chance of rain. Max ~30°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
