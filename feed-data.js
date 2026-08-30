@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-30T20:00:00+08:00",
+  "generated_at": "2026-08-30T21:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Aug 31",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~29°C."
+        "summary": "Heavy drizzle, 94% chance of rain. Max ~30°C."
       },
       {
         "date": "Sep 1",
-        "summary": "Drizzle, 71% chance of rain. Max ~30°C."
+        "summary": "Heavy drizzle, 71% chance of rain. Max ~30°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Rain showers in Metro Manila; max ~29°C.",
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 1.3,
-      "total_mm_today": 15,
+      "total_mm_today": 14,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.7,
-          "total_mm": 17
+          "total_mm": 16
         },
         {
           "name": "Manila",
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.3,
-          "total_mm": 15
+          "total_mm": 14
         },
         {
           "name": "Marikina",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.9,
-          "total_mm": 17
+          "total_mm": 15
         },
         {
           "name": "Pasig",
@@ -84,7 +84,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.7,
-          "total_mm": 14
+          "total_mm": 12
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -92,7 +92,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.4,
-          "total_mm": 9
+          "total_mm": 8
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.1,
-          "total_mm": 12
+          "total_mm": 11
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.1,
-          "total_mm": 12
+          "total_mm": 11
         },
         {
           "name": "Bacoor / Imus",
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.8,
-          "total_mm": 14
+          "total_mm": 13
         },
         {
           "name": "Dasmariñas",
@@ -132,7 +132,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 9
+          "total_mm": 8
         },
         {
           "name": "San Pedro / Biñan",
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.7,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.6,
-          "total_mm": 21
+          "total_mm": 20
         }
       ],
       "elevated": [],
