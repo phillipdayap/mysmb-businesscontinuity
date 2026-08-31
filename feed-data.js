@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-08-31T20:00:00+08:00",
+  "generated_at": "2026-08-31T21:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Aug 31",
-        "summary": "Thunderstorms, 98% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 88% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 1",
-        "summary": "Thunderstorms, 82% chance of rain. Max ~29°C."
+        "summary": "Heavy drizzle, 77% chance of rain. Max ~29°C."
       },
       {
         "date": "Sep 2",
-        "summary": "Thunderstorms, 99% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 96% chance of rain. Max ~29°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~31°C.",
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 1.9,
-      "total_mm_today": 10,
+      "total_mm_today": 9,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.9,
-          "total_mm": 10
+          "total_mm": 9
         },
         {
           "name": "Marikina",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.8,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "Antipolo",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.8,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.8,
-          "total_mm": 8
+          "total_mm": 7
         }
       ],
       "elevated": [],
