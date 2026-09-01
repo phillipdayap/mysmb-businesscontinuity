@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-01T20:00:00+08:00",
+  "generated_at": "2026-09-01T21:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,20 +17,20 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 1",
-        "summary": "Thunderstorms, 76% chance of rain. Max ~30°C."
+        "summary": "Thunderstorms, 76% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 2",
-        "summary": "Heavy drizzle, 98% chance of rain. Max ~29°C."
+        "summary": "Rain showers, 98% chance of rain. Max ~29°C."
       },
       {
         "date": "Sep 3",
         "summary": "Thunderstorms, 100% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~30°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~31°C.",
     "heat_index": {
-      "max_c": 36,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 0.8,
-      "total_mm_today": 6,
+      "total_mm_today": 5,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 7
+          "total_mm": 6
         },
         {
           "name": "Manila",
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.8,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "Marikina",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.7,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "Pasig",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.8,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "Antipolo",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.8,
-          "total_mm": 6
+          "total_mm": 5
         },
         {
           "name": "San Jose del Monte",
