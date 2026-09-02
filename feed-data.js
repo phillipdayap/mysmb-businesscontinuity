@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-02T19:00:00+08:00",
+  "generated_at": "2026-09-02T20:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 2",
-        "summary": "Heavy drizzle, 98% chance of rain. Max ~30°C."
+        "summary": "Heavy drizzle, 100% chance of rain. Max ~30°C."
       },
       {
         "date": "Sep 3",
