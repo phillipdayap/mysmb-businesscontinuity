@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-02T11:00:00+08:00",
+  "generated_at": "2026-09-02T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-09-02-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-09-02T12:00:00+08:00",
+      "title": "PH hazard brief — Sep 2, 2026 — PREPARE",
+      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Sep 2, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~35°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Sep 2: Thunderstorms, 100% chance of rain. Max ~30°C. Sep 3: Thunderstorms, 100% chance of rain. Max ~29°C. Sep 4: Thunderstorms, 100% chance of rain. Max ~28°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-09-01-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
       "sms": "MYSMB brief Aug 4, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
       "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~33°C (Caution). Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Aug 4: Rain showers, 100% chance of rain. Max ~29°C. Aug 5: Thunderstorms, 100% chance of rain. Max ~27°C. Aug 6: Rain showers, 94% chance of rain. Max ~29°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-08-03-digest",
-      "type": "digest",
-      "tier": 2,
-      "tier_label": "PREPARE",
-      "timestamp": "2026-08-03T12:00:00+08:00",
-      "title": "PH hazard brief — Aug 3, 2026 — PREPARE",
-      "bottom_line": "BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin.",
-      "sms": "MYSMB brief Aug 3, 2026: BGC/Taguig: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
-      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~34°C (Extreme Caution). Seismic: 2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 3: Rain showers, 100% chance of rain. Max ~29°C. Aug 4: Thunderstorms, 100% chance of rain. Max ~27°C. Aug 5: Thunderstorms, 100% chance of rain. Max ~27°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
