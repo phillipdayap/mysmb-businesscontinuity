@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-05T11:00:00+08:00",
+  "generated_at": "2026-09-05T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-09-05-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-09-05T12:00:00+08:00",
+      "title": "PH hazard brief — Sep 5, 2026 — PREPARE",
+      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Sep 5, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "M4.7 quake ~126 km from Makati — may be felt in NCR. Heat index today ~33°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 2 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.7 ~126 km from Makati (2 km NNW of Cabangan, Philippines). 3-day outlook — Sep 5: Rain showers, 100% chance of rain. Max ~29°C. Sep 6: Rain showers, 98% chance of rain. Max ~28°C. Sep 7: Rain showers, 98% chance of rain. Max ~28°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-09-04-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
       "sms": "MYSMB brief Aug 7, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
       "body": "M5 quake ~137 km from Makati — may be felt in NCR. Heat index today ~34°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 1 M4.0+ event(s) in the PH region (last 24h); nearest of note M5 ~137 km from Makati (7 km NW of Cabacao, Philippines). 3-day outlook — Aug 7: Thunderstorms, 100% chance of rain. Max ~29°C. Aug 8: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 9: Thunderstorms, 100% chance of rain. Max ~28°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-08-06-digest",
-      "type": "digest",
-      "tier": 2,
-      "tier_label": "PREPARE",
-      "timestamp": "2026-08-06T12:00:00+08:00",
-      "title": "PH hazard brief — Aug 6, 2026 — PREPARE",
-      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
-      "sms": "MYSMB brief Aug 6, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
-      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~32°C (Caution). Staff/commute areas: all clear. Seismic: 11 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 6: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 7: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 8: Thunderstorms, 100% chance of rain. Max ~28°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
