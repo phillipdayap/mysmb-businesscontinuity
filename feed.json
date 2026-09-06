@@ -2,17 +2,17 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-06T19:00:00+08:00",
+  "generated_at": "2026-09-06T20:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
     "action_needed": false,
     "bottom_line": "Makati: No action needed today. Normal operations.",
     "headline": "Calm — no active cyclone, no NCR quakes.",
-    "confidence": "MEDIUM",
+    "confidence": "LOW",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: USGS unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
     "outlook_3day": [
       {
         "date": "Sep 6",
@@ -46,7 +46,7 @@
     "seismic_24h": {
       "count": 0,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "USGS feed unreachable this run."
     },
     "dams": [],
     "areas_watch": {
