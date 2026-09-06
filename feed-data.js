@@ -3,17 +3,17 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-06T20:00:00+08:00",
+  "generated_at": "2026-09-06T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
     "action_needed": false,
     "bottom_line": "Makati: No action needed today. Normal operations.",
     "headline": "Calm — no active cyclone, no NCR quakes.",
-    "confidence": "LOW",
+    "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": true,
-    "degraded_note": "Automated cloud monitor: USGS unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
+    "monitoring_degraded": false,
+    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
         "date": "Sep 6",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Sep 7",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~29°C."
+        "summary": "Rain showers, 100% chance of rain. Max ~28°C."
       },
       {
         "date": "Sep 8",
-        "summary": "Rain showers, 98% chance of rain. Max ~28°C."
+        "summary": "Thunderstorms, 98% chance of rain. Max ~29°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~28°C.",
@@ -47,7 +47,7 @@ window.PBCA_FEED = {
     "seismic_24h": {
       "count": 0,
       "ncr_relevant": false,
-      "note": "USGS feed unreachable this run."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "areas_watch": {
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.9,
-          "total_mm": 13
+          "total_mm": 12
         },
         {
           "name": "Manila",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.5,
-          "total_mm": 13
+          "total_mm": 12
         },
         {
           "name": "Pasig",
@@ -92,7 +92,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.4,
-          "total_mm": 11
+          "total_mm": 10
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.7,
-          "total_mm": 12
+          "total_mm": 10
         },
         {
           "name": "Antipolo",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.4,
-          "total_mm": 13
+          "total_mm": 12
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.4,
-          "total_mm": 13
+          "total_mm": 12
         },
         {
           "name": "Bacoor / Imus",
@@ -132,7 +132,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.9,
-          "total_mm": 13
+          "total_mm": 11
         },
         {
           "name": "San Pedro / Biñan",
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.1,
-          "total_mm": 11
+          "total_mm": 9
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -148,7 +148,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.4,
-          "total_mm": 11
+          "total_mm": 10
         },
         {
           "name": "Meycauayan / Marilao",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.7,
-          "total_mm": 12
+          "total_mm": 10
         },
         {
           "name": "San Jose del Monte",
