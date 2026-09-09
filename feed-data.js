@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-09T23:00:00+08:00",
+  "generated_at": "2026-09-10T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,21 +16,21 @@ window.PBCA_FEED = {
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Sep 9",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
-      },
-      {
         "date": "Sep 10",
         "summary": "Thunderstorms, 100% chance of rain. Max ~29°C."
       },
       {
         "date": "Sep 11",
-        "summary": "Thunderstorms, 80% chance of rain. Max ~29°C."
+        "summary": "Thunderstorms, 76% chance of rain. Max ~29°C."
+      },
+      {
+        "date": "Sep 12",
+        "summary": "Heavy drizzle, 59% chance of rain. Max ~29°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~28°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~29°C.",
     "heat_index": {
-      "max_c": 31,
+      "max_c": 33,
       "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 5.1,
-      "total_mm_today": 30,
+      "max_mm_hr": 6.2,
+      "total_mm_today": 23,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,117 +59,134 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.8,
-          "total_mm": 32
+          "max_mm_hr": 6.6,
+          "total_mm": 21
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.1,
-          "total_mm": 30
+          "max_mm_hr": 6.2,
+          "total_mm": 23
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 8.7,
-          "total_mm": 36
+          "max_mm_hr": 14.8,
+          "total_mm": 41
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.3,
-          "total_mm": 34
+          "max_mm_hr": 13.5,
+          "total_mm": 31
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.3,
-          "total_mm": 25
+          "max_mm_hr": 5.9,
+          "total_mm": 24
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.1,
-          "total_mm": 31
+          "max_mm_hr": 2.3,
+          "total_mm": 18
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
-          "level": "Watch",
-          "tier": 1,
-          "max_mm_hr": 8.3,
-          "total_mm": 38
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.1,
+          "total_mm": 32
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
-          "level": "Watch",
-          "tier": 1,
-          "max_mm_hr": 8.3,
-          "total_mm": 38
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.1,
+          "total_mm": 32
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 2.9,
-          "total_mm": 19
+          "max_mm_hr": 10.5,
+          "total_mm": 20
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3.6,
-          "total_mm": 18
+          "max_mm_hr": 11.4,
+          "total_mm": 25
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.2,
+          "max_mm_hr": 7.2,
           "total_mm": 17
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 2.6,
-          "total_mm": 14
+          "max_mm_hr": 9.1,
+          "total_mm": 18
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.1,
-          "total_mm": 31
+          "max_mm_hr": 2.3,
+          "total_mm": 18
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.4,
-          "total_mm": 42
+          "max_mm_hr": 9.7,
+          "total_mm": 30
         }
       ],
-      "elevated": [],
-      "worst_tier": 1,
-      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
+      "elevated": [
+        {
+          "name": "Antipolo",
+          "region": "Rizal",
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.1,
+          "total_mm": 32
+        },
+        {
+          "name": "Cainta / Taytay",
+          "region": "Rizal",
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.1,
+          "total_mm": 32
+        }
+      ],
+      "worst_tier": 2,
+      "note": "2 of 14 watched staff/commute areas at elevated flood risk: Antipolo (Elevated), Cainta / Taytay (Elevated). Staff there may struggle to travel even if Makati is clear — consider WFH for affected staff; confirm each area on NOAH/PAGASA."
     },
     "sources": [
       {
