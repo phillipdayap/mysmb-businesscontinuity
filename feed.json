@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-13T11:00:00+08:00",
+  "generated_at": "2026-09-13T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -194,6 +194,23 @@
     ]
   },
   "notifications": [
+    {
+      "id": "2026-09-13-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-09-13T12:00:00+08:00",
+      "title": "PH hazard brief — Sep 13, 2026 — No action",
+      "bottom_line": "Makati: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Sep 13, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~36°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 13: Thunderstorms with hail, 100% chance of rain. Max ~30°C. Sep 14: Light drizzle, 55% chance of rain. Max ~31°C. Sep 15: Thunderstorms, 90% chance of rain. Max ~31°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-09-12-digest",
       "type": "digest",
@@ -680,23 +697,6 @@
       "bottom_line": "Makati: No action needed today. Normal operations.",
       "sms": "MYSMB brief Aug 15, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
       "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~35°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Aug 15: Rain showers, 77% chance of rain. Max ~30°C. Aug 16: Heavy drizzle, 90% chance of rain. Max ~29°C. Aug 17: Rain showers, 96% chance of rain. Max ~28°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-08-14-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-08-14T12:00:00+08:00",
-      "title": "PH hazard brief — Aug 14, 2026 — No action",
-      "bottom_line": "Makati: No action needed today. Normal operations.",
-      "sms": "MYSMB brief Aug 14, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
-      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~35°C (Extreme Caution). Rainfall/flood: Watch — Heavy (Yellow-equivalent). Staff/commute areas: all clear. Seismic: 3 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 14: Thunderstorms with hail, 100% chance of rain. Max ~30°C. Aug 15: Heavy drizzle, 84% chance of rain. Max ~29°C. Aug 16: Thunderstorms, 97% chance of rain. Max ~28°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
