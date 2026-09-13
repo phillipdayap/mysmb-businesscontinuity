@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-13T07:19:00+08:00",
+  "generated_at": "2026-09-13T08:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -20,7 +20,7 @@
       },
       {
         "date": "Sep 14",
-        "summary": "Rain showers, 57% chance of rain. Max ~31°C."
+        "summary": "Rain showers, 63% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 15",
