@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-15T23:00:00+08:00",
+  "generated_at": "2026-09-16T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,19 +16,19 @@ window.PBCA_FEED = {
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Sep 15",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
-      },
-      {
         "date": "Sep 16",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~30°C."
+        "summary": "Thunderstorms, 99% chance of rain. Max ~30°C."
       },
       {
         "date": "Sep 17",
         "summary": "Thunderstorms with hail, 100% chance of rain. Max ~29°C."
+      },
+      {
+        "date": "Sep 18",
+        "summary": "Thunderstorms with hail, 100% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~31°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~30°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.8,
-      "total_mm_today": 5,
+      "max_mm_hr": 4.8,
+      "total_mm_today": 11,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,47 +59,47 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.5,
-          "total_mm": 8
+          "max_mm_hr": 6.5,
+          "total_mm": 15
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 5
+          "max_mm_hr": 4.8,
+          "total_mm": 11
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.4,
-          "total_mm": 13
+          "max_mm_hr": 1.6,
+          "total_mm": 11
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 8
+          "max_mm_hr": 7.1,
+          "total_mm": 20
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2,
-          "total_mm": 11
+          "max_mm_hr": 4,
+          "total_mm": 14
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.5,
+          "max_mm_hr": 2.7,
           "total_mm": 8
         },
         {
@@ -107,40 +107,40 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 8
+          "max_mm_hr": 5.3,
+          "total_mm": 18
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 8
+          "max_mm_hr": 5.3,
+          "total_mm": 18
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.1,
-          "total_mm": 11
+          "max_mm_hr": 6.6,
+          "total_mm": 15
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.2,
-          "total_mm": 13
+          "max_mm_hr": 2.2,
+          "total_mm": 12
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.3,
-          "total_mm": 12
+          "max_mm_hr": 4,
+          "total_mm": 17
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -148,14 +148,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.8,
-          "total_mm": 7
+          "total_mm": 10
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.5,
+          "max_mm_hr": 2.7,
           "total_mm": 8
         },
         {
@@ -163,8 +163,8 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.7,
-          "total_mm": 7
+          "max_mm_hr": 1.7,
+          "total_mm": 9
         }
       ],
       "elevated": [],
