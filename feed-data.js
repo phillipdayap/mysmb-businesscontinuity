@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-17T20:04:00+08:00",
+  "generated_at": "2026-09-17T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 5.2,
-      "total_mm_today": 24,
+      "max_mm_hr": 4.3,
+      "total_mm_today": 17,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.3,
+          "max_mm_hr": 4.6,
           "total_mm": 18
         },
         {
@@ -67,8 +67,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.2,
-          "total_mm": 24
+          "max_mm_hr": 4.3,
+          "total_mm": 17
         },
         {
           "name": "Marikina",
@@ -76,38 +76,38 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 6.2,
-          "total_mm": 31
+          "total_mm": 28
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.9,
-          "total_mm": 19
+          "max_mm_hr": 3.2,
+          "total_mm": 15
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.4,
-          "total_mm": 18
+          "max_mm_hr": 2.4,
+          "total_mm": 11
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 6.3,
-          "total_mm": 19
+          "max_mm_hr": 4.5,
+          "total_mm": 16
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.9,
+          "max_mm_hr": 3.2,
           "total_mm": 16
         },
         {
@@ -115,32 +115,32 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.9,
+          "max_mm_hr": 3.2,
           "total_mm": 16
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
-          "level": "Watch",
+          "level": "Low",
           "tier": 1,
-          "max_mm_hr": 7.7,
-          "total_mm": 30
+          "max_mm_hr": 2.9,
+          "total_mm": 12
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 5.3,
-          "total_mm": 24
+          "max_mm_hr": 7.5,
+          "total_mm": 20
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.2,
-          "total_mm": 20
+          "max_mm_hr": 5.1,
+          "total_mm": 19
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -148,23 +148,23 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.1,
-          "total_mm": 20
+          "total_mm": 14
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 6.3,
-          "total_mm": 19
+          "max_mm_hr": 4.5,
+          "total_mm": 16
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 6.6,
-          "total_mm": 19
+          "max_mm_hr": 2.8,
+          "total_mm": 13
         }
       ],
       "elevated": [],
