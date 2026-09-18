@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-18T21:00:00+08:00",
+  "generated_at": "2026-09-18T22:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Sep 19",
-        "summary": "Thunderstorms with hail, 100% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 20",
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 1.9,
-      "total_mm_today": 10,
+      "max_mm_hr": 1.4,
+      "total_mm_today": 7,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -60,26 +60,10 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 3.5,
-          "total_mm": 13
+          "total_mm": 11
         },
         {
           "name": "Manila",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.9,
-          "total_mm": 10
-        },
-        {
-          "name": "Marikina",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 4.3,
-          "total_mm": 10
-        },
-        {
-          "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
@@ -87,12 +71,28 @@ window.PBCA_FEED = {
           "total_mm": 7
         },
         {
+          "name": "Marikina",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 4.3,
+          "total_mm": 13
+        },
+        {
+          "name": "Pasig",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.7,
+          "total_mm": 5
+        },
+        {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.2,
-          "total_mm": 11
+          "max_mm_hr": 2.2,
+          "total_mm": 13
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -100,23 +100,23 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.9,
-          "total_mm": 16
+          "total_mm": 19
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 8
+          "max_mm_hr": 0.5,
+          "total_mm": 4
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 8
+          "max_mm_hr": 0.5,
+          "total_mm": 4
         },
         {
           "name": "Bacoor / Imus",
@@ -124,23 +124,23 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.5,
-          "total_mm": 7
+          "total_mm": 8
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.7,
-          "total_mm": 13
+          "max_mm_hr": 6.8,
+          "total_mm": 21
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2,
-          "total_mm": 11
+          "max_mm_hr": 5.1,
+          "total_mm": 15
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.9,
-          "total_mm": 16
+          "total_mm": 19
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 9.5,
-          "total_mm": 21
+          "total_mm": 23
         }
       ],
       "elevated": [],
