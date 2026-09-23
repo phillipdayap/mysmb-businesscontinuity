@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-23T07:00:00+08:00",
+  "generated_at": "2026-09-23T08:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 23",
-        "summary": "Thunderstorms, 94% chance of rain. Max ~30°C."
-      },
-      {
-        "date": "Sep 24",
         "summary": "Thunderstorms, 95% chance of rain. Max ~30°C."
       },
       {
+        "date": "Sep 24",
+        "summary": "Thunderstorms, 98% chance of rain. Max ~30°C."
+      },
+      {
         "date": "Sep 25",
-        "summary": "Drizzle, 81% chance of rain. Max ~30°C."
+        "summary": "Drizzle, 82% chance of rain. Max ~30°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~30°C.",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 4,
+      "count": 3,
       "ncr_relevant": false,
-      "note": "4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "3 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
