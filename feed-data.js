@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-24T15:00:00+08:00",
+  "generated_at": "2026-09-24T16:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,20 +17,20 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 24",
-        "summary": "Drizzle, 86% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 86% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 25",
-        "summary": "Drizzle, 73% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 73% chance of rain. Max ~31°C."
       },
       {
         "date": "Sep 26",
         "summary": "Light drizzle, 45% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Drizzle in Metro Manila; max ~32°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~31°C.",
     "heat_index": {
-      "max_c": 38,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.7,
-      "total_mm_today": 2,
+      "max_mm_hr": 0.2,
+      "total_mm_today": 0,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,39 +59,39 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.3,
-          "total_mm": 3
+          "max_mm_hr": 0.1,
+          "total_mm": 0
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
-          "total_mm": 2
+          "max_mm_hr": 0.2,
+          "total_mm": 0
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.5,
-          "total_mm": 10
+          "max_mm_hr": 2.5,
+          "total_mm": 5
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.3,
-          "total_mm": 11
+          "max_mm_hr": 0.6,
+          "total_mm": 1
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.3,
+          "max_mm_hr": 1,
           "total_mm": 2
         },
         {
@@ -99,31 +99,31 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 5
+          "max_mm_hr": 0.6,
+          "total_mm": 1
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
-          "level": "Elevated",
-          "tier": 2,
-          "max_mm_hr": 16.4,
-          "total_mm": 27
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 4.2,
+          "total_mm": 6
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
-          "level": "Elevated",
-          "tier": 2,
-          "max_mm_hr": 16.4,
-          "total_mm": 27
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 4.2,
+          "total_mm": 6
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.5,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         },
         {
@@ -131,62 +131,45 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.2,
-          "total_mm": 5
+          "max_mm_hr": 0.1,
+          "total_mm": 1
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
-          "total_mm": 2
+          "max_mm_hr": 0.4,
+          "total_mm": 1
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 2
+          "max_mm_hr": 1.8,
+          "total_mm": 3
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 5
+          "max_mm_hr": 0.6,
+          "total_mm": 1
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 6.3,
-          "total_mm": 9
+          "max_mm_hr": 3.4,
+          "total_mm": 6
         }
       ],
-      "elevated": [
-        {
-          "name": "Antipolo",
-          "region": "Rizal",
-          "level": "Elevated",
-          "tier": 2,
-          "max_mm_hr": 16.4,
-          "total_mm": 27
-        },
-        {
-          "name": "Cainta / Taytay",
-          "region": "Rizal",
-          "level": "Elevated",
-          "tier": 2,
-          "max_mm_hr": 16.4,
-          "total_mm": 27
-        }
-      ],
-      "worst_tier": 2,
-      "note": "2 of 14 watched staff/commute areas at elevated flood risk: Antipolo (Elevated), Cainta / Taytay (Elevated). Staff there may struggle to travel even if Makati is clear — consider WFH for affected staff; confirm each area on NOAH/PAGASA."
+      "elevated": [],
+      "worst_tier": 1,
+      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
     },
     "sources": [
       {
