@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-26T11:00:00+08:00",
+  "generated_at": "2026-09-26T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 26",
-        "summary": "Light drizzle, 38% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 33% chance of rain. Max ~32°C."
       },
       {
         "date": "Sep 27",
-        "summary": "Light drizzle, 39% chance of rain. Max ~33°C."
+        "summary": "Light drizzle, 57% chance of rain. Max ~33°C."
       },
       {
         "date": "Sep 28",
-        "summary": "Light drizzle, 89% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 64% chance of rain. Max ~32°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~32°C.",
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-09-26-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-09-26T12:00:00+08:00",
+      "title": "PH hazard brief — Sep 26, 2026 — PREPARE",
+      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Sep 26, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~36°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 26: Light drizzle, 33% chance of rain. Max ~32°C. Sep 27: Light drizzle, 57% chance of rain. Max ~33°C. Sep 28: Light drizzle, 64% chance of rain. Max ~32°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-09-25-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "Makati: No action needed today. Normal operations.",
       "sms": "MYSMB brief Aug 28, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
       "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~31°C (Caution). Staff/commute areas: all clear. Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Aug 28: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 29: Thunderstorms, 100% chance of rain. Max ~28°C. Aug 30: Rain showers, 98% chance of rain. Max ~28°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-08-27-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-08-27T12:00:00+08:00",
-      "title": "PH hazard brief — Aug 27, 2026 — No action",
-      "bottom_line": "Makati: No action needed today. Normal operations.",
-      "sms": "MYSMB brief Aug 27, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
-      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~34°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Aug 27: Heavy drizzle, 100% chance of rain. Max ~29°C. Aug 28: Thunderstorms, 100% chance of rain. Max ~29°C. Aug 29: Thunderstorms, 100% chance of rain. Max ~27°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
