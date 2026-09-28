@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-29T03:00:00+08:00",
+  "generated_at": "2026-09-29T03:38:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Sep 30",
-        "summary": "Rain showers, 100% chance of rain. Max ~33°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 1",
-        "summary": "Light drizzle, 80% chance of rain. Max ~32°C."
+        "summary": "Rain showers, 80% chance of rain. Max ~32°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~32°C.",
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
+          "max_mm_hr": 0.5,
           "total_mm": 2
         },
         {
@@ -75,56 +75,56 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
-          "total_mm": 4
+          "max_mm_hr": 2.3,
+          "total_mm": 7
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.6,
-          "total_mm": 4
+          "max_mm_hr": 2.1,
+          "total_mm": 5
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
-          "total_mm": 3
+          "max_mm_hr": 0.2,
+          "total_mm": 1
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.8,
-          "total_mm": 5
+          "max_mm_hr": 0.9,
+          "total_mm": 2
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.1,
-          "total_mm": 8
+          "max_mm_hr": 1.6,
+          "total_mm": 4
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.1,
-          "total_mm": 8
+          "max_mm_hr": 1.6,
+          "total_mm": 4
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 3
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         },
         {
           "name": "Dasmariñas",
@@ -132,39 +132,39 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.5,
-          "total_mm": 6
+          "total_mm": 8
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.8,
-          "total_mm": 6
+          "max_mm_hr": 0.5,
+          "total_mm": 3
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.2,
-          "total_mm": 11
+          "max_mm_hr": 2.1,
+          "total_mm": 6
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.8,
-          "total_mm": 5
+          "max_mm_hr": 0.9,
+          "total_mm": 2
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.6,
-          "total_mm": 9
+          "max_mm_hr": 0.6,
+          "total_mm": 2
         }
       ],
       "elevated": [],
