@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-28T12:00:00+08:00",
+  "generated_at": "2026-09-28T13:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Sep 28",
-        "summary": "Thunderstorms, 91% chance of rain. Max ~33°C."
+        "summary": "Thunderstorms, 90% chance of rain. Max ~33°C."
       },
       {
         "date": "Sep 29",
-        "summary": "Heavy drizzle, 90% chance of rain. Max ~32°C."
+        "summary": "Heavy drizzle, 98% chance of rain. Max ~32°C."
       },
       {
         "date": "Sep 30",
-        "summary": "Thunderstorms, 90% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 91% chance of rain. Max ~32°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~33°C.",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.9 ~191 km from Makati (43 km W of Palauig, Philippines)."
     },
     "dams": [],
     "areas_watch": {
