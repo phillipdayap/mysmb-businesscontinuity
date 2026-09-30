@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-09-30T14:39:00+08:00",
+  "generated_at": "2026-09-30T15:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -20,16 +20,16 @@
       },
       {
         "date": "Oct 1",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~33°C."
+        "summary": "Drizzle, 100% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 2",
-        "summary": "Rain showers, 92% chance of rain. Max ~32°C."
+        "summary": "Drizzle, 92% chance of rain. Max ~33°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": 39,
+      "max_c": 40,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
