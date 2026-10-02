@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-02T23:00:00+08:00",
+  "generated_at": "2026-10-03T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,21 +16,21 @@ window.PBCA_FEED = {
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Oct 2",
-        "summary": "Heavy drizzle, 99% chance of rain. Max ~34°C."
-      },
-      {
         "date": "Oct 3",
-        "summary": "Drizzle, 85% chance of rain. Max ~32°C."
+        "summary": "Drizzle, 100% chance of rain. Max ~32°C."
       },
       {
         "date": "Oct 4",
-        "summary": "Thunderstorms, 80% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 92% chance of rain. Max ~32°C."
+      },
+      {
+        "date": "Oct 5",
+        "summary": "Rain showers, 88% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Heavy drizzle in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~32°C.",
     "heat_index": {
-      "max_c": 39,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,16 +38,16 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 1,
-      "total_mm_today": 3,
+      "max_mm_hr": 0.8,
+      "total_mm_today": 2,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.8 ~168 km from Makati (78 km WSW of San Nicolas, Philippines)."
     },
     "dams": [],
     "areas_watch": {
@@ -59,47 +59,47 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 4
+          "max_mm_hr": 0.4,
+          "total_mm": 2
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
-          "total_mm": 3
+          "max_mm_hr": 0.8,
+          "total_mm": 2
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
-          "level": "Watch",
+          "level": "Low",
           "tier": 1,
-          "max_mm_hr": 7.5,
-          "total_mm": 11
+          "max_mm_hr": 1.8,
+          "total_mm": 3
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 4.5,
-          "total_mm": 12
+          "max_mm_hr": 2.4,
+          "total_mm": 4
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 7
+          "max_mm_hr": 1.9,
+          "total_mm": 4
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.9,
+          "max_mm_hr": 1.4,
           "total_mm": 4
         },
         {
@@ -107,31 +107,31 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5,
-          "total_mm": 13
+          "max_mm_hr": 1.8,
+          "total_mm": 6
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5,
-          "total_mm": 13
+          "max_mm_hr": 1.8,
+          "total_mm": 6
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.2,
-          "total_mm": 5
+          "max_mm_hr": 1.9,
+          "total_mm": 4
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.9,
+          "max_mm_hr": 1,
           "total_mm": 3
         },
         {
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
+          "max_mm_hr": 3,
           "total_mm": 5
         },
         {
@@ -147,15 +147,15 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
-          "total_mm": 4
+          "max_mm_hr": 1.9,
+          "total_mm": 5
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.9,
+          "max_mm_hr": 1.4,
           "total_mm": 4
         },
         {
@@ -163,8 +163,8 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
-          "total_mm": 4
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         }
       ],
       "elevated": [],
