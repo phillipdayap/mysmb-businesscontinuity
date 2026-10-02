@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-02T20:00:00+08:00",
+  "generated_at": "2026-10-02T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 7.5,
-          "total_mm": 12
+          "total_mm": 11
         },
         {
           "name": "Pasig",
@@ -84,7 +84,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4.5,
-          "total_mm": 11
+          "total_mm": 12
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -99,8 +99,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 3
+          "max_mm_hr": 0.9,
+          "total_mm": 4
         },
         {
           "name": "Antipolo",
@@ -123,23 +123,23 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.8,
-          "total_mm": 7
+          "max_mm_hr": 1.2,
+          "total_mm": 5
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.3,
-          "total_mm": 6
+          "max_mm_hr": 0.9,
+          "total_mm": 3
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
+          "max_mm_hr": 1.1,
           "total_mm": 5
         },
         {
@@ -147,7 +147,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.2,
+          "max_mm_hr": 0.7,
           "total_mm": 4
         },
         {
@@ -155,8 +155,8 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 3
+          "max_mm_hr": 0.9,
+          "total_mm": 4
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.1,
-          "total_mm": 3
+          "total_mm": 4
         }
       ],
       "elevated": [],
