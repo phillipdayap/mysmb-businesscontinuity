@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-06T15:00:00+08:00",
+  "generated_at": "2026-10-06T16:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -20,16 +20,16 @@
       },
       {
         "date": "Oct 7",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
       },
       {
         "date": "Oct 8",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~30°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Rain showers in Metro Manila; max ~33°C.",
     "heat_index": {
-      "max_c": 39,
+      "max_c": 38,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -50,12 +50,125 @@
     },
     "dams": [],
     "areas_watch": {
-      "ok": false,
-      "checked": 0,
-      "areas": [],
+      "ok": true,
+      "checked": 14,
+      "areas": [
+        {
+          "name": "Quezon City",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.7,
+          "total_mm": 6
+        },
+        {
+          "name": "Manila",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.7,
+          "total_mm": 5
+        },
+        {
+          "name": "Marikina",
+          "region": "Metro Manila",
+          "level": "Watch",
+          "tier": 1,
+          "max_mm_hr": 8.6,
+          "total_mm": 20
+        },
+        {
+          "name": "Pasig",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 4.6,
+          "total_mm": 12
+        },
+        {
+          "name": "Parañaque / Las Piñas",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.5,
+          "total_mm": 4
+        },
+        {
+          "name": "Caloocan / Valenzuela",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 3.5,
+          "total_mm": 7
+        },
+        {
+          "name": "Antipolo",
+          "region": "Rizal",
+          "level": "Watch",
+          "tier": 1,
+          "max_mm_hr": 8.6,
+          "total_mm": 22
+        },
+        {
+          "name": "Cainta / Taytay",
+          "region": "Rizal",
+          "level": "Watch",
+          "tier": 1,
+          "max_mm_hr": 8.6,
+          "total_mm": 22
+        },
+        {
+          "name": "Bacoor / Imus",
+          "region": "Cavite",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.7,
+          "total_mm": 4
+        },
+        {
+          "name": "Dasmariñas",
+          "region": "Cavite",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.3,
+          "total_mm": 2
+        },
+        {
+          "name": "San Pedro / Biñan",
+          "region": "Laguna",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.9,
+          "total_mm": 6
+        },
+        {
+          "name": "Santa Rosa / Calamba",
+          "region": "Laguna",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 4.1,
+          "total_mm": 7
+        },
+        {
+          "name": "Meycauayan / Marilao",
+          "region": "Bulacan",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 3.5,
+          "total_mm": 7
+        },
+        {
+          "name": "San Jose del Monte",
+          "region": "Bulacan",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 3.5,
+          "total_mm": 10
+        }
+      ],
       "elevated": [],
       "worst_tier": 1,
-      "note": "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed."
+      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
     },
     "sources": [
       {
