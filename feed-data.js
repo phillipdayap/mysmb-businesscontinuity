@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-09T08:00:00+08:00",
+  "generated_at": "2026-10-09T09:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 9",
-        "summary": "Light drizzle, 72% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 72% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 10",
@@ -25,12 +25,12 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 11",
-        "summary": "Thunderstorms with hail, 100% chance of rain. Max ~32°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~32°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
-      "max_c": 38,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.2,
-      "total_mm_today": 1,
+      "max_mm_hr": 0.4,
+      "total_mm_today": 2,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -51,125 +51,12 @@ window.PBCA_FEED = {
     },
     "dams": [],
     "areas_watch": {
-      "ok": true,
-      "checked": 14,
-      "areas": [
-        {
-          "name": "Quezon City",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
-        },
-        {
-          "name": "Manila",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
-        },
-        {
-          "name": "Marikina",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
-        },
-        {
-          "name": "Pasig",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
-        },
-        {
-          "name": "Parañaque / Las Piñas",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 0
-        },
-        {
-          "name": "Caloocan / Valenzuela",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
-        },
-        {
-          "name": "Antipolo",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 0
-        },
-        {
-          "name": "Cainta / Taytay",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 0
-        },
-        {
-          "name": "Bacoor / Imus",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 1
-        },
-        {
-          "name": "Dasmariñas",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 4
-        },
-        {
-          "name": "San Pedro / Biñan",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 1
-        },
-        {
-          "name": "Santa Rosa / Calamba",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 0
-        },
-        {
-          "name": "Meycauayan / Marilao",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
-        },
-        {
-          "name": "San Jose del Monte",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
-        }
-      ],
+      "ok": false,
+      "checked": 0,
+      "areas": [],
       "elevated": [],
       "worst_tier": 1,
-      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
+      "note": "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed."
     },
     "sources": [
       {
