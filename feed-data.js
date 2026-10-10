@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-10T09:00:00+08:00",
+  "generated_at": "2026-10-10T10:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -12,16 +12,36 @@ window.PBCA_FEED = {
     "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": true,
-    "degraded_note": "Automated cloud monitor: forecast unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
-    "outlook_3day": [],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. ",
+    "monitoring_degraded": false,
+    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "outlook_3day": [
+      {
+        "date": "Oct 10",
+        "summary": "Drizzle, 100% chance of rain. Max ~34°C."
+      },
+      {
+        "date": "Oct 11",
+        "summary": "Drizzle, 100% chance of rain. Max ~32°C."
+      },
+      {
+        "date": "Oct 12",
+        "summary": "Thunderstorms, 100% chance of rain. Max ~32°C."
+      }
+    ],
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": null,
-      "category": "Not available",
-      "note": "Forecast source unreachable this run."
+      "max_c": 38,
+      "category": "Extreme Caution",
+      "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
-    "flood_risk": null,
+    "flood_risk": {
+      "level": "Low",
+      "category": "No heavy rain forecast",
+      "tier": 1,
+      "max_mm_hr": 0.7,
+      "total_mm_today": 4,
+      "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
+    },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
@@ -31,12 +51,125 @@ window.PBCA_FEED = {
     },
     "dams": [],
     "areas_watch": {
-      "ok": false,
-      "checked": 0,
-      "areas": [],
+      "ok": true,
+      "checked": 14,
+      "areas": [
+        {
+          "name": "Quezon City",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.6,
+          "total_mm": 3
+        },
+        {
+          "name": "Manila",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.7,
+          "total_mm": 4
+        },
+        {
+          "name": "Marikina",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.2,
+          "total_mm": 5
+        },
+        {
+          "name": "Pasig",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.4,
+          "total_mm": 5
+        },
+        {
+          "name": "Parañaque / Las Piñas",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.2,
+          "total_mm": 3
+        },
+        {
+          "name": "Caloocan / Valenzuela",
+          "region": "Metro Manila",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.2,
+          "total_mm": 1
+        },
+        {
+          "name": "Antipolo",
+          "region": "Rizal",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 2.2,
+          "total_mm": 6
+        },
+        {
+          "name": "Cainta / Taytay",
+          "region": "Rizal",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 2.2,
+          "total_mm": 6
+        },
+        {
+          "name": "Bacoor / Imus",
+          "region": "Cavite",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.1,
+          "total_mm": 3
+        },
+        {
+          "name": "Dasmariñas",
+          "region": "Cavite",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 1.2,
+          "total_mm": 5
+        },
+        {
+          "name": "San Pedro / Biñan",
+          "region": "Laguna",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 2,
+          "total_mm": 6
+        },
+        {
+          "name": "Santa Rosa / Calamba",
+          "region": "Laguna",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 2.1,
+          "total_mm": 6
+        },
+        {
+          "name": "Meycauayan / Marilao",
+          "region": "Bulacan",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.2,
+          "total_mm": 1
+        },
+        {
+          "name": "San Jose del Monte",
+          "region": "Bulacan",
+          "level": "Low",
+          "tier": 1,
+          "max_mm_hr": 0.2,
+          "total_mm": 1
+        }
+      ],
       "elevated": [],
       "worst_tier": 1,
-      "note": "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed."
+      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
     },
     "sources": [
       {
