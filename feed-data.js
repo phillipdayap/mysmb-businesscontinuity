@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-14T03:00:00+08:00",
+  "generated_at": "2026-10-14T04:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 15",
-        "summary": "Heavy drizzle, 84% chance of rain. Max ~34°C."
+        "summary": "Heavy drizzle, 84% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 16",
@@ -92,7 +92,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.1,
-          "total_mm": 3
+          "total_mm": 4
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.9,
-          "total_mm": 3
+          "total_mm": 4
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.9,
-          "total_mm": 3
+          "total_mm": 4
         },
         {
           "name": "Bacoor / Imus",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.7,
-          "total_mm": 1
+          "total_mm": 2
         }
       ],
       "elevated": [],
