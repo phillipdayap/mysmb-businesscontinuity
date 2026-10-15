@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-15T20:00:00+08:00",
+  "generated_at": "2026-10-15T20:50:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 15",
-        "summary": "Drizzle, 63% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 63% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 16",
-        "summary": "Cloudy, 82% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 82% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 17",
-        "summary": "Drizzle, 84% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 84% chance of rain. Max ~35°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~35°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~35°C.",
     "heat_index": {
       "max_c": 38,
       "category": "Extreme Caution",
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.6,
-      "total_mm_today": 2,
+      "max_mm_hr": 0.2,
+      "total_mm_today": 1,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
+          "max_mm_hr": 0.8,
           "total_mm": 2
         },
         {
@@ -67,16 +67,16 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 2
+          "max_mm_hr": 0.2,
+          "total_mm": 1
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 1
+          "max_mm_hr": 0.6,
+          "total_mm": 2
         },
         {
           "name": "Pasig",
@@ -91,8 +91,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
+          "max_mm_hr": 0,
+          "total_mm": 0
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -123,15 +123,15 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
+          "max_mm_hr": 0.1,
+          "total_mm": 0
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -140,14 +140,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.1,
-          "total_mm": 0
+          "total_mm": 1
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -163,7 +163,7 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         }
       ],
