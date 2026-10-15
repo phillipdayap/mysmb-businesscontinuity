@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-15T22:00:00+08:00",
+  "generated_at": "2026-10-15T23:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 15",
-        "summary": "Light drizzle, 63% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 47% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 16",
-        "summary": "Light drizzle, 82% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 86% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 17",
-        "summary": "Light drizzle, 84% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 78% chance of rain. Max ~34°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~35°C.",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 2
+          "total_mm": 1
         },
         {
           "name": "Pasig",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.4,
-          "total_mm": 2
+          "total_mm": 1
         },
         {
           "name": "Antipolo",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.2,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.2,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Bacoor / Imus",
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.1,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.4,
-          "total_mm": 2
+          "total_mm": 1
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.3,
-          "total_mm": 1
+          "total_mm": 0
         }
       ],
       "elevated": [],
