@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-19T20:00:00+08:00",
+  "generated_at": "2026-10-19T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 20",
-        "summary": "Rain showers, 97% chance of rain. Max ~35°C."
+        "summary": "Drizzle, 97% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 21",
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 0.8,
-      "total_mm_today": 3,
+      "total_mm_today": 2,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.8,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "Marikina",
