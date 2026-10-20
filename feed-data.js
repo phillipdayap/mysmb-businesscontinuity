@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-20T15:00:00+08:00",
+  "generated_at": "2026-10-20T16:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -25,7 +25,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 22",
-        "summary": "Light drizzle, 60% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 60% chance of rain. Max ~33°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Heavy drizzle in Metro Manila; max ~35°C.",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.9,
-          "total_mm": 4
+          "total_mm": 3
         },
         {
           "name": "Pasig",
@@ -84,7 +84,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.5,
-          "total_mm": 5
+          "total_mm": 4
         },
         {
           "name": "Parañaque / Las Piñas",
