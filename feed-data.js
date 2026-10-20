@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-20T11:00:00+08:00",
+  "generated_at": "2026-10-20T12:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 20",
-        "summary": "Light drizzle, 99% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 93% chance of rain. Max ~35°C."
       },
       {
         "date": "Oct 21",
@@ -25,7 +25,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 22",
-        "summary": "Light drizzle, 55% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 60% chance of rain. Max ~34°C."
       }
     ],
     "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~35°C.",
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-10-20-digest",
+      "type": "digest",
+      "tier": 2,
+      "tier_label": "PREPARE",
+      "timestamp": "2026-10-20T12:00:00+08:00",
+      "title": "PH hazard brief — Oct 20, 2026 — PREPARE",
+      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
+      "sms": "MYSMB brief Oct 20, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
+      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~39°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Oct 20: Light drizzle, 93% chance of rain. Max ~35°C. Oct 21: Drizzle, 57% chance of rain. Max ~33°C. Oct 22: Light drizzle, 60% chance of rain. Max ~34°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-10-19-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "Makati: No action needed today. Normal operations.",
       "sms": "MYSMB brief Sep 21, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
       "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~36°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 21: Thunderstorms, 100% chance of rain. Max ~30°C. Sep 22: Rain showers, 98% chance of rain. Max ~30°C. Sep 23: Thunderstorms, 97% chance of rain. Max ~30°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-20-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-09-20T12:00:00+08:00",
-      "title": "PH hazard brief — Sep 20, 2026 — No action",
-      "bottom_line": "Makati: No action needed today. Normal operations.",
-      "sms": "MYSMB brief Sep 20, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
-      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~37°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 20: Heavy drizzle, 67% chance of rain. Max ~31°C. Sep 21: Rain showers, 100% chance of rain. Max ~30°C. Sep 22: Drizzle, 99% chance of rain. Max ~30°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
