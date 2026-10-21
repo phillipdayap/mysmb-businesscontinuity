@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-21T16:00:00+08:00",
+  "generated_at": "2026-10-21T17:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 2,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.4,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Santa Rosa / Calamba",
