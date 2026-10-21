@@ -3,31 +3,51 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-21T10:00:00+08:00",
+  "generated_at": "2026-10-21T11:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
     "action_needed": true,
     "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
     "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
-    "confidence": "LOW",
+    "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": true,
-    "degraded_note": "Automated cloud monitor: USGS, forecast unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
-    "outlook_3day": [],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. ",
+    "monitoring_degraded": false,
+    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "outlook_3day": [
+      {
+        "date": "Oct 21",
+        "summary": "Thunderstorms, 76% chance of rain. Max ~33°C."
+      },
+      {
+        "date": "Oct 22",
+        "summary": "Heavy drizzle, 61% chance of rain. Max ~33°C."
+      },
+      {
+        "date": "Oct 23",
+        "summary": "Light drizzle, 44% chance of rain. Max ~33°C."
+      }
+    ],
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Thunderstorms in Metro Manila; max ~33°C.",
     "heat_index": {
-      "max_c": null,
-      "category": "Not available",
-      "note": "Forecast source unreachable this run."
+      "max_c": 39,
+      "category": "Extreme Caution",
+      "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
-    "flood_risk": null,
+    "flood_risk": {
+      "level": "Low",
+      "category": "No heavy rain forecast",
+      "tier": 1,
+      "max_mm_hr": 2.4,
+      "total_mm_today": 5,
+      "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
+    },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "USGS feed unreachable this run."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
