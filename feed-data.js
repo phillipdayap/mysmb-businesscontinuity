@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-21T14:00:00+08:00",
+  "generated_at": "2026-10-21T15:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 22",
-        "summary": "Heavy drizzle, 61% chance of rain. Max ~33°C."
+        "summary": "Heavy drizzle, 61% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 23",
@@ -45,131 +45,18 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "areas_watch": {
-      "ok": true,
-      "checked": 14,
-      "areas": [
-        {
-          "name": "Quezon City",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 3.4,
-          "total_mm": 8
-        },
-        {
-          "name": "Manila",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.4,
-          "total_mm": 5
-        },
-        {
-          "name": "Marikina",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.8,
-          "total_mm": 5
-        },
-        {
-          "name": "Pasig",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 4
-        },
-        {
-          "name": "Parañaque / Las Piñas",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.9,
-          "total_mm": 3
-        },
-        {
-          "name": "Caloocan / Valenzuela",
-          "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.8,
-          "total_mm": 6
-        },
-        {
-          "name": "Antipolo",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.9,
-          "total_mm": 3
-        },
-        {
-          "name": "Cainta / Taytay",
-          "region": "Rizal",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.9,
-          "total_mm": 3
-        },
-        {
-          "name": "Bacoor / Imus",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 1
-        },
-        {
-          "name": "Dasmariñas",
-          "region": "Cavite",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.7,
-          "total_mm": 2
-        },
-        {
-          "name": "San Pedro / Biñan",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 4
-        },
-        {
-          "name": "Santa Rosa / Calamba",
-          "region": "Laguna",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 2
-        },
-        {
-          "name": "Meycauayan / Marilao",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 2.8,
-          "total_mm": 6
-        },
-        {
-          "name": "San Jose del Monte",
-          "region": "Bulacan",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 1.1,
-          "total_mm": 4
-        }
-      ],
+      "ok": false,
+      "checked": 0,
+      "areas": [],
       "elevated": [],
       "worst_tier": 1,
-      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
+      "note": "Staff/commute area check unavailable this run — confirm on NOAH/PAGASA if needed."
     },
     "sources": [
       {
