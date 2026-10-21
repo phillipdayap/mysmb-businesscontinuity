@@ -2,17 +2,17 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-21T18:00:00+08:00",
+  "generated_at": "2026-10-21T19:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
     "action_needed": true,
     "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
     "headline": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin.",
-    "confidence": "MEDIUM",
+    "confidence": "LOW",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: USGS unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
     "outlook_3day": [
       {
         "date": "Oct 21",
@@ -44,9 +44,9 @@
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "USGS feed unreachable this run."
     },
     "dams": [],
     "areas_watch": {
