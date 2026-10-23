@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-23T09:00:00+08:00",
+  "generated_at": "2026-10-23T09:26:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 23",
-        "summary": "Light drizzle, 29% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 29% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 24",
-        "summary": "Light drizzle, 69% chance of rain. Max ~31°C."
+        "summary": "Light drizzle, 69% chance of rain. Max ~32°C."
       },
       {
         "date": "Oct 25",
         "summary": "Drizzle, 22% chance of rain. Max ~32°C."
       }
     ],
-    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~32°C.",
+    "weather": "An active tropical cyclone appears in the PAGASA bulletin — check the official bulletin for wind signal levels over Metro Manila. Light drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 35,
       "category": "Extreme Caution",
@@ -92,7 +92,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.2,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Caloocan / Valenzuela",
