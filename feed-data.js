@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-25T11:00:00+08:00",
+  "generated_at": "2026-10-25T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,15 +17,15 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 25",
-        "summary": "Light drizzle, 30% chance of rain. Max ~32°C."
+        "summary": "Light drizzle, 14% chance of rain. Max ~32°C."
       },
       {
         "date": "Oct 26",
-        "summary": "Heavy drizzle, 82% chance of rain. Max ~34°C."
+        "summary": "Heavy drizzle, 88% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 27",
-        "summary": "Drizzle, 94% chance of rain. Max ~35°C."
+        "summary": "Drizzle, 91% chance of rain. Max ~35°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~32°C.",
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-10-25-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-10-25T12:00:00+08:00",
+      "title": "PH hazard brief — Oct 25, 2026 — No action",
+      "bottom_line": "Makati: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Oct 25, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~35°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Oct 25: Light drizzle, 14% chance of rain. Max ~32°C. Oct 26: Heavy drizzle, 88% chance of rain. Max ~34°C. Oct 27: Drizzle, 91% chance of rain. Max ~35°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-10-24-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
       "sms": "MYSMB brief Sep 26, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
       "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~36°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 26: Light drizzle, 33% chance of rain. Max ~32°C. Sep 27: Light drizzle, 57% chance of rain. Max ~33°C. Sep 28: Light drizzle, 64% chance of rain. Max ~32°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-25-digest",
-      "type": "digest",
-      "tier": 2,
-      "tier_label": "PREPARE",
-      "timestamp": "2026-09-25T12:00:00+08:00",
-      "title": "PH hazard brief — Sep 25, 2026 — PREPARE",
-      "bottom_line": "Makati: No action needed yet — review contingencies and watch the next bulletin.",
-      "sms": "MYSMB brief Sep 25, 2026: Makati: No action needed yet — review contingencies and watch the next bulletin. 3-day + heat index in the app.",
-      "body": "Active tropical cyclone in PAR — confirm wind signal over Metro Manila on the official bulletin. Heat index today ~38°C (Extreme Caution). Staff/commute areas: all clear. Seismic: No M4.0+ earthquakes in the PH region in the last 24h. 3-day outlook — Sep 25: Thunderstorms, 80% chance of rain. Max ~32°C. Sep 26: Drizzle, 33% chance of rain. Max ~31°C. Sep 27: Drizzle, 63% chance of rain. Max ~32°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
