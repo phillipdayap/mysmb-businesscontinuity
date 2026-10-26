@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-26T20:00:00+08:00",
+  "generated_at": "2026-10-26T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 26",
-        "summary": "Rain showers, 92% chance of rain. Max ~34°C."
+        "summary": "Heavy drizzle, 92% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 27",
@@ -28,7 +28,7 @@ window.PBCA_FEED = {
         "summary": "Light drizzle, 92% chance of rain. Max ~33°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Rain showers in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Heavy drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
       "max_c": 38,
       "category": "Extreme Caution",
@@ -38,7 +38,7 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 1.7,
+      "max_mm_hr": 1.2,
       "total_mm_today": 2,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
@@ -59,15 +59,15 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
-          "total_mm": 3
+          "max_mm_hr": 1.2,
+          "total_mm": 2
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
+          "max_mm_hr": 1.2,
           "total_mm": 2
         },
         {
@@ -75,15 +75,15 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 1
+          "max_mm_hr": 0.7,
+          "total_mm": 2
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.3,
+          "max_mm_hr": 0.8,
           "total_mm": 2
         },
         {
@@ -91,23 +91,23 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.5,
-          "total_mm": 2
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.6,
-          "total_mm": 4
+          "max_mm_hr": 1.3,
+          "total_mm": 1
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         },
         {
@@ -123,8 +123,8 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 1
+          "max_mm_hr": 0.9,
+          "total_mm": 2
         },
         {
           "name": "Dasmariñas",
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -148,15 +148,15 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.1,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.6,
-          "total_mm": 4
+          "max_mm_hr": 1.3,
+          "total_mm": 1
         },
         {
           "name": "San Jose del Monte",
