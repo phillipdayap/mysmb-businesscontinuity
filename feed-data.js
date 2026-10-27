@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-27T20:00:00+08:00",
+  "generated_at": "2026-10-27T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 28",
-        "summary": "Light drizzle, 50% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 50% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 29",
-        "summary": "Rain showers, 97% chance of rain. Max ~33°C."
+        "summary": "Light drizzle, 97% chance of rain. Max ~33°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~35°C.",
@@ -39,7 +39,7 @@ window.PBCA_FEED = {
       "category": "No heavy rain forecast",
       "tier": 1,
       "max_mm_hr": 0.9,
-      "total_mm_today": 2,
+      "total_mm_today": 3,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.9,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Marikina",
@@ -84,7 +84,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.9,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -107,7 +107,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
