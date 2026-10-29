@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-29T07:59:00+08:00",
+  "generated_at": "2026-10-29T08:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 29",
-        "summary": "Light drizzle, 94% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 78% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 30",
@@ -25,7 +25,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 31",
-        "summary": "Heavy drizzle, 92% chance of rain. Max ~34°C."
+        "summary": "Heavy drizzle, 94% chance of rain. Max ~34°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
