@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-29T15:00:00+08:00",
+  "generated_at": "2026-10-29T16:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,20 +17,20 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 29",
-        "summary": "Light drizzle, 90% chance of rain. Max ~34°C."
+        "summary": "Drizzle, 90% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 30",
-        "summary": "Light drizzle, 100% chance of rain. Max ~34°C."
+        "summary": "Rain showers, 100% chance of rain. Max ~33°C."
       },
       {
         "date": "Oct 31",
-        "summary": "Drizzle, 99% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 99% chance of rain. Max ~33°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": 38,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,16 +38,16 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.4,
-      "total_mm_today": 3,
+      "max_mm_hr": 0.9,
+      "total_mm_today": 5,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 4,
+      "count": 5,
       "ncr_relevant": false,
-      "note": "4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "5 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
@@ -59,23 +59,23 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 3
+          "max_mm_hr": 1.5,
+          "total_mm": 6
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 3
+          "max_mm_hr": 0.9,
+          "total_mm": 5
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.9,
+          "max_mm_hr": 0.8,
           "total_mm": 3
         },
         {
@@ -83,16 +83,16 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 1
+          "max_mm_hr": 0.7,
+          "total_mm": 4
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.7,
-          "total_mm": 3
+          "max_mm_hr": 2.4,
+          "total_mm": 6
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -100,39 +100,39 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
+          "max_mm_hr": 0.5,
+          "total_mm": 1
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
+          "max_mm_hr": 0.5,
+          "total_mm": 1
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 2
+          "max_mm_hr": 1.2,
+          "total_mm": 4
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.9,
-          "total_mm": 3
+          "max_mm_hr": 0.7,
+          "total_mm": 2
         },
         {
           "name": "San Pedro / Biñan",
@@ -140,14 +140,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.9,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
+          "max_mm_hr": 1.3,
           "total_mm": 5
         },
         {
@@ -156,14 +156,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 2
+          "total_mm": 3
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0.4,
           "total_mm": 1
         }
       ],
