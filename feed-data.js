@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-10-29T11:00:00+08:00",
+  "generated_at": "2026-10-29T12:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Oct 29",
-        "summary": "Light drizzle, 78% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 90% chance of rain. Max ~34°C."
       },
       {
         "date": "Oct 30",
@@ -25,7 +25,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Oct 31",
-        "summary": "Drizzle, 94% chance of rain. Max ~35°C."
+        "summary": "Drizzle, 99% chance of rain. Max ~35°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
@@ -45,9 +45,9 @@ window.PBCA_FEED = {
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 2,
+      "count": 4,
       "ncr_relevant": false,
-      "note": "2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
@@ -195,6 +195,23 @@ window.PBCA_FEED = {
     ]
   },
   "notifications": [
+    {
+      "id": "2026-10-29-digest",
+      "type": "digest",
+      "tier": 1,
+      "tier_label": "MONITOR",
+      "timestamp": "2026-10-29T12:00:00+08:00",
+      "title": "PH hazard brief — Oct 29, 2026 — No action",
+      "bottom_line": "Makati: No action needed today. Normal operations.",
+      "sms": "MYSMB brief Oct 29, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
+      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~38°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 4 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Oct 29: Light drizzle, 90% chance of rain. Max ~34°C. Oct 30: Light drizzle, 100% chance of rain. Max ~34°C. Oct 31: Drizzle, 99% chance of rain. Max ~35°C.",
+      "sources": [
+        {
+          "label": "PAGASA — Tropical Cyclone Bulletin",
+          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+        }
+      ]
+    },
     {
       "id": "2026-10-28-digest",
       "type": "digest",
@@ -681,23 +698,6 @@ window.PBCA_FEED = {
       "bottom_line": "Makati: No action needed today. Normal operations.",
       "sms": "MYSMB brief Sep 30, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
       "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~39°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 3 M4.0+ event(s) in the PH region (last 24h); nearest of note M4.8 ~173 km from Makati (18 km SW of Tayaman, Philippines). 3-day outlook — Sep 30: Thunderstorms, 100% chance of rain. Max ~34°C. Oct 1: Thunderstorms, 100% chance of rain. Max ~33°C. Oct 2: Rain showers, 92% chance of rain. Max ~32°C.",
-      "sources": [
-        {
-          "label": "PAGASA — Tropical Cyclone Bulletin",
-          "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-29-digest",
-      "type": "digest",
-      "tier": 1,
-      "tier_label": "MONITOR",
-      "timestamp": "2026-09-29T12:00:00+08:00",
-      "title": "PH hazard brief — Sep 29, 2026 — No action",
-      "bottom_line": "Makati: No action needed today. Normal operations.",
-      "sms": "MYSMB brief Sep 29, 2026: Makati: No action needed today. Normal operations. 3-day + heat index in the app.",
-      "body": "Calm — no active cyclone, no NCR quakes. Heat index today ~37°C (Extreme Caution). Staff/commute areas: all clear. Seismic: 2 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila. 3-day outlook — Sep 29: Drizzle, 88% chance of rain. Max ~32°C. Sep 30: Heavy drizzle, 98% chance of rain. Max ~33°C. Oct 1: Thunderstorms, 90% chance of rain. Max ~32°C.",
       "sources": [
         {
           "label": "PAGASA — Tropical Cyclone Bulletin",
