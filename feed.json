@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-03T03:00:00+08:00",
+  "generated_at": "2026-11-03T04:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,20 +16,20 @@
     "outlook_3day": [
       {
         "date": "Nov 3",
-        "summary": "Drizzle, 86% chance of rain. Max ~35°C."
+        "summary": "Heavy drizzle, 86% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 4",
-        "summary": "Light drizzle, 69% chance of rain. Max ~34°C."
+        "summary": "Rain showers, 69% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 5",
         "summary": "Partly cloudy, 2% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~35°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Heavy drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": 38,
+      "max_c": 37,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -37,8 +37,8 @@
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.7,
-      "total_mm_today": 3,
+      "max_mm_hr": 1.2,
+      "total_mm_today": 4,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
