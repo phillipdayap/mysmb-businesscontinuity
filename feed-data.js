@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-02T20:00:00+08:00",
+  "generated_at": "2026-11-02T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 3",
-        "summary": "Light drizzle, 57% chance of rain. Max ~35°C."
+        "summary": "Drizzle, 57% chance of rain. Max ~35°C."
       },
       {
         "date": "Nov 4",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.5,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "Antipolo",
@@ -108,7 +108,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 1
+          "total_mm": 2
         },
         {
           "name": "Cainta / Taytay",
@@ -116,7 +116,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 1
+          "total_mm": 2
         },
         {
           "name": "Bacoor / Imus",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.5,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "San Jose del Monte",
