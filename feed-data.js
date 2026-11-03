@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-03T14:00:00+08:00",
+  "generated_at": "2026-11-03T15:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.9,
-          "total_mm": 6
+          "total_mm": 7
         },
         {
           "name": "Manila",
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.1,
-          "total_mm": 3
+          "total_mm": 6
         },
         {
           "name": "Marikina",
@@ -84,15 +84,15 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.5,
-          "total_mm": 3
+          "total_mm": 4
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.5,
-          "total_mm": 2
+          "max_mm_hr": 0.9,
+          "total_mm": 4
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -100,14 +100,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.3,
-          "total_mm": 6
+          "total_mm": 7
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         },
         {
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.9,
-          "total_mm": 4
+          "total_mm": 5
         },
         {
           "name": "Dasmariñas",
@@ -132,7 +132,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 3
+          "total_mm": 2
         },
         {
           "name": "San Pedro / Biñan",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.3,
-          "total_mm": 6
+          "total_mm": 7
         },
         {
           "name": "San Jose del Monte",
