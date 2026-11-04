@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-04T15:00:00+08:00",
+  "generated_at": "2026-11-04T16:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 4",
-        "summary": "Drizzle, 25% chance of rain. Max ~35°C."
+        "summary": "Drizzle, 25% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 5",
@@ -25,12 +25,12 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 6",
-        "summary": "Cloudy, 7% chance of rain. Max ~35°C."
+        "summary": "Mainly clear, 7% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~35°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": 37,
+      "max_c": 36,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,16 +38,16 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.5,
-      "total_mm_today": 1,
+      "max_mm_hr": 0.8,
+      "total_mm_today": 2,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
