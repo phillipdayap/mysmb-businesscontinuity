@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-06T08:00:00+08:00",
+  "generated_at": "2026-11-06T09:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 6",
-        "summary": "Partly cloudy, 2% chance of rain. Max ~35°C."
+        "summary": "Mainly clear, 2% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 7",
@@ -28,7 +28,7 @@ window.PBCA_FEED = {
         "summary": "Light drizzle, 61% chance of rain. Max ~33°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Partly cloudy in Metro Manila; max ~35°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Mainly clear in Metro Manila; max ~34°C.",
     "heat_index": {
       "max_c": 35,
       "category": "Extreme Caution",
