@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-09T14:01:00+08:00",
+  "generated_at": "2026-11-09T15:00:00+08:00",
   "current": {
     "tier": 2,
     "tier_label": "PREPARE",
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
+          "max_mm_hr": 0.8,
           "total_mm": 2
         },
         {
@@ -68,31 +68,31 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.6,
-          "total_mm": 1
+          "total_mm": 2
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.1,
-          "total_mm": 2
+          "max_mm_hr": 0.6,
+          "total_mm": 1
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 2
+          "max_mm_hr": 0.5,
+          "total_mm": 1
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 1
+          "max_mm_hr": 0.6,
+          "total_mm": 2
         },
         {
           "name": "Caloocan / Valenzuela",
@@ -107,7 +107,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.5,
+          "max_mm_hr": 0.1,
           "total_mm": 1
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.5,
+          "max_mm_hr": 0.1,
           "total_mm": 1
         },
         {
@@ -123,15 +123,15 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 1
+          "max_mm_hr": 0.9,
+          "total_mm": 3
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         },
         {
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.1,
           "total_mm": 1
         },
         {
@@ -147,8 +147,8 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 2
+          "max_mm_hr": 0.2,
+          "total_mm": 1
         },
         {
           "name": "Meycauayan / Marilao",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.1,
-          "total_mm": 1
+          "total_mm": 2
         }
       ],
       "elevated": [],
