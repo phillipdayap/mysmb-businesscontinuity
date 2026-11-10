@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-10T14:00:00+08:00",
+  "generated_at": "2026-11-10T15:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -75,7 +75,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -91,7 +91,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -131,7 +131,7 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0.6,
           "total_mm": 1
         },
         {
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0.6,
           "total_mm": 1
         },
         {
@@ -147,8 +147,8 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 3
+          "max_mm_hr": 0.4,
+          "total_mm": 2
         },
         {
           "name": "Meycauayan / Marilao",
