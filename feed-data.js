@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-11T21:00:00+08:00",
+  "generated_at": "2026-11-11T22:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -25,12 +25,12 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 13",
-        "summary": "Mainly clear, 10% chance of rain. Max ~34°C."
+        "summary": "Mainly clear, 10% chance of rain. Max ~35°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
-      "max_c": 36,
+      "max_c": 35,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.7,
-      "total_mm_today": 2,
+      "max_mm_hr": 0.9,
+      "total_mm_today": 3,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
