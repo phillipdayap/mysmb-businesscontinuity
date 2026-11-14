@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-14T09:00:00+08:00",
+  "generated_at": "2026-11-14T10:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 15",
-        "summary": "Cloudy, 4% chance of rain. Max ~34°C."
+        "summary": "Partly cloudy, 4% chance of rain. Max ~33°C."
       },
       {
         "date": "Nov 16",
@@ -38,8 +38,8 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.3,
-      "total_mm_today": 1,
+      "max_mm_hr": 0.2,
+      "total_mm_today": 0,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
@@ -59,39 +59,39 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
-          "total_mm": 1
+          "max_mm_hr": 1,
+          "total_mm": 2
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
-          "total_mm": 1
+          "max_mm_hr": 0.2,
+          "total_mm": 0
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
-          "total_mm": 1
+          "max_mm_hr": 0.1,
+          "total_mm": 0
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 1
+          "max_mm_hr": 0.2,
+          "total_mm": 0
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -99,7 +99,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         },
         {
@@ -107,7 +107,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
+          "max_mm_hr": 1.2,
           "total_mm": 2
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.7,
+          "max_mm_hr": 1.2,
           "total_mm": 2
         },
         {
@@ -123,7 +123,7 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -131,7 +131,7 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -147,15 +147,15 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.6,
-          "total_mm": 5
+          "max_mm_hr": 0.4,
+          "total_mm": 1
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.4,
+          "max_mm_hr": 0.3,
           "total_mm": 1
         },
         {
@@ -163,7 +163,7 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         }
       ],
