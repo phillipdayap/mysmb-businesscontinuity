@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-15T20:00:00+08:00",
+  "generated_at": "2026-11-15T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,7 +16,7 @@
     "outlook_3day": [
       {
         "date": "Nov 15",
-        "summary": "Cloudy, 4% chance of rain. Max ~32°C."
+        "summary": "Cloudy, 4% chance of rain. Max ~33°C."
       },
       {
         "date": "Nov 16",
@@ -24,10 +24,10 @@
       },
       {
         "date": "Nov 17",
-        "summary": "Cloudy, 2% chance of rain. Max ~34°C."
+        "summary": "Fog, 2% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~32°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -75,7 +75,7 @@
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.2,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Pasig",
