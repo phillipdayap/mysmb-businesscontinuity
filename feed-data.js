@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-16T09:00:00+08:00",
+  "generated_at": "2026-11-16T09:57:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 16",
-        "summary": "Cloudy, 4% chance of rain. Max ~34°C."
+        "summary": "Cloudy, 4% chance of rain. Max ~33°C."
       },
       {
         "date": "Nov 17",
-        "summary": "Cloudy, 2% chance of rain. Max ~33°C."
+        "summary": "Cloudy, 2% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 18",
         "summary": "Light drizzle, 63% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -75,7 +75,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -83,7 +83,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -91,7 +91,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -99,7 +99,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -123,7 +123,7 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.3,
           "total_mm": 0
         },
         {
@@ -155,7 +155,7 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
