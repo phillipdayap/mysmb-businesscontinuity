@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-16T23:00:00+08:00",
+  "generated_at": "2026-11-17T24:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -16,19 +16,19 @@ window.PBCA_FEED = {
     "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
     "outlook_3day": [
       {
-        "date": "Nov 16",
-        "summary": "Cloudy, 2% chance of rain. Max ~33°C."
-      },
-      {
         "date": "Nov 17",
-        "summary": "Light drizzle, 4% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 2% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 18",
-        "summary": "Rain showers, 93% chance of rain. Max ~34°C."
+        "summary": "Rain showers, 84% chance of rain. Max ~34°C."
+      },
+      {
+        "date": "Nov 19",
+        "summary": "Drizzle, 61% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~33°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -38,7 +38,7 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0,
+      "max_mm_hr": 0.1,
       "total_mm_today": 0,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
@@ -59,15 +59,15 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
-          "total_mm": 0
+          "max_mm_hr": 0.4,
+          "total_mm": 1
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.1,
           "total_mm": 0
         },
         {
@@ -75,15 +75,15 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
-          "total_mm": 0
+          "max_mm_hr": 0.8,
+          "total_mm": 1
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -91,7 +91,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -99,7 +99,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -107,7 +107,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -115,7 +115,7 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -123,7 +123,7 @@ window.PBCA_FEED = {
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -155,7 +155,7 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         },
         {
@@ -163,8 +163,8 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
+          "max_mm_hr": 0.5,
+          "total_mm": 1
         }
       ],
       "elevated": [],
