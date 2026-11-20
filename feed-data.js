@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-20T15:00:00+08:00",
+  "generated_at": "2026-11-20T16:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,30 +17,30 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 20",
-        "summary": "Thunderstorms, 100% chance of rain. Max ~30°C."
+        "summary": "Thunderstorms, 100% chance of rain. Max ~28°C."
       },
       {
         "date": "Nov 21",
-        "summary": "Heavy drizzle, 75% chance of rain. Max ~31°C."
+        "summary": "Drizzle, 75% chance of rain. Max ~31°C."
       },
       {
         "date": "Nov 22",
-        "summary": "Drizzle, 80% chance of rain. Max ~32°C."
+        "summary": "Drizzle, 80% chance of rain. Max ~31°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~30°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Thunderstorms in Metro Manila; max ~28°C.",
     "heat_index": {
-      "max_c": 35,
-      "category": "Extreme Caution",
+      "max_c": 32,
+      "category": "Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
     "flood_risk": {
       "level": "Watch",
       "category": "Heavy (Yellow-equivalent)",
       "tier": 1,
-      "max_mm_hr": 8,
-      "total_mm_today": 15,
-      "note": "Forecast peak ~8 mm/h, ~15 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
+      "max_mm_hr": 11.9,
+      "total_mm_today": 26,
+      "note": "Forecast peak ~11.9 mm/h, ~26 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
     },
     "flood_official": null,
     "volcanoes": [],
@@ -57,49 +57,49 @@ window.PBCA_FEED = {
         {
           "name": "Quezon City",
           "region": "Metro Manila",
-          "level": "Low",
-          "tier": 1,
-          "max_mm_hr": 7.3,
-          "total_mm": 16
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.3,
+          "total_mm": 29
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 8,
-          "total_mm": 15
+          "max_mm_hr": 11.9,
+          "total_mm": 26
         },
         {
           "name": "Marikina",
           "region": "Metro Manila",
           "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 10.4,
-          "total_mm": 19
+          "max_mm_hr": 11.2,
+          "total_mm": 34
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
-          "level": "Low",
+          "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 3.3,
-          "total_mm": 8
+          "max_mm_hr": 13.3,
+          "total_mm": 26
         },
         {
           "name": "Parañaque / Las Piñas",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
-          "total_mm": 3
+          "max_mm_hr": 4.8,
+          "total_mm": 10
         },
         {
           "name": "Caloocan / Valenzuela",
           "region": "Metro Manila",
           "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 8,
+          "max_mm_hr": 8.5,
           "total_mm": 18
         },
         {
@@ -107,69 +107,78 @@ window.PBCA_FEED = {
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 4
+          "max_mm_hr": 5.6,
+          "total_mm": 18
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 2.1,
-          "total_mm": 4
+          "max_mm_hr": 5.6,
+          "total_mm": 18
         },
         {
           "name": "Bacoor / Imus",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.5,
-          "total_mm": 4
+          "max_mm_hr": 4.6,
+          "total_mm": 10
         },
         {
           "name": "Dasmariñas",
           "region": "Cavite",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 3.9,
-          "total_mm": 9
+          "max_mm_hr": 2.8,
+          "total_mm": 10
         },
         {
           "name": "San Pedro / Biñan",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.6,
-          "total_mm": 2
+          "max_mm_hr": 2.3,
+          "total_mm": 10
         },
         {
           "name": "Santa Rosa / Calamba",
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 4
+          "max_mm_hr": 5.2,
+          "total_mm": 15
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Watch",
           "tier": 1,
-          "max_mm_hr": 8,
+          "max_mm_hr": 8.5,
           "total_mm": 18
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
-          "level": "Watch",
+          "level": "Low",
           "tier": 1,
-          "max_mm_hr": 9.7,
-          "total_mm": 26
+          "max_mm_hr": 4,
+          "total_mm": 19
         }
       ],
-      "elevated": [],
-      "worst_tier": 1,
-      "note": "All 14 watched staff/commute areas show low flood risk (Open-Meteo forecast)."
+      "elevated": [
+        {
+          "name": "Quezon City",
+          "region": "Metro Manila",
+          "level": "Elevated",
+          "tier": 2,
+          "max_mm_hr": 16.3,
+          "total_mm": 29
+        }
+      ],
+      "worst_tier": 2,
+      "note": "1 of 14 watched staff/commute areas at elevated flood risk: Quezon City (Elevated). Staff there may struggle to travel even if Makati is clear — consider WFH for affected staff; confirm each area on NOAH/PAGASA."
     },
     "sources": [
       {
