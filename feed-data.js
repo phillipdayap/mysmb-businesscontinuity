@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-20T21:00:00+08:00",
+  "generated_at": "2026-11-20T22:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,7 +21,7 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 21",
-        "summary": "Drizzle, 88% chance of rain. Max ~31°C."
+        "summary": "Light drizzle, 88% chance of rain. Max ~31°C."
       },
       {
         "date": "Nov 22",
@@ -39,15 +39,15 @@ window.PBCA_FEED = {
       "category": "Heavy (Yellow-equivalent)",
       "tier": 1,
       "max_mm_hr": 11.9,
-      "total_mm_today": 26,
-      "note": "Forecast peak ~11.9 mm/h, ~26 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
+      "total_mm_today": 25,
+      "note": "Forecast peak ~11.9 mm/h, ~25 mm today (Open-Meteo). Low-lying Makati areas can flood in heavy rain — confirm the PAGASA rainfall/flood bulletin."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 0,
+      "count": 1,
       "ncr_relevant": false,
-      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
+      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
     },
     "dams": [],
     "areas_watch": {
@@ -60,7 +60,7 @@ window.PBCA_FEED = {
           "level": "Elevated",
           "tier": 2,
           "max_mm_hr": 16.3,
-          "total_mm": 29
+          "total_mm": 28
         },
         {
           "name": "Manila",
@@ -68,7 +68,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 11.9,
-          "total_mm": 26
+          "total_mm": 25
         },
         {
           "name": "Marikina",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 8.5,
-          "total_mm": 18
+          "total_mm": 17
         },
         {
           "name": "Antipolo",
@@ -140,7 +140,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.3,
-          "total_mm": 10
+          "total_mm": 9
         },
         {
           "name": "Santa Rosa / Calamba",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Watch",
           "tier": 1,
           "max_mm_hr": 8.5,
-          "total_mm": 18
+          "total_mm": 17
         },
         {
           "name": "San Jose del Monte",
@@ -164,7 +164,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 4,
-          "total_mm": 19
+          "total_mm": 17
         }
       ],
       "elevated": [
@@ -174,7 +174,7 @@ window.PBCA_FEED = {
           "level": "Elevated",
           "tier": 2,
           "max_mm_hr": 16.3,
-          "total_mm": 29
+          "total_mm": 28
         }
       ],
       "worst_tier": 2,
