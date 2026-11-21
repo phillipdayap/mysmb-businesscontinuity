@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-21T21:00:00+08:00",
+  "generated_at": "2026-11-21T22:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 21",
-        "summary": "Heavy drizzle, 100% chance of rain. Max ~33°C."
+        "summary": "Drizzle, 100% chance of rain. Max ~33°C."
       },
       {
         "date": "Nov 22",
-        "summary": "Light drizzle, 69% chance of rain. Max ~33°C."
+        "summary": "Cloudy, 69% chance of rain. Max ~33°C."
       },
       {
         "date": "Nov 23",
-        "summary": "Light drizzle, 31% chance of rain. Max ~34°C."
+        "summary": "Cloudy, 31% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Heavy drizzle in Metro Manila; max ~33°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Drizzle in Metro Manila; max ~33°C.",
     "heat_index": {
       "max_c": 36,
       "category": "Extreme Caution",
@@ -38,16 +38,16 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 1,
+      "max_mm_hr": 0.9,
       "total_mm_today": 4,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "areas_watch": {
@@ -60,14 +60,14 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 2.2,
-          "total_mm": 6
+          "total_mm": 8
         },
         {
           "name": "Manila",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1,
+          "max_mm_hr": 0.9,
           "total_mm": 4
         },
         {
@@ -75,16 +75,16 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.2,
-          "total_mm": 4
+          "max_mm_hr": 2.5,
+          "total_mm": 8
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.4,
-          "total_mm": 4
+          "max_mm_hr": 1.5,
+          "total_mm": 5
         },
         {
           "name": "Parañaque / Las Piñas",
@@ -99,24 +99,24 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.4,
-          "total_mm": 12
+          "max_mm_hr": 2.7,
+          "total_mm": 9
         },
         {
           "name": "Antipolo",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 3
+          "max_mm_hr": 1.8,
+          "total_mm": 5
         },
         {
           "name": "Cainta / Taytay",
           "region": "Rizal",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.8,
-          "total_mm": 3
+          "max_mm_hr": 1.8,
+          "total_mm": 5
         },
         {
           "name": "Bacoor / Imus",
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1.4,
-          "total_mm": 4
+          "total_mm": 6
         },
         {
           "name": "Dasmariñas",
@@ -139,7 +139,7 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 1
         },
         {
@@ -155,16 +155,16 @@ window.PBCA_FEED = {
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 5.4,
-          "total_mm": 12
+          "max_mm_hr": 2.7,
+          "total_mm": 9
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
-          "level": "Watch",
+          "level": "Low",
           "tier": 1,
-          "max_mm_hr": 9,
-          "total_mm": 21
+          "max_mm_hr": 4.5,
+          "total_mm": 12
         }
       ],
       "elevated": [],
