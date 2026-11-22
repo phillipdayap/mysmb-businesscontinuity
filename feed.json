@@ -2,7 +2,7 @@
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-22T19:00:00+08:00",
+  "generated_at": "2026-11-22T20:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -20,11 +20,11 @@
       },
       {
         "date": "Nov 23",
-        "summary": "Light drizzle, 37% chance of rain. Max ~34°C."
+        "summary": "Light drizzle, 24% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 24",
-        "summary": "Cloudy, 41% chance of rain. Max ~34°C."
+        "summary": "Cloudy, 51% chance of rain. Max ~34°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~34°C.",
