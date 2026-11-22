@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-22T09:00:00+08:00",
+  "generated_at": "2026-11-22T10:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,7 +17,7 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 22",
-        "summary": "Light drizzle, 35% chance of rain. Max ~34°C."
+        "summary": "Cloudy, 35% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 23",
@@ -28,9 +28,9 @@ window.PBCA_FEED = {
         "summary": "Light drizzle, 41% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~34°C.",
     "heat_index": {
-      "max_c": 36,
+      "max_c": 34,
       "category": "Extreme Caution",
       "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
     },
@@ -38,7 +38,7 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.2,
+      "max_mm_hr": 0,
       "total_mm_today": 0,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.5,
+          "max_mm_hr": 0.7,
           "total_mm": 1
         },
         {
@@ -67,7 +67,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -75,15 +75,15 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 1.3,
-          "total_mm": 2
+          "max_mm_hr": 0.5,
+          "total_mm": 1
         },
         {
           "name": "Pasig",
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -99,8 +99,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
-          "total_mm": 0
+          "max_mm_hr": 0.4,
+          "total_mm": 1
         },
         {
           "name": "Antipolo",
@@ -147,23 +147,23 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.3,
-          "total_mm": 1
+          "max_mm_hr": 0.1,
+          "total_mm": 0
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
-          "total_mm": 0
+          "max_mm_hr": 0.4,
+          "total_mm": 1
         },
         {
           "name": "San Jose del Monte",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0.2,
           "total_mm": 0
         }
       ],
