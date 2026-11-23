@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-23T15:00:00+08:00",
+  "generated_at": "2026-11-23T16:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -17,18 +17,18 @@ window.PBCA_FEED = {
     "outlook_3day": [
       {
         "date": "Nov 23",
-        "summary": "Light drizzle, 45% chance of rain. Max ~34°C."
+        "summary": "Cloudy, 45% chance of rain. Max ~34°C."
       },
       {
         "date": "Nov 24",
-        "summary": "Drizzle, 62% chance of rain. Max ~35°C."
+        "summary": "Light drizzle, 62% chance of rain. Max ~35°C."
       },
       {
         "date": "Nov 25",
         "summary": "Drizzle, 67% chance of rain. Max ~34°C."
       }
     ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~34°C.",
     "heat_index": {
       "max_c": 37,
       "category": "Extreme Caution",
@@ -38,16 +38,16 @@ window.PBCA_FEED = {
       "level": "Low",
       "category": "No heavy rain forecast",
       "tier": 1,
-      "max_mm_hr": 0.2,
+      "max_mm_hr": 0,
       "total_mm_today": 0,
       "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
     },
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
-      "count": 1,
+      "count": 0,
       "ncr_relevant": false,
-      "note": "1 M4.0+ event(s) in the PH region (last 24h); none near Metro Manila."
+      "note": "No M4.0+ earthquakes in the PH region in the last 24h."
     },
     "dams": [],
     "areas_watch": {
@@ -59,7 +59,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -67,7 +67,7 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.2,
+          "max_mm_hr": 0,
           "total_mm": 0
         },
         {
@@ -99,8 +99,8 @@ window.PBCA_FEED = {
           "region": "Metro Manila",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         },
         {
           "name": "Antipolo",
@@ -124,7 +124,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.1,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Dasmariñas",
@@ -147,16 +147,16 @@ window.PBCA_FEED = {
           "region": "Laguna",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0,
-          "total_mm": 0
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         },
         {
           "name": "Meycauayan / Marilao",
           "region": "Bulacan",
           "level": "Low",
           "tier": 1,
-          "max_mm_hr": 0.1,
-          "total_mm": 0
+          "max_mm_hr": 0.3,
+          "total_mm": 1
         },
         {
           "name": "San Jose del Monte",
