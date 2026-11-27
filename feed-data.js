@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-27T14:00:00+08:00",
+  "generated_at": "2026-11-27T15:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -12,36 +12,16 @@ window.PBCA_FEED = {
     "headline": "Calm — no active cyclone, no NCR quakes.",
     "confidence": "MEDIUM",
     "next_update": "Automated hourly; full brief at 12:00 NN (Asia/Manila)",
-    "monitoring_degraded": false,
-    "degraded_note": "Volcano (PHIVOLCS) and dam levels are not yet in the automated cloud version — confirm those on the official sites if relevant.",
-    "outlook_3day": [
-      {
-        "date": "Nov 27",
-        "summary": "Cloudy, 37% chance of rain. Max ~34°C."
-      },
-      {
-        "date": "Nov 28",
-        "summary": "Drizzle, 90% chance of rain. Max ~33°C."
-      },
-      {
-        "date": "Nov 29",
-        "summary": "Drizzle, 31% chance of rain. Max ~32°C."
-      }
-    ],
-    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Cloudy in Metro Manila; max ~34°C.",
+    "monitoring_degraded": true,
+    "degraded_note": "Automated cloud monitor: forecast unreachable this run — figures may lag; confirm on the official sites. Volcano (PHIVOLCS) and dam levels are not yet in the automated version.",
+    "outlook_3day": [],
+    "weather": "No active tropical cyclone within the Philippine Area of Responsibility. ",
     "heat_index": {
-      "max_c": 37,
-      "category": "Extreme Caution",
-      "note": "Computed from Open-Meteo temperature and humidity for Metro Manila."
+      "max_c": null,
+      "category": "Not available",
+      "note": "Forecast source unreachable this run."
     },
-    "flood_risk": {
-      "level": "Low",
-      "category": "No heavy rain forecast",
-      "tier": 1,
-      "max_mm_hr": 0,
-      "total_mm_today": 0,
-      "note": "No heavy rain forecast for Metro Manila (Open-Meteo)."
-    },
+    "flood_risk": null,
     "flood_official": null,
     "volcanoes": [],
     "seismic_24h": {
