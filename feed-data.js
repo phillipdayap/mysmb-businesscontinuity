@@ -3,7 +3,7 @@ window.PBCA_FEED = {
   "app": "PH Business Continuity Advisory",
   "client": "mySMB.com",
   "location": "Makati City, Metro Manila",
-  "generated_at": "2026-11-27T20:00:00+08:00",
+  "generated_at": "2026-11-27T21:00:00+08:00",
   "current": {
     "tier": 1,
     "tier_label": "MONITOR",
@@ -21,11 +21,11 @@ window.PBCA_FEED = {
       },
       {
         "date": "Nov 28",
-        "summary": "Drizzle, 95% chance of rain. Max ~33°C."
+        "summary": "Drizzle, 95% chance of rain. Max ~32°C."
       },
       {
         "date": "Nov 29",
-        "summary": "Light drizzle, 37% chance of rain. Max ~33°C."
+        "summary": "Drizzle, 37% chance of rain. Max ~33°C."
       }
     ],
     "weather": "No active tropical cyclone within the Philippine Area of Responsibility. Light drizzle in Metro Manila; max ~34°C.",
@@ -76,7 +76,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 0.1,
-          "total_mm": 1
+          "total_mm": 0
         },
         {
           "name": "Pasig",
@@ -100,7 +100,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 4
+          "total_mm": 3
         },
         {
           "name": "Antipolo",
@@ -156,7 +156,7 @@ window.PBCA_FEED = {
           "level": "Low",
           "tier": 1,
           "max_mm_hr": 1,
-          "total_mm": 4
+          "total_mm": 3
         },
         {
           "name": "San Jose del Monte",
